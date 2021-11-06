@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Serialization;
+using CoffeeBook.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoffeeBook
 {
@@ -25,6 +28,17 @@ namespace CoffeeBook
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Config format JSON result
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+                .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
+                = new DefaultContractResolver());
+            // Map Context to MySQL
+            services.AddDbContext<Context>(options =>
+            options.UseMySQL(Configuration.GetConnectionString("CoffeeBook")));
+
+            //---//
             services.AddControllers();
         }
 
