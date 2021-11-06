@@ -19,3 +19,24 @@ E:\Code Life\UIT\Project\HTTT framework\.Net\Backend\CoffeeBook\obj\Debug\netcor
 E:\Code Life\UIT\Project\HTTT framework\.Net\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
 E:\Code Life\UIT\Project\HTTT framework\.Net\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
 E:\Code Life\UIT\Project\HTTT framework\.Net\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.exe
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.deps.json
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.json
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.xml
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeBook.styles.css
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framwork_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
