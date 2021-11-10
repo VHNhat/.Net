@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import ListItem from "../../components/ListItem";
 import ListItemNews from "../../components/ListItemNews";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import Slider from "../../components/Slider";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./styles.scss";
 
 function Home() {
@@ -30,18 +31,17 @@ function Home() {
   }, []);
 
   return (
+    <>
     <div className="Home">
       <div className="body_Page">
         <div className="Slider_Home pt-4">
           <Slider />
         </div>
-        
-      </div>
       <div className="GoiY">
         <div className="Tags">
           <ul>
             <div className="icon">
-              <i className="fas fa-lightbulb"></i>
+            <i className="fad fa-lightbulb"></i>
             </div>
             <li className="Tag active goiy" onClick={() => ChangeActive(".goiy")}>
               Nhà gợi ý cho bạn
@@ -54,7 +54,7 @@ function Home() {
         <div className="Subject_Tag">
           {check ? (
             <div className="Btn_Login">
-              <p>Đăng Nhập</p>
+              <Link to="/login">Đăng Nhập</Link>
             </div>
           ) : (
             <ListItem />
@@ -81,7 +81,7 @@ function Home() {
         <div>
           <div>
             <div className="filter_store">
-              <div className="d-flex">
+              <div className="search_bottom">
                 <i className="fas fa-home color_orange"></i>
                 <h5>Tìm Một Cửa Hàng</h5>
               </div>
@@ -103,8 +103,12 @@ function Home() {
         </div>
       </div>
       <Footer />
+      </div>
+    
     </div>
+    <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
+      </>
   );
 }
 
-export default Home;
+export default memo(Home);

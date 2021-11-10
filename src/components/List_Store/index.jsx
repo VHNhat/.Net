@@ -1,32 +1,9 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./styles.scss";
-const List_Store = [
-  {
-    Country_Name: "Hà Nội",
-    count: 49,
-  },
-  {
-    Country_Name: "Hồ Chí Minh ",
-    count: 4,
-  },
-  {
-    Country_Name: "Hải Phòng ",
-    count: 9,
-  },
-  {
-    Country_Name: "Đà Nẵng ",
-    count: 19,
-  },
-  {
-    Country_Name: "Đồng Nai",
-    count: 39,
-  },
-  {
-    Country_Name: "Bà Rịa Vũng Tàu",
-    count: 109,
-  },
-];
+import data from"../../data"
+import { memo } from "react";
+const List_Store = data.Stores;
 
 function ListStore(props) {
   // const [Filter, SetFilter] = useState("");
@@ -59,7 +36,7 @@ function ListStore(props) {
               <Col key={index} className="Center_Item" xs={12} sm={6} lg={3}>
                 {" "}
                 <li className="Store" onClick={() => ChangeActive(index)}>
-                  {item.Country_Name}({item.count})
+                  {item.City_Name}({item.count})
                 </li>{" "}
               </Col>
             ))}
@@ -70,4 +47,4 @@ function ListStore(props) {
   );
 }
 
-export default ListStore;
+export default memo(ListStore);

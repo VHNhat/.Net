@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import ListItemNews from "../../components/ListItemNews";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./styles.scss";
 
 News.propTypes = {};
@@ -16,8 +16,9 @@ function News(props) {
         <ListItemNews />
       </div>
       <Footer />
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }
 
-export default News;
+export default memo(News);

@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+
 function Ticket(props) {
     const {item}=props;
   return (
