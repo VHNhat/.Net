@@ -2,6 +2,7 @@
 import Fade from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
 import React, { useContext, useEffect, useState } from 'react';
+import { getListRoleId } from '../../app/ApiResult';
 import { context } from '../../app/Context';
 import Account from './../Account/index';
 import './stylesUpdateComponent/UpdateAccount.scss';
@@ -16,7 +17,13 @@ function UpdateAccount(props) {
     Password: '',
     Role: '',
   });
-
+  const [listRoleId, setListRoleId] = useState()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async()=>{
+   const res=await getListRoleId('/role');
+   console.log(res)
+   setListRoleId(res);
+  },[])
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     const result = 0;
@@ -85,16 +92,20 @@ function UpdateAccount(props) {
               <label htmlFor='floatingInput'>Password</label>
             </div>
             <div className='form-floating mb-3 inputData'>
-              <select
+            <select
                 type='text'
                 className='form-control '
-                name='Role'
+                name='RoleId'
                 color='warning'
-                value={valueData?.Role}
+                value={valueData?.RoleId}
                 onChange={handleChange}>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
+                  {
+                    listRoleId?.map((item,index)=>(
+                      <option key={index} value={item?.Id}>{item.RoleName}</option>
+                    ))
+                  }
+           
+  
               </select>
 
               <label htmlFor='floatingInput'>Role</label>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Fade, Paper } from '@mui/material';
 import { useSnackbar } from 'notistack';
 import React, { useContext, useState } from 'react';
@@ -84,7 +85,7 @@ function AddProductType(props) {
         <label className='inputFileLabel label--input inputData ' htmlFor='inputFile'>
           <div className='box_input'>
             <p className='text-center textUpload '>Hình ảnh mô tả</p>
-            {image ? <img className='img_preview' src={image.preview} />: 
+            {image ?<img className='img_preview' src={image.preview} />: 
                 valueData?.Photo&&<img className='img_preview' src={valueData?.Photo} />}
             <i className='fad fa-plus-circle iconUpLoad'></i>
           </div>

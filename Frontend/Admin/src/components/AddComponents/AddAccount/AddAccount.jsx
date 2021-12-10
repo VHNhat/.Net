@@ -1,22 +1,29 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 import Fade from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
 import { useSnackbar } from 'notistack';
 import React, { useContext, useEffect, useState } from 'react';
-import './styles.scss';
+import { addAccount, getListRoleId } from '../../../app/ApiResult';
 import { context } from './../../../app/Context';
 import Account from './../../Account/index';
-import { addAccount } from '../../../app/ApiResult';
+import './styles.scss';
 function AddAccount(props) {
   const Context = useContext(context);
   const { setBodyAdmin, setFillerAdmin } = Context;
   const { enqueueSnackbar } = useSnackbar();
+
   const [valueData, setValueData] = useState({
     Username: '',
     Password: '',
-    RoleId: '1',
+    RoleId: '',
   });
-
+  const [listRoleId, setListRoleId] = useState()
+  useEffect(async()=>{
+   const res=await getListRoleId('/role');
+   console.log(res)
+   setListRoleId(res);
+  },[])
   const handleChangeData = (event) => {
     setValueData({
       ...valueData,
@@ -86,9 +93,13 @@ function AddAccount(props) {
                 color='warning'
                 value={valueData?.RoleId}
                 onChange={handleChangeData}>
-                <option  value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
+                  {
+                    listRoleId?.map((item,index)=>(
+                      <option key={index} value={item?.Id}>{item.RoleName}</option>
+                    ))
+                  }
+           
+  
               </select>
 
               <label htmlFor='floatingInput'>RoleId</label>

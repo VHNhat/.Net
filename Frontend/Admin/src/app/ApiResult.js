@@ -359,9 +359,9 @@ export const addSupplier = async datafrom => {
  
 };
 // ================================Role=================================
-export const getRoleId= async(id,router)=>{
+export const getListRoleId= async(router)=>{
 
-  const response = await axios.get(`${router}/${id}`);
+  const response = await axios.get(`${router}`);
   if (response?.data) {
     return response?.data;
     
@@ -388,6 +388,15 @@ export const addRole = async datafrom => {
   }
  
 };
+export const getRoleId= async(router)=>{
+
+  const response = await axios.get(router);
+  if (response?.data) {
+    return response?.data;
+  }
+  return [];
+
+}
 export const getRole= async(pag,router)=>{
 
   const response = await axios.get(router);
