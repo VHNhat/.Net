@@ -1,23 +1,18 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Fade, Paper } from '@mui/material';
 import { useSnackbar } from 'notistack';
-import React, { useContext, useEffect, useState } from 'react';
-import { getTypeId, updateProType } from '../../app/ApiResult';
-import { context } from '../../app/Context';
-import ProductType from './../Product/ProductType/index.';
-import './stylesUpdateComponent/UpdateProductType.scss';
-function UpdateProductType(props) {
+import React, { useContext, useState } from 'react';
+import ProductType from './../../Product/ProductType/index.';
+import { context } from './../../../app/Context';
+import './UpdateProductType.scss'
+import { addProType } from '../../../app/ApiResult';
+function AddProductType(props) {
   const Context = useContext(context);
   const { setBodyAdmin, setFillerAdmin } = Context;
   const [valueData, setValueData] = useState({
-    Id: '',
     Name: '',
     Photo: '',
     Description: '',
-
   });
-
-  const { id } = props;
   function Prev() {
     setBodyAdmin(<ProductType />);
     setFillerAdmin('PRODUCTTYPE')
@@ -45,25 +40,10 @@ function UpdateProductType(props) {
       }
     }
   };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(async() => {
-    const result = await getTypeId(id,"/ProductType")
-    console.log(result)
-  if(result){
-    setValueData({
-      ...valueData,
-      Id:result.Id,
-      Name: result.Name,
-    Photo: result.Photo,
-    Description: result.Description,
-    Price: result.Price,
-  
-    })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }},[id])
+
   const HandleUpload = async () => {
     console.log(valueData)
-    const res = await updateProType(valueData)
+    const res = await addProType(valueData);
     if (res?.success) {
       enqueueSnackbar('Tải lên thành công', { variant: 'success' });
     } else {
@@ -71,7 +51,7 @@ function UpdateProductType(props) {
     }
   };
   return (
-    <div className='UpdateProductType'>
+    <div className='AddProductType'>
           <Fade in={true} timeout={200} style={{ height: '100%' }}>
         <Paper>
         <button
@@ -85,8 +65,7 @@ function UpdateProductType(props) {
             <p className> Quay lại</p>
           </button>
       <h2 className='text-center pt-2'>Cập nhật loại sản phẩm </h2>
-      <p  style={{width:'70%',margin:'0 auto'}}>Mã loại sản phẩm:{id}</p>
-      <div className='dataUpdate'>
+      <div className='dataAdd'>
         <div className='form-floating mb-3 inputData'>
           <input
             type='text'
@@ -133,4 +112,4 @@ function UpdateProductType(props) {
   );
 }
 
-export default UpdateProductType;
+export default AddProductType;

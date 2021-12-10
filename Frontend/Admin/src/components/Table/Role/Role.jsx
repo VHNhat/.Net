@@ -10,6 +10,7 @@ import { DeleteId } from '../../../app/ApiResult';
 import { context } from '../../../app/Context';
 import '../stylesTable.scss';
 import UpdateRole from './../../UpdateComponent/UpdateRole';
+import AddRole from './../../AddComponents/AddRole/AddAccount';
 TableRole.propTypes = {
   List: PropTypes.array,
 };
@@ -50,11 +51,14 @@ export default function TableRole(props) {
   function HandelUpdate(id) {
     setBodyAdmin(<UpdateRole id={id} />);
   }
+  function HandelAdd() {
+    setBodyAdmin(<AddRole/>);
+  }
   return (
     <>
       <button
         type='button'
-        onClick=''
+        onClick={()=>HandelAdd()}
         className='btn btn-outline-success'
         style={{ position: 'absolute', right: '5%', top: '2%' }}>
         Thêm nhóm quyền

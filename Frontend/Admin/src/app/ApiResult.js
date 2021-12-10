@@ -106,6 +106,25 @@ export const getProductTypes= async(pag,router)=>{
   return [];
 
 }
+export const addProType = async datafrom => {
+  try {
+ 
+    const response = await axios({
+      method: 'post',
+      url: `/ProductType/create`,
+      data:datafrom
+    })
+
+    if (response?.status===200) {
+     
+      return { success: true, message: 'Yes' };
+    }
+  } catch (error) {
+   
+     return { success: false, message: 'Fail' };
+  }
+ 
+};
 export const getTypeId= async(id,router)=>{
 
   const response = await axios.get(`${router}/${id}`);
@@ -350,7 +369,25 @@ export const getRoleId= async(id,router)=>{
   return [];
 
 }
+export const addRole = async datafrom => {
+  try {
+ 
+    const response = await axios({
+      method: 'post',
+      url: `/role/add`,
+      data:datafrom
+    })
 
+    if (response.status===200) {
+     
+      return { success: true, message: 'Yes' };
+    }
+  } catch (error) {
+   
+     return { success: false, message: 'Fail' };
+  }
+ 
+};
 export const getRole= async(pag,router)=>{
 
   const response = await axios.get(router);

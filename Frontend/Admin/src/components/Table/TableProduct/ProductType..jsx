@@ -10,6 +10,7 @@ import { DeleteId } from '../../../app/ApiResult';
 import { context } from '../../../app/Context';
 import ProDetails from '../../ProDetails';
 import '../stylesTable.scss';
+import AddProductType from './../../AddComponents/AddProductType/AddProductType';
 import UpdateProductType from './../../UpdateComponent/UpdateProductType';
 TableProductType.propTypes = {
   List: PropTypes.array,
@@ -60,10 +61,13 @@ export default function TableProductType(props) {
   function HandelUpdate(id) {
         setBodyAdmin(<UpdateProductType id={id} />);
   }
+  function HandelAdd() {
+    setBodyAdmin(<AddProductType />);
+}
   return (
     <>
-       <button type='button' onClick="" className='btn btn-outline-success' style={{position:'absolute',right:"5%",top:"2%"}}>
-        Thêm nhà cung cấp mới
+       <button type='button' onClick={()=>HandelAdd()} className='btn btn-outline-success' style={{position:'absolute',right:"5%",top:"2%"}}>
+        Thêm loại sản phẩm mới
      
       </button>
    
