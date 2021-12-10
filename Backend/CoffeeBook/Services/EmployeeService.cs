@@ -57,7 +57,6 @@ namespace CoffeeBook.Services
 
         public int Put(int id, Employee model)
         {
-            Console.WriteLine("asd");
             var emp = _context.Employees.Single(s => s.Id == id);
             emp.Name = model.Name;
             emp.Age = model.Age;

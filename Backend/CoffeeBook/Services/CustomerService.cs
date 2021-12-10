@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CoffeeBook.Services
@@ -34,56 +35,19 @@ namespace CoffeeBook.Services
             ctx = context;
         }
 
-        public DataTable findAll()
+        public List<Customer> FindAll()
         {
-            DataTable table = new DataTable();
-            string query = "select * from Customer";
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
+            try
             {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
+                return ctx.Customers.ToList();
             }
-            return table;
+            catch
+            {
+                return null;
+            }
         }
 
-        public DataTable save(Customer customer)
-        {
-            DataTable table = new DataTable();
-            string query = $"insert into Customer(username, password, email, phone, name, avata, address, gender) " +
-                           $"values('{customer.Username}'," +
-                           $"'{customer.Password}'," +
-                           $"'{customer.Email}'," +
-                           $"'{customer.Phone}'," +
-                           $"'{customer.Name}'," +
-                           $"'{customer.Avata}'," +
-                           $"'{customer.Address}'," +
-                           $"{customer.Gender})";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
-        }
-
-        public Customer findById(int id)
+        public Customer FindById(int id)
         {
             try
             {
@@ -93,74 +57,88 @@ namespace CoffeeBook.Services
             {
                 return null;
             }
-           
         }
 
-        public DataTable Register(SignupDto dto)
+        public int Add(Customer customer)
         {
-            Customer customer = new Customer();
-            customer.Username = dto.Username;
-            customer.Password = dto.Password;
-            customer.Phone = dto.Phone;
-            customer.Email = dto.Email;
-            /*customer.Gender = dto.Gender;*/
-
-            DataTable table = new DataTable();
-            string query = $"insert into Customer(username, password, email, phone) " +
-                           $"values('{customer.Username}'," +
-                           $"'{customer.Password}'," +
-                           $"'{customer.Email}'," +
-                           $"'{customer.Phone}')";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
+            try
             {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
+                ctx.Customers.Add(customer);
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
+        }
 
-                    myReader.Close();
-                    myCon.Close();
+        public string Register(SignupDto dto)
+        {
+            var errorList = new List<string>();
+            bool[] flag = { false, false, false };
+            var customers = ctx.Customers.ToList();
+            foreach (var cust in customers)
+            {
+                if (cust.Username == dto.Username)
+                {
+                    if (!flag[0])
+                    {
+                        flag[0] = true;
+                        errorList.Add("Username");
+                    }
+                }
+                if (cust.Email == dto.Email)
+                {
+                    if (!flag[1])
+                    {
+                        flag[1] = true;
+                        errorList.Add("Email");
+                    }
+
+                }
+                if (cust.Phone == dto.Phone)
+                {
+                    if (!flag[2])
+                    {
+                        flag[2] = true;
+                        errorList.Add("Phone");
+                    }
                 }
             }
-            return table;
+            if(errorList.Count != 0)
+                return JsonSerializer.Serialize(errorList);
+            try
+            {
+                
+                Customer customer = new Customer();
+                customer.Username = dto.Username;
+                customer.Password = dto.Password;
+                customer.Phone = dto.Phone;
+                customer.Email = dto.Email;
+                customer.Name = dto.Name;
+
+                ctx.Customers.Add(customer);
+                return ctx.SaveChanges().ToString();
+            }
+            catch
+            {
+                return "0";
+            }
         }
 
         public Customer Login(SigninDto dto)
         {
-            var query = from c in ctx.Customers
-                        where c.Username == dto.Username
-                        where c.Password == dto.Password
-                        select c;
-
-            return query.FirstOrDefault();
-        }
-
-        public DataTable deleteById(int id)
-        {
-            DataTable table = new DataTable();
-            string query = @$"delete from Customer 
-                              where id = {id}";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
+            try
             {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
+                return ctx.Customers.Single(s => s.Username == dto.Username &&
+                                                 s.Password == dto.Password);
             }
-            return table;
+            catch
+            {
+                return null;
+            }
         }
-
-        public int update(int id,Customer customer)
+        public int Update(int id, Customer customer)
         {
             try
             {
@@ -171,13 +149,25 @@ namespace CoffeeBook.Services
                 cus.Address = customer.Address;
                 cus.Gender = customer.Gender;
                 return ctx.SaveChanges();
-            } catch(Exception ex)
+            }
+            catch
             {
-                Console.WriteLine(ex.Message);
                 return -1;
             }
-                
-            
+        }
+
+        public int Delete(int id)
+        {
+            try
+            {
+                var deletedCustomer = ctx.Customers.Single(s => s.Id == id);
+                ctx.Customers.Remove(deletedCustomer);
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

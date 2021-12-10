@@ -39,7 +39,7 @@ namespace CoffeeBook.Controllers
 
         [Route("admin/login")]
         [HttpPost]
-        public JsonResult Login(AdminLoginDto dto)
+        public ActionResult Login(AdminLoginDto dto)
         {
             Account result = _service.Login(dto);
 
@@ -47,7 +47,7 @@ namespace CoffeeBook.Controllers
             {
                 return new JsonResult("Username or Password is invalid.");
             }
-            var token = generateJwtToken(result);
+            var token = GenerateJwtToken(result);
             return new JsonResult(new { Token = token });
         }
 
@@ -61,6 +61,17 @@ namespace CoffeeBook.Controllers
                 return new JsonResult("There is no data");
 
             return new JsonResult(accounts);
+        }
+
+        [Route("account/{id}")]
+        [HttpGet]
+        public JsonResult GetAccountById(int id)
+        {
+            Account account = _service.FindById(id);
+            if (account == null)
+                return new JsonResult("There is no data");
+
+            return new JsonResult(account);
         }
 
         [Route("account/add")]
@@ -90,14 +101,13 @@ namespace CoffeeBook.Controllers
         [HttpDelete]
         public ActionResult DeleteAccount(int id)
         {
-            if (id == null) return BadRequest();
             int res = _service.DeleteById(id);
             if (res > 0) return Ok();
             else return BadRequest();
         }
 
 
-        private string generateJwtToken(Account account)
+        private string GenerateJwtToken(Account account)
         {
             var claims = new Claim[]
             {

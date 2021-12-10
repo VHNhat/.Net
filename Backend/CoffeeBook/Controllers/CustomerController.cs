@@ -3,25 +3,17 @@ using CoffeeBook.DataAccess;
 using CoffeeBook.Dto;
 using CoffeeBook.Models;
 using CoffeeBook.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
-    /*[Route("api/[controller]")]*/
     [ApiController]
     public class CustomerController : ControllerBase
     {
@@ -38,35 +30,37 @@ namespace CoffeeBook.Controllers
             service = new CustomerService(_config, ctx);
         }
 
-
         [Route("customer")]
         [HttpGet]
-        public JsonResult Get()
+        public ActionResult Get()
         {
-            /*NewsService service = new NewsService(_config);*/
-            DataTable table = service.findAll();
-            if (table.Equals("") || table == null || table.Rows.Count == 0)
-                return new JsonResult("There is no data.");
+            var customers = service.FindAll();
+            if (customers == null || customers.Count == 0)
+                return BadRequest();
             
-            return new JsonResult(table);
+            return new JsonResult(customers);
         }
 
         [Route("customer/{id}")]
         [HttpGet]
-        public ActionResult GetById(int id)
+        public ActionResult Get(int id)
         {
-            Customer list = service.findById(id);
-            if (list == null) return BadRequest();
-            return new JsonResult(list);
+            var customer = service.FindById(id);
+            if (customer == null) 
+                return BadRequest();
+
+            return new JsonResult(customer);
         }
 
         [Route("customer/add")]
         [HttpPost]
-        public JsonResult Post(Customer customer)
+        public ActionResult Post(Customer customer)
         {
-            DataTable table = service.save(customer);
+            var result = service.Add(customer);
+            if (result > 0)
+                return Ok();
 
-            return new JsonResult("Added successfully!");
+            return BadRequest();
         }
 
         [Route("customer/login")]
@@ -78,40 +72,45 @@ namespace CoffeeBook.Controllers
             if(user == null)
                 return BadRequest();
 
-            var token = generateJwtToken(user);
+            var token = GenerateJwtToken(user);
 
             return new JsonResult(new { Token = token });
         }
 
         [Route("customer/signup")]
         [HttpPost]
-        public JsonResult Register(SignupDto dto)
+        public ActionResult Register(SignupDto dto)
         {
-            DataTable table = service.Register(dto);
+            var result = service.Register(dto);
+            if (result == "1")
+                return Ok();
 
-            return new JsonResult("Register successfully!");
+            return new JsonResult(result);
         }
 
         [Route("customer/edit/{id}")]
         [HttpPut]
         public ActionResult Put(int id,Customer customer)
         {
-            int res = service.update(id,customer);
-            if (res > 0) return Ok();
-            else return BadRequest();
+            int res = service.Update(id,customer);
+            if (res > 0) 
+                return Ok();
+            
+            return BadRequest();
         }
 
         [Route("customer/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
-            DataTable table = service.deleteById(id);
+            var result = service.Delete(id);
+            if (result > 0)
+                return Ok();
 
-            return new JsonResult($"Customer with id = {id} is deleted successfully!");
+            return BadRequest();
         }
 
-
-        private string generateJwtToken(Customer customer)
+        private string GenerateJwtToken(Customer customer)
         {
             var claims = new Claim[]
             {

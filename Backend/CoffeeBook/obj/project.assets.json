@@ -7716,25 +7716,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vohoa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Malik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code Life\\UIT\\Project\\HTTT framework\\.Net\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+      "projectUniqueName": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
       "projectName": "CoffeeBook",
-      "projectPath": "E:\\Code Life\\UIT\\Project\\HTTT framework\\.Net\\Backend\\CoffeeBook\\CoffeeBook.csproj",
-      "packagesPath": "C:\\Users\\vohoa\\.nuget\\packages\\",
-      "outputPath": "E:\\Code Life\\UIT\\Project\\HTTT framework\\.Net\\Backend\\CoffeeBook\\obj\\",
+      "projectPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+      "packagesPath": "C:\\Users\\Malik\\.nuget\\packages\\",
+      "outputPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\vohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Malik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7806,6 +7801,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.21, 3.1.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7814,7 +7815,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

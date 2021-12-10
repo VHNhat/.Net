@@ -32,19 +32,29 @@ namespace CoffeeBook.Services
             ctx = context;
         }
 
-        public IQueryable findAll()
+        public List<Bill> FindAll()
         {
-            /*DataTable table = new DataTable();*/
-
-            var query = from b in ctx.Bills
-                        select b;
-
-            /*table.Load((IDataReader)query);*/
-
-            return query;
+            try
+            {
+                return ctx.Bills.ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
-
-        public int save(Bill bill)
+        public Bill FindById(int id)
+        {
+            try
+            {
+                return ctx.Bills.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public int Add(Bill bill)
         {
             try
             {

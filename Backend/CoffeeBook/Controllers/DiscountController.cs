@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
-    /*[Route("api/[controller]")]*/
     [ApiController]
     public class DiscountController : ControllerBase
     {
@@ -30,41 +29,59 @@ namespace CoffeeBook.Controllers
 
         [Route("discount")]
         [HttpGet]
-        public JsonResult Get()
+        public ActionResult Get()
         {
-            /*NewsService service = new NewsService(_config);*/
-            DataTable table = service.findAll();
-            if (table.Equals("") || table == null || table.Rows.Count == 0)
-                return new JsonResult("There is no data.");
+            var discounts = service.FindAll();
+            if (discounts == null)
+                return BadRequest();
 
-            return new JsonResult(table);
+            return new JsonResult(discounts);
+        }
+
+        [Route("discount/{id}")]
+        [HttpGet]
+        public ActionResult Get(int id)
+        {
+            var discount = service.FindById(id);
+            if (discount == null)
+                return BadRequest();
+
+            return new JsonResult(discount);
         }
 
         [Route("discount/add")]
         [HttpPost]
-        public JsonResult Post(Discount discount)
+        public ActionResult Post(Discount discount)
         {
-            DataTable table = service.save(discount);
+            var result = service.Add(discount);
+            if(result > 0)
+                return Ok();
 
-            return new JsonResult("Added successfully!");
+            return BadRequest();
         }
 
-        [Route("discount/edit")]
+        [Route("discount/edit/{id}")]
         [HttpPut]
-        public JsonResult Put(Discount discount)
+        public ActionResult Put(int id, Discount discount)
         {
-            DataTable table = service.update(discount);
+            var result = service.Update(id, discount);
 
-            return new JsonResult("Updated successfully!");
+            if (result > 0)
+                return Ok();
+
+            return BadRequest();
         }
 
         [Route("discount/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
-            DataTable table = service.deleteById(id);
+            var result = service.Delete(id);
 
-            return new JsonResult($"Discount with id = {id} is deleted successfully!");
+            if (result > 0)
+                return Ok();
+
+            return BadRequest();
         }
     }
 }

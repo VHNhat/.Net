@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
-    /*[Route("api/[controller]")]*/
     [ApiController]
     public class BillController : ControllerBase
     {
@@ -33,20 +32,33 @@ namespace CoffeeBook.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            IQueryable table = _service.findAll();
-            if (table.Equals("") || table == null)
+            var bills = _service.FindAll();
+            if (bills == null || bills.Count == 0)
                 return new JsonResult("There is no data.");
 
-            return new JsonResult(table);
+            return new JsonResult(bills);
+        }
+
+        [Route("bill/{id}")]
+        [HttpGet]
+        public JsonResult Get(int id)
+        {
+            var bill = _service.FindById(id);
+            if (bill == null)
+                return new JsonResult("There is no data.");
+
+            return new JsonResult(bill);
         }
 
         [Route("bill/add")]
         [HttpPost]
         public ActionResult Post(Bill bill)
         {
-            int table = _service.save(bill);
-            if (table > 0) return Ok();
-            else return BadRequest();
+            int result = _service.Add(bill);
+            if (result > 0) 
+                return Ok();
+
+            return BadRequest();
         }
 
         [Route("bill/edit/{id}")]
@@ -54,8 +66,10 @@ namespace CoffeeBook.Controllers
         public ActionResult Put(int id, Bill bill)
         {
             int res = _service.update(id, bill);
-            if (res > 0) return Ok();
-            else return BadRequest();
+            if (res > 0) 
+                return Ok();
+            
+            return BadRequest();
         }
 
         [Route("bill/delete/{id}")]
@@ -63,8 +77,10 @@ namespace CoffeeBook.Controllers
         public ActionResult Delete(int id)
         {
             int res = _service.DeleteById(id);
-            if (res > 0) return Ok();
-            else return BadRequest();
+            if (res > 0) 
+                return Ok();
+            
+            return BadRequest();
         }
 
         [Route("bill/purchase")]
@@ -74,7 +90,8 @@ namespace CoffeeBook.Controllers
             int result = _service.Purchase(dto);
             if (result > 0)
                 return Ok();
-            else return BadRequest();
+            
+            return BadRequest();
         }
 
         [Route("bill/delivery/{id}")]
@@ -82,8 +99,10 @@ namespace CoffeeBook.Controllers
         public ActionResult Delivery(int id)
         {
             int res = _service.Delivery(id);
-            if (res > 0) return Ok();
-            else return BadRequest();
+            if (res > 0) 
+                return Ok();
+            
+            return BadRequest();
         }
     }
 }

@@ -22,13 +22,15 @@ namespace CoffeeBook.Dto
         [Required]
         [EmailAddress]
         private string email;
-        /*private int gender;*/
+        [Required]
+        [StringLength(100)]
+        private string name;
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public string Phone { get => phone; set => phone = value; }
         public string ConfirmPassword { get => confirmPassword; set => confirmPassword = value; }
         public string Email { get => email; set => email = value; }
-        /*public int Gender { get => gender; set => gender = value; }*/
+        public string Name { get => name; set => name = value; }
     }
 }
