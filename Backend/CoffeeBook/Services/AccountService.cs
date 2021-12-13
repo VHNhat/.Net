@@ -76,9 +76,11 @@ namespace CoffeeBook.Services
             {
                 Account acc = ctx.Accounts.Single(s => s.Id == id);
 
-                acc.Username = account.Username;
+                //acc.Username = account.Username;
                 acc.Password = account.Password;
                 acc.RoleId = account.RoleId;
+                acc.Name = account.Name;
+                acc.Avatar = account.Avatar;
 
                 return ctx.SaveChanges();
                 

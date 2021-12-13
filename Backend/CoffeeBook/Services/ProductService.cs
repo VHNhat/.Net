@@ -69,8 +69,9 @@ namespace CoffeeBook.Services
             {
                 var product = _context.Products.Single(s => s.Id == id);
 
-                product.CreatedDate = model.CreatedDate;
-                product.Description = model.Description; product.Name = model.Name;
+                //product.CreatedDate = model.CreatedDate;
+                product.Description = model.Description;
+                product.Name = model.Name;
                 product.Photo = model.Photo;
                 product.Price = model.Price;
                 product.Size = model.Size;

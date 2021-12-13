@@ -101,7 +101,7 @@ namespace CoffeeBook.DataAccess
 
                 entity.Property(e => e.Status)
                     .HasMaxLength(100)
-                    .HasDefaultValue("Đang chờ thanh toán")
+                    .HasDefaultValue("Nhận đơn")
                     .IsUnicode();
 
                 entity.Property(e => e.Name)

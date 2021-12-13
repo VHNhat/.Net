@@ -72,11 +72,12 @@ namespace CoffeeBook.Services
                 bill.Note = dto.Note;
                 bill.PayBy = dto.PayBy;
                 bill.Phone = dto.Phone;
-                bill.Time = dto.Time;
                 bill.TotalPrice = dto.TotalPrice;
                 bill.CreatedDate = DateTime.Now;
                 bill.CustomerId = dto.CustomerId;
-                bill.Status = "Delivering";
+                bill.Status = "Nhận đơn";
+                if(dto.Time.Equals("")) bill.Time = "15-20 phút";
+                else bill.Time = dto.Time;
                 ctx.Bills.Add(bill);
 
                 var billResult = ctx.SaveChanges();
