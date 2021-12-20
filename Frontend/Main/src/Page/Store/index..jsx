@@ -1,6 +1,7 @@
 import React, { memo, useEffect } from "react";
+import Footer from "../../components/Footer";
 import ListStore from "../../components/ListStore";
-import Slider from "../../components/Slider";
+import './styles.scss';
 Store.propTypes = {};
 
 function Store(props) {
@@ -9,12 +10,14 @@ function Store(props) {
   }, []);
   return (
     <div>
-      <div className="body_Page">
-        <div className="Slider_Home pt-4">
-          <Slider />
-        </div>
+      <div className="body_Page Store">
+  
+        <div className="Intro">
+            <p>Hệ thống của hàng Coffee & Book trên toàn quốc</p>
+          </div>
         <ListStore />
       </div>
+      <Footer/>
     </div>
   );
 }

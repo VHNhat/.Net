@@ -1,5 +1,6 @@
 import { Checkbox, Radio } from '@mui/material';
-import jwt_decode from "jwt-decode";
+import emailjs from 'emailjs-com';
+import jwt_decode from 'jwt-decode';
 import { useSnackbar } from 'notistack';
 import React, { memo, useContext, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,41 +9,67 @@ import { CheckoutData, getCustomerById } from '../../app/ApiResult';
 import { context } from '../../app/Context';
 import { decreaseBill, reset } from '../../app/CounterBill';
 import { actionKM } from '../../app/KMOpen';
+import Loading from './../Loading/Loading';
 import './styles.scss';
 
 function Checkout(props) {
-  const [get, SetGet] = useState(JSON.parse(localStorage.getItem('LISTBILL') || '[]'));
-  const {checkToken ,address} = useContext(context);
+  const [get, SetGet] = useState(
+    JSON.parse(localStorage.getItem('LISTBILL') || '[]')
+  );
+  const { checkToken, address, discount } = useContext(context);
   const [pay, setPay] = useState('tienmat');
   const { enqueueSnackbar } = useSnackbar();
   const [total, setTotal] = useState(0);
+  const [email, setEmail] = useState();
+  const [dateEx, setdateEx] = useState();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const KMOpen = useSelector((state) => state.KMOpen);
   const dispatch = useDispatch();
-  const [dataUser,setDataUser]=useState({
-
-    Address:'',
-    Time:'',
-    Name:'',
-    Phone:'',
-    Note:'',
-    PayBy:'',
-    listBill:get,
-    CustomerId:'',
-    TotalPrice:0
+  const [dataUser, setDataUser] = useState({
+    Address: '',
+    Time: '',
+    Name: '',
+    Phone: '',
+    Note: '',
+    PayBy: '',
+    listBill: get,
+    CustomerId: '',
+    TotalPrice: 0,
+    DiscountId: '',
+    CheckDiscount: false,
   });
-
-  
-  useEffect(() => {
-    var Total = get.reduce((total, item) => {
+  const getTotal=()=>{
+    return get.reduce((total, item) => {
       return total + item.price;
     }, 0);
-    setDataUser({...dataUser,TotalPrice:Total});
-    setTotal(Total)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[get])
- 
- 
+  }
+  useEffect(() => {
+    var Total = getTotal()
+    setDataUser({ ...dataUser, TotalPrice: Total });
+    setTotal(Total);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [get, discount]);
+  useEffect(() => {
+    if (discount.ExpiredDate) {
+
+      const date = new Date(discount?.ExpiredDate)[Symbol.toPrimitive]('number');
+      setdateEx(date);
+      if (discount?.Value && total >= discount?.MinPrice && Date.now() < date) {
+        setDataUser({ ...dataUser, CheckDiscount:true,DiscountId:discount?.Id });
+        setTotal(() => {
+          var Total = getTotal();
+          return Total - discount?.Value;
+        });
+      }
+      else {
+        setDataUser({ ...dataUser, CheckDiscount:false,DiscountId:discount?.Id });
+      }
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [discount, get]);
   function removeItem(index) {
     SetGet(JSON.parse(localStorage.getItem('LISTBILL')) || []);
     if (get.length) {
@@ -54,30 +81,29 @@ function Checkout(props) {
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect( async ()=>{
-    if(checkToken){
+  useEffect(async () => {
+    if (checkToken) {
       var decoded = jwt_decode(checkToken);
- 
-      if(decoded?.Id)
-      {
-       const res= await getCustomerById(decoded?.Id)
-       if(res)
-   
-       setDataUser({...dataUser,
-        Name:res?.Name,
-        Phone:res?.Phone,
-        CustomerId:res?.Id})
+
+      if (decoded?.Id) {
+        const res = await getCustomerById(decoded?.Id);
+        if (res) setEmail(res?.Email);
+        setDataUser({
+          ...dataUser,
+          Name: res?.Name,
+          Phone: res?.Phone,
+          CustomerId: res?.Id,
+        });
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[checkToken])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [checkToken]);
 
   const handleChange = (event) => {
     setPay(event.target.value);
-
   };
   const handleOnChange = (e) => {
-    setDataUser({...dataUser,[e.target.name]:e.target.value});
+    setDataUser({ ...dataUser, [e.target.name]: e.target.value });
   };
   const controlProps = (item) => ({
     checked: pay === item,
@@ -86,26 +112,61 @@ function Checkout(props) {
     name: 'color-radio-button-demo',
     inputProps: { 'aria-label': item },
   });
-   const OnSubmit = async ()=>{
-     if(dataUser?.CustomerId)
-     {
-      const response = await CheckoutData({...dataUser,PayBy:pay})
-      if(response?.status===200){
-       enqueueSnackbar('Đặt hàng thành công', { variant: 'success' });
-      }else{
-       enqueueSnackbar('Đặt hàng thất bại', { variant: 'error' });
+  const OnSubmit = async () => {
+    setLoading(true);
+    console.log(dataUser);
+    if (dataUser?.CustomerId) {
+      const response = await CheckoutData({
+        ...dataUser,
+        PayBy: pay,
+        TotalPrice: total,
+        Address: address?.Address,
+      });
+      if (response?.status === 200) {
+        var templateParams = {
+          name: dataUser?.Name,
+          productName: 'Cà phê',
+          productPrice: '1000 đ',
+          TotalPrice: `
+          Cà phê:
+          10000 đ 
+          Trà đá:
+          20000d
+          `,
+          customerEmail: email,
+        };
+        emailjs
+          .send(
+            'service_6wbvhfd',
+            'template_wsjpvjr',
+            templateParams,
+            'user_O1sTVwC39UzmBBol4XCe2'
+          )
+          .then((res) => {
+            enqueueSnackbar('Đặt hàng thành công', { variant: 'success' });
+            setTimeout(() => {
+              localStorage.removeItem('LISTBILL');
+              SetGet([]);
+              dispatch(reset());
+            }, 2000);
+          })
+          .catch((e) => {
+            enqueueSnackbar('Đặt hàng thất bại', { variant: 'error' });
+          });
+      } else {
+        enqueueSnackbar('Đặt hàng thất bại', { variant: 'error' });
       }
-     }
-     else{
+    } else {
       enqueueSnackbar('Đặt hàng thất bại', { variant: 'error' });
-     }
-  
-  }
+    }
+    setLoading(false);
+    setSuccess(true);
+  };
 
   return (
     <div className='Checkout_com'>
       <div className='Checkout_com_Title'>
-      <i className="fad fa-file"></i>
+        <i className='fad fa-file'></i>
         <h3>Xác nhận đơn hàng</h3>
       </div>
       <div className='checkout__body'>
@@ -122,34 +183,42 @@ function Checkout(props) {
             </div>
             <div className='info_type'>
               <div className='info_imgType'>
-                <img
-                  src={address?.Photo}
-                  alt=''
-                />
+                <img src={address?.Photo} alt='' />
               </div>
               <div className='info_des'>
-                <div className='location d-flex justify-content-between'>
-                  <div>
-                    <b>Địa chỉ giao hàng tại </b>
-                    <p>
-                   
-                      { address?.Address|| <div style={{color:'red',fontWeight:'550'}}> 
-                      Bạn chưa nhập địa chỉ giao hàng:  <br/>
-                      Cú pháp: <br/> Số nhà - Tên đường - Quận - Thành phố </div>}
-                    </p>
-                  </div>{' '}
-                  <div className='d-flex flex-column justify-content-center'>
-                    <i className='fa fa-chevron-right'></i>
-                  </div>
+                <div className='location '>
+                  <label
+                    htmlFor='check_choose'
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                    }}>
+                    <div>
+                      <b>Địa chỉ giao hàng tại </b>
+                      <p>
+                        {address?.Address || (
+                          <div style={{ color: 'red', fontWeight: '550' }}>
+                            Bạn chưa nhập địa chỉ giao hàng: <br />
+                            Cú pháp: <br /> Số nhà - Tên đường - Quận - Thành
+                            phố{' '}
+                          </div>
+                        )}
+                      </p>
+                    </div>{' '}
+                    <div className='d-flex flex-column justify-content-center'>
+                      <i className='fa fa-chevron-right'></i>
+                    </div>
+                  </label>
                 </div>
 
                 <div className='time d-flex justify-content-between'>
                   <div>
-                    <b>Nhận hàng trong ngày 15-30 phút</b>
-                    <p>Vào lúc: Càng sớm càng tốt</p>
+                    <b>Nhận đơn từ thứ 2 - Chủ nhật</b>
+                    <p>Thời gian: 20-30 phút sau khi đặt hàng</p>
                   </div>
                   <div className='d-flex flex-column justify-content-center'>
-                    <i className='fa fa-chevron-right '></i>
+                    <i class='fad fa-flag-alt'></i>
                   </div>
                 </div>
               </div>
@@ -162,25 +231,30 @@ function Checkout(props) {
                   type='text'
                   name='Name'
                   id='Name'
-                  onChange={e=>handleOnChange(e)}
+                  onChange={(e) => handleOnChange(e)}
                   value={dataUser?.Name}
                   placeholder='Tên người nhận'
                   required
                 />
               </div>
               <div className='input_info'>
-                <input type='text' name='Phone' id='Phone' required 
-                  value={dataUser?.Phone} 
-                       onChange={e=>handleOnChange(e)}
-                placeholder="Số điện thoại"/>
+                <input
+                  type='text'
+                  name='Phone'
+                  id='Phone'
+                  required
+                  value={dataUser?.Phone}
+                  onChange={(e) => handleOnChange(e)}
+                  placeholder='Số điện thoại'
+                />
               </div>
               <div className='input_info'>
                 <input
                   type='text'
                   name='Note'
                   id='Note'
-                  value={dataUser?.Note} 
-                  onChange={e=>handleOnChange(e)}
+                  value={dataUser?.Note}
+                  onChange={(e) => handleOnChange(e)}
                   placeholder='Thêm hướng dẫn đặt hàng'
                 />
               </div>
@@ -189,10 +263,13 @@ function Checkout(props) {
             <div className='pay_for'>
               <p className='type_Name'>Phương thức thanh toán</p>
               <div className='checkpay'>
-       
-            
                 <label htmlFor='tienmat'>
-                <Radio {...controlProps('tienmat')} color="default" name='pay' id='tienmat' />
+                  <Radio
+                    {...controlProps('tienmat')}
+                    color='default'
+                    name='pay'
+                    id='tienmat'
+                  />
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/1000_photo_2021-04-06_11-17-08.jpg'
                     alt=''
@@ -201,10 +278,13 @@ function Checkout(props) {
                 </label>
               </div>
               <div className='checkpay'>
-              
-            
                 <label htmlFor='momo'>
-                <Radio {...controlProps('momo')} color="default" name='pay' id='momo' />
+                  <Radio
+                    {...controlProps('momo')}
+                    color='default'
+                    name='pay'
+                    id='momo'
+                  />
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/386_ic_momo@3x.png'
                     alt=''
@@ -214,10 +294,13 @@ function Checkout(props) {
               </div>
 
               <div className='checkpay'>
-             
-            
                 <label htmlFor='zalopay'>
-                <Radio {...controlProps('zalopay')} color="default" name='pay' id='zalopay' />
+                  <Radio
+                    {...controlProps('zalopay')}
+                    color='default'
+                    name='pay'
+                    id='zalopay'
+                  />
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/388_ic_zalo@3x.png'
                     alt=''
@@ -227,10 +310,14 @@ function Checkout(props) {
               </div>
 
               <div className='checkpay'>
-            
                 <label htmlFor='shopeepay'>
-                <Radio {...controlProps('shopeepay')} color="default"  name='pay' id='shopeepay'/>
-            
+                  <Radio
+                    {...controlProps('shopeepay')}
+                    color='default'
+                    name='pay'
+                    id='shopeepay'
+                  />
+
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/1120_1119_ShopeePay-Horizontal2_O.png'
                     alt=''
@@ -240,7 +327,7 @@ function Checkout(props) {
               </div>
             </div>
             <div className='agree'>
-            <Checkbox {...label}  color="secondary"   name='agree' />
+              <Checkbox {...label} color='secondary' name='agree' />
               <span>
                 {' '}
                 Đồng ý với các điều khoản và{' '}
@@ -265,7 +352,7 @@ function Checkout(props) {
             {get.map((item, index) => (
               <li key={index} className='list__bill-Iteam'>
                 <div className='list_fix'>
-                <i className="fad fa-acorn"></i>
+                  <i className='fad fa-acorn'></i>
                 </div>
                 <div className='list_text'>
                   <b className='tilte_item'>{item.title} </b>
@@ -277,7 +364,7 @@ function Checkout(props) {
                 </div>
                 <div className='list_price'>
                   <p>
-                    {(item.price*1).toLocaleString(undefined, {
+                    {(item.price * 1).toLocaleString(undefined, {
                       minimumFractionDigits: 0,
                     })}
                     đ
@@ -291,13 +378,40 @@ function Checkout(props) {
             <div className='thanhtien'>
               <p>Thành tiền</p>
               <p className='price_total'>
-                {total?.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ
+                {total?.toLocaleString(undefined, { minimumFractionDigits: 0 })}
+                đ
               </p>
             </div>{' '}
             <div
               className='khuyenmai d-flex justify-content-between'
               onClick={() => dispatch(actionKM(KMOpen))}>
-              <p>Khuyến mãi</p>
+              {discount?.Id ? (
+                <>
+                  <p
+                    style={{
+                      width: '60%',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis',
+                    }}>
+                    Khuyến mãi: {discount?.Name}
+                  </p>
+                  {
+                    (total < discount?.MinPrice || Date.now() > dateEx) && (
+                    <span
+                      style={{
+                        color: 'red',
+                        lineHeight: '70px',
+                        display: 'block',
+                      }}>
+                      
+                      (Không thể áp dụng)
+                    </span>
+                  )}
+                </>
+              ) : (
+                <p>Khuyến mãi</p>
+              )}
               <i className='fa fa-chevron-right'></i>
             </div>{' '}
             <div className='dathang d-flex justify-content-between p-2 lh-3'>
@@ -310,8 +424,8 @@ function Checkout(props) {
                   đ
                 </p>
               </div>
-              <div className='btn_dathang d-flex flex-column justify-content-center ' onClick={OnSubmit}>
-                <p>Đặt hàng</p>
+              <div onClick={OnSubmit}>
+                <Loading loading={loading} success={success} />
               </div>
             </div>
           </div>

@@ -121,6 +121,7 @@ namespace CoffeeBook.DataAccess
                     .IsUnicode();
 
                 entity.Property(e => e.Time)
+                    .HasMaxLength(100)
                     .HasDefaultValue("15-20 phút")
                     .IsUnicode();
 
@@ -153,6 +154,9 @@ namespace CoffeeBook.DataAccess
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.Value)
+                    .HasDefaultValue(0);
+
+                entity.Property(e => e.MinPrice)
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.ExpiredDate)
@@ -416,6 +420,7 @@ namespace CoffeeBook.DataAccess
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.TilteSize)
+                    .IsUnicode()
                     .HasDefaultValue("Nhỏ");
 
                 entity.Property(e => e.CreatedDate)
@@ -467,6 +472,12 @@ namespace CoffeeBook.DataAccess
                     .HasMaxLength(11)
                     .IsRequired();
 
+                /*entity.Property(e => e.District)
+                    .IsRequired();
+
+                entity.Property(e => e.LinkGG)
+                    .IsUnicode();*/
+                
                 entity.HasIndex(e => e.ManagerId)
                     .IsUnique();
 

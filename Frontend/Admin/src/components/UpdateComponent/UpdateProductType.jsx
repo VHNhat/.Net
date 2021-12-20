@@ -26,11 +26,11 @@ function UpdateProductType(props) {
   if(result){
     setValueData({
       ...valueData,
-      Id:result.Id,
+      Id:result?.Id,
       Name: result.Name,
-    Photo: result.Photo,
-    Description: result.Description,
-    Price: result.Price,
+    Photo: result?.Photo,
+    Description: result?.Description,
+    Price: result?.Price,
   
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -45,7 +45,7 @@ function UpdateProductType(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [urlImage, setUrlimage] = useState(undefined);
   const [image, setImage] = useState();
-  var HandleChangeImg = (e) => {
+  const HandleChangeImg = (e) => {
     const file = e.target?.files[0];
 
     if (file) {
@@ -64,9 +64,9 @@ function UpdateProductType(props) {
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    if (urlImage) {
-      console.log(urlImage)
-      const res = await updateProType({...valueData,Photo:urlImage});
+    if (valueData?.Id) {
+       const photo=urlImage||valueData?.Photo;
+        const res = await updateProType({...valueData,Photo:photo});
       if (res?.success) {
         enqueueSnackbar('Tải lên thành công', { variant: 'success' });
       } else {
@@ -75,10 +75,10 @@ function UpdateProductType(props) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [urlImage]);
-  const HandleUpload = async () => {
+  const HandleUpload =  () => {
     if (image) {
       const UploadTask = storage.ref(`imageProducts/${image.name}`).put(image);
-      await UploadTask.on(
+      UploadTask.on(
         'state_changed',
         (snapshot) => {},
         (error) => {
@@ -97,6 +97,9 @@ function UpdateProductType(props) {
             });
         }
       );
+    }
+    else{
+      setUrlimage(null);
     }
   };
   return (

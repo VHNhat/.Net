@@ -21,9 +21,10 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         padding: 0 5px;
-    
+        margin: -15px 0;
     }
     & .tilte_new{
+        padding: 5px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

@@ -40,7 +40,8 @@ namespace CoffeeBook.Migrations
                     Value = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     Quantity = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     ExpiredDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)),
-                    Photo = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: true)
+                    Photo = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: true),
+                    MinPrice = table.Column<int>(type: "int", nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
                 {
@@ -146,10 +147,10 @@ namespace CoffeeBook.Migrations
                     Address = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Phone = table.Column<string>(type: "text", nullable: false),
-                    Time = table.Column<string>(type: "nvarchar(100)", nullable: true, defaultValue: "15-20 phút"),
+                    Time = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true, defaultValue: "15-30 phút"),
                     PayBy = table.Column<string>(type: "text", nullable: false),
                     Note = table.Column<string>(type: "text", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 10, 14, 25, 37, 904, DateTimeKind.Local).AddTicks(4277))
+                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 21, 0, 8, 21, 40, DateTimeKind.Local).AddTicks(4330))
                 },
                 constraints: table =>
                 {
@@ -170,7 +171,7 @@ namespace CoffeeBook.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     CustomerId = table.Column<int>(type: "int", nullable: true),
                     ProductQuantity = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 10, 14, 25, 37, 921, DateTimeKind.Local).AddTicks(8863))
+                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 21, 0, 8, 21, 57, DateTimeKind.Local).AddTicks(3714))
                 },
                 constraints: table =>
                 {
@@ -194,7 +195,10 @@ namespace CoffeeBook.Migrations
                     Address = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
                     Country = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: false),
-                    ManagerId = table.Column<int>(type: "int", nullable: true)
+                    ManagerId = table.Column<int>(type: "int", nullable: true),
+                    Photo = table.Column<string>(type: "text", nullable: true),
+                    LinkGG = table.Column<string>(type: "text", nullable: true),
+                    District = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -299,7 +303,7 @@ namespace CoffeeBook.Migrations
                     ShoppingCartId = table.Column<int>(type: "int", nullable: false),
                     TilteSize = table.Column<string>(type: "nvarchar(100)", nullable: true, defaultValue: "Nhỏ"),
                     Count = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 10, 14, 25, 37, 928, DateTimeKind.Local).AddTicks(6790))
+                    CreatedDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValue: new DateTime(2021, 12, 21, 0, 8, 21, 64, DateTimeKind.Local).AddTicks(3755))
                 },
                 constraints: table =>
                 {

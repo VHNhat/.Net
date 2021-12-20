@@ -9,6 +9,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .App .choose_ForBuy{
+    width: 100%;
+  }
   .App .DetailsUser .InfoPerson .Info-Center .avata{
     margin: 0 auto;
   }
@@ -24,6 +27,7 @@
     flex-direction: column;
     text-align: center;
     width: 100%;
+    padding-top: 20px;
   }
  .App .filter_store{
   display: block;
@@ -118,6 +122,7 @@
   }
   .App .Header .hamber {
     visibility: visible;
+    display: block;
   }
   .App .Checkout_com .checkout__body {
     width: 93%;
@@ -134,9 +139,49 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+    .App .List_Store .bodyCountry{
+     flex-direction: column;
+   }
+   .App .List_Store .bodyCountry .Stores{
+     margin: 0;
+   }
+   .App .List_Store .bodyCountry .Countrys{
+    margin: 0;
+    width: 100%;
+    display: flex;
+   }
+   .App .Header__TilteName{
+    display: none;
+  }
+}
+@media screen and (max-width: 992px)  {
+
+  .App .List_Store .bodyCountry{
+    flex-direction: column;
+  }
+  .App .DetailsUser{
+    width: 100%;
+  }
+  .App .DetailsUser .InfoDetails{
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .App .DetailsUser .InfoDetails{
+    padding: 20px;
+  }
+  .App .List_Store .bodyCountry .Stores{
+    margin: 0;
+  }
+  .App .List_Store .bodyCountry .Countrys{
+   margin: 0;
+   width: 100%;
+   display: flex;
+  }
+
 }
 @media screen and (max-width: 992px) and (min-width: 601px) {
-
+  
   .App .Checkout_com .checkout__body {
     width: 93%;
     margin: 0 auto;
@@ -168,6 +213,7 @@
   }
   .App .Header .hamber {
     visibility: visible;
+    display: block;
   }
 
   .App .Login .loginFrom {

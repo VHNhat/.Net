@@ -149,7 +149,7 @@ export default function CustomizedDialogs(Props) {
             </div>
           </div>
           <div className='choose_size '>
-            <div className='tilte_size'>
+            <div className='tilte_size mt-2'>
               <p>CHỌN SIZE (BẮT BUỘC)</p>
             </div>
             <div className='choose d-flex '>

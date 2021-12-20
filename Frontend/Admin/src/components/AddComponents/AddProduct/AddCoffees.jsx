@@ -3,10 +3,12 @@ import Fade from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
 import { useSnackbar } from 'notistack';
 import React, { useEffect, useState } from 'react';
-import { addProduct } from '../../../app/ApiResult';
+import { addProduct, getProductTypesSelect, getSupplierSelect } from '../../../app/ApiResult';
 import { storage } from '../../../app/firebaseUpload';
 import './styles/AddCoffees.scss';
 function AddCoffee(props) {
+  const [proType, setProType] = useState([])
+  const [supplier, setSupplier] = useState([])
   const [valueData, setValueData] = useState({
     Id: undefined,
     Name: '',
@@ -21,6 +23,18 @@ function AddCoffee(props) {
   const handleChangeData = (event) => {
     setValueData({ ...valueData, [event.target.name]: event.target.value });
   };
+  const fetch=async()=>{
+    const ProType = await getProductTypesSelect();
+    if(ProType)setProType(ProType)
+    const Supplier = await getSupplierSelect();
+    if(Supplier)setSupplier(Supplier);
+    setValueData({...valueData,ProductTypeId:ProType[0]?.Id,SupplierId:Supplier[0]?.Id})
+  }
+  useEffect(() => {
+    fetch()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
   const { enqueueSnackbar } = useSnackbar();
   const [urlImage, setUrlimage] = useState(undefined);
   const [image, setImage] = useState();
@@ -110,27 +124,42 @@ function AddCoffee(props) {
                 <label htmlFor='floatingInput'>Giá</label>
               </div>
               <div className='form-floating mb-3 inputData'>
-                <input
-                  type='text'
-                  className='form-control '
-                  name='ProductTypeId'
-                  color='warning'
-                  value={valueData.ProductTypeId}
-                  onChange={handleChangeData}
-                />
-                <label htmlFor='floatingInput'>productTypeId</label>
-              </div>
-              <div className='form-floating mb-3 inputData'>
-                <input
-                  type='text'
-                  className='form-control '
-                  name='SupplierId'
-                  color='warning'
-                  value={valueData.SupplierId}
-                  onChange={handleChangeData}
-                />
-                <label htmlFor='floatingInput'>supplierId</label>
-              </div>
+            <select
+                type='text'
+                className='form-control '
+                name='ProductTypeId'
+                color='warning'
+                value={valueData?.ProductTypeId}
+                onChange={handleChangeData}>
+                  {
+                    proType?.map((item,index)=>(
+                      <option selected={valueData?.ProductTypeId===item?.Id&&"seleted"} key={index} value={item?.Id}>{item?.Name}</option>
+                    ))
+                  }
+           
+  
+              </select>
+
+              <label htmlFor='floatingInput'>Product Type</label>
+            </div>
+            <div className='form-floating mb-3 inputData'>
+            <select
+                type='text'
+                className='form-control '
+                name='supplierId'
+                color='warning'
+                value={valueData?.SupplierId}
+                onChange={handleChangeData}>
+                  {
+                    supplier?.map((item,index)=>(
+                      <option selected={valueData?.SupplierId===item?.Id&&"seleted"} key={index} value={item?.Id}>{item?.Name}</option>
+                    ))
+                  }
+           
+  
+              </select>
+              <label htmlFor='floatingInput'>Nhà Phân Phối</label>
+            </div>
               <div className='form-floating mb-3 inputData'>
                 <input
                   type='text'

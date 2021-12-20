@@ -32,6 +32,14 @@ namespace CoffeeBook.Controllers
             return new JsonResult(stores);
         }
 
+        [Route("stores/district")]
+        [HttpGet]
+        public ActionResult GetByDistrict()
+        {
+            var stores = service.GetByDistrict();
+            return new JsonResult(stores);
+        }
+
         [Route("store/{id}")]
         [HttpGet]
         public ActionResult GetById(int id)

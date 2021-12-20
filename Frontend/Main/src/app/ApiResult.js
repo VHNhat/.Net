@@ -66,3 +66,36 @@ export const updateCustomer= async(dataform)=>{
     return [];
   }
 }
+export const getStore= async()=>{
+  try {
+      const res = await axios.get('/stores');
+      if(res?.data)
+      return res?.data;
+      return [];
+  } catch (error) {
+    return [];
+  }
+}
+
+export const getStoreByDistrict= async()=>{
+  try {
+      const res = await axios.get('/stores/district');
+      if(res?.data)
+      return res?.data;
+      return [];
+  } catch (error) {
+    return [];
+  }
+}
+
+export const getDiscounts= async()=>{
+  try {
+      const res = await axios.get('/discount');
+      if(res?.data)
+      return res?.data;
+      return [];
+  } catch (error) {
+    return [];
+  }
+}
+

@@ -121,6 +121,28 @@ export const getProductTypes= async(pag,router)=>{
   return [];
 
 }
+export const getProductTypesSelect= async()=>{
+
+  const response = await axios.get('/ProductTypes');
+  if (response?.data) {
+
+    return response?.data;
+    
+  }
+  return [];
+
+}
+export const getSupplierSelect= async()=>{
+
+  const response = await axios.get('/supplier');
+  if (response?.data) {
+
+    return response?.data;
+    
+  }
+  return [];
+
+}
 export const addProType = async datafrom => {
   try {
  

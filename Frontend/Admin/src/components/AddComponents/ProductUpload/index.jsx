@@ -42,10 +42,10 @@ function ProductUpload(props) {
             label="Show"
             aria-controls='home'
             aria-selected='true'>
-            Coffees
+           Sản phẩm
           </button>
         </li>
-        <li className='nav-item' role='presentation'>
+        {/* <li className='nav-item' role='presentation'>
           <button
             onClick={()=>setBodyValue(1)}
             className='nav-link'
@@ -59,7 +59,7 @@ function ProductUpload(props) {
                   >
             Books
           </button>
-        </li>
+        </li> */}
         <li className='nav-item' role='presentation'>
           <button
             onClick={()=>setBodyValue(2)}
@@ -71,7 +71,7 @@ function ProductUpload(props) {
             role='tab'
             aria-controls='contact'
             aria-selected='false'>
-            News
+            Tin tức
           </button>
         </li>
       </ul>

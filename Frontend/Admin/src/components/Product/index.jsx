@@ -102,10 +102,10 @@ function ProductList(props) {
             label={'Show'}
             aria-controls='home'
             aria-selected='true'>
-            Coffees
+            Sản phẩm
           </button>
         </li>
-        <li className='nav-item' role='presentation'>
+        {/* <li className='nav-item' role='presentation'>
           <button
             onClick={() => setTypeDataPro('BOOKS')}
             className={`nav-link ${TypeDataPro === 'BOOKS' && 'active'}`}
@@ -118,7 +118,7 @@ function ProductList(props) {
             aria-selected='false'>
             Books
           </button>
-        </li>
+        </li> */}
         <li className='nav-item' role='presentation'>
           <button
             onClick={() => setTypeDataPro('NEWS')}
@@ -130,7 +130,7 @@ function ProductList(props) {
             role='tab'
             aria-controls='contact'
             aria-selected='false'>
-            News
+            Tin tức
           </button>
         </li>
       </ul>

@@ -16,14 +16,16 @@ function Revenue(props) {
     let k = 0;
     for (let i = 1; i <= 12; i++) {
       List.Month.push(i);
+      
       if (Data[k]?.Month === i) {
+        console.log(Data[k])
         List.Value.push(Data[k++]?.Sales);
       } else {
         List.Value.push(0);
       }
     }
-    setSaleMonth(List.Month);
-    setSaleMonthV(List.Value);
+    setSaleMonth(List?.Month);
+    setSaleMonthV(List?.Value);
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {

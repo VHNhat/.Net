@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffeeBook.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20211210072538_SetupMigration")]
+    [Migration("20211220170821_SetupMigration")]
     partial class SetupMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -72,7 +72,7 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 904, DateTimeKind.Local).AddTicks(4277));
+                        .HasDefaultValue(new DateTime(2021, 12, 21, 0, 8, 21, 40, DateTimeKind.Local).AddTicks(4330));
 
                     b.Property<int?>("CustomerId")
                         .IsRequired()
@@ -104,8 +104,9 @@ namespace CoffeeBook.Migrations
                         .HasDefaultValue("Đang chờ thanh toán");
 
                     b.Property<string>("Time")
+                        .HasMaxLength(100)
                         .IsUnicode(true)
-                        .HasColumnType("text")
+                        .HasColumnType("varchar(100)")
                         .HasDefaultValue("15-20 phút");
 
                     b.Property<long>("TotalPrice")
@@ -204,6 +205,9 @@ namespace CoffeeBook.Migrations
                     b.Property<DateTime>("ExpiredDate")
                         .HasColumnType("datetime")
                         .HasDefaultValue(new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+                    b.Property<int>("MinPrice")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -507,7 +511,7 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 921, DateTimeKind.Local).AddTicks(8863));
+                        .HasDefaultValue(new DateTime(2021, 12, 21, 0, 8, 21, 57, DateTimeKind.Local).AddTicks(3714));
 
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
@@ -537,7 +541,7 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 928, DateTimeKind.Local).AddTicks(6790));
+                        .HasDefaultValue(new DateTime(2021, 12, 21, 0, 8, 21, 64, DateTimeKind.Local).AddTicks(3755));
 
                     b.Property<string>("TilteSize")
                         .HasColumnType("text")
@@ -572,6 +576,12 @@ namespace CoffeeBook.Migrations
                         .IsUnicode(true)
                         .HasColumnType("text");
 
+                    b.Property<string>("District")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LinkGG")
+                        .HasColumnType("text");
+
                     b.Property<int?>("ManagerId")
                         .HasColumnType("int");
 
@@ -579,6 +589,9 @@ namespace CoffeeBook.Migrations
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("text");
 
                     b.Property<string>("StoreName")
                         .IsRequired()

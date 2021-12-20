@@ -528,3 +528,4 @@ C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBo
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete

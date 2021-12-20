@@ -4,14 +4,22 @@ import { getProducts } from '../../app/ApiResult';
 import Iteam from '../Item';
 import './styles.scss';
 function ListItem(props) {
-  const { check, numList,filter } = props;
+  const { check, numList,filter,recently } = props;
   const [listFillter, SetListFillter] = useState([]);
   const [list, SetList] = useState([]);
  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-   const response=await getProducts()
-    SetList(response);
-  }, []);
+
+   if(recently)
+   {  
+       SetList([]);
+   }
+   else{
+    const response=await getProducts()
+       SetList(response);
+   }
+ 
+  }, [recently]);
   
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {

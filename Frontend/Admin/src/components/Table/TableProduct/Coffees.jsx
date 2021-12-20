@@ -1,3 +1,4 @@
+import { Tooltip, Zoom } from '@mui/material';
 import Fade from '@mui/material/Grow';
 import Pagination from '@mui/material/Pagination';
 import Paper from '@mui/material/Paper';
@@ -88,7 +89,15 @@ export default function TableCoffees(props) {
                     <td>{index + 1}</td>
                     <td>{item?.Id}</td>
                     <td>
-                      <p className='text_over'>{item?.Name}</p>
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        title={item?.Name}
+                        placement='right-start'
+                        arrow>
+                      <p className='text_over'>
+                        {item?.Name}
+                      </p>
+                      </Tooltip>
                     </td>
 
                     <td>

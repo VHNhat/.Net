@@ -14,6 +14,7 @@ import { useSnackbar } from 'notistack';
 import { useContext, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { storage } from '../../app/firebaseApp';
+import Footer from '../../components/Footer';
 import Iteam from '../../components/Item';
 import {
   getBillsId,
@@ -146,6 +147,7 @@ function UserDetails({ id, setFlagAvata }) {
     Address: '',
     Avata: '',
   });
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     const customer = await getCustomerById(id);
@@ -179,6 +181,7 @@ function UserDetails({ id, setFlagAvata }) {
       }
     }
   };
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     if (urlImage) {
@@ -228,10 +231,11 @@ function UserDetails({ id, setFlagAvata }) {
         <form onSubmit={OnSubmit}>
           <table className='tableInfoAcc'>
             <tr>
-              <td>Tên khách hàng</td>
+              <td>Tên khách hàng</td>     
+              
             </tr>
-            <input type='file' id='inputFile' onChange={HandleChangeImg} />
-
+       
+     
             <tr className='space-center'>
               <td>
                 {' '}
@@ -243,6 +247,15 @@ function UserDetails({ id, setFlagAvata }) {
                   value={dataForm?.Name}
                   onChange={(e) => HandleChange(e)}
                 />
+              </td>
+              <td>
+              <input style={{display:'none'}} type='file' id='inputFile' onChange={HandleChangeImg} />
+              
+              <label htmlFor="inputFile">
+                <div className='avataPreview'>
+                {image?.preview?<img src={image?.preview} alt="" />:<i class="fad fa-camera"></i>}
+                </div>
+              </label>
               </td>
             </tr>
             <tr>
@@ -328,7 +341,6 @@ function UserDetails({ id, setFlagAvata }) {
 function DetailsUser(props) {
   const { checkToken ,flagAvata, setFlagAvata} = useContext(context);
   const [value, setValue] = useState(0);
-  const [flag, setFlag] = useState();
   const [dataUser, setdataUser] = useState({
     Id: '',
     Name: '',
@@ -347,10 +359,12 @@ function DetailsUser(props) {
             Username: res?.Username,
             Email: res?.Email,
             Avata: res?.Avata,
+            Name: res?.Name,
           });
       }
     }
     setFlagAvata(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkToken, flagAvata]);
   return (
     <div className='body_Page'>
@@ -369,7 +383,7 @@ function DetailsUser(props) {
 
             <div className='infoUser'>
               <div className='name'>
-                <h3>{dataUser?.Username}</h3>
+                <h3>{dataUser?.Name}</h3>
               </div>
               <div className='email'>
                 <p>Email:{dataUser?.Email}</p>
@@ -421,6 +435,7 @@ function DetailsUser(props) {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

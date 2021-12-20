@@ -119,7 +119,7 @@ namespace CoffeeBook.Services
                 if (res > 0) return "1";
                 return "";
             }
-            catch (Exception ex)
+            catch 
             {
                 return "0";
             }

@@ -16,6 +16,8 @@ namespace CoffeeBook.Dto
         private string note;
         private int totalPrice;
         private int customerId;
+        private bool checkDiscount;
+        private int discountId;
         private List<ShoppingCart_Product> listBill;
 
         public string Address { get => address; set => address = value; }
@@ -27,5 +29,7 @@ namespace CoffeeBook.Dto
         public int TotalPrice { get => totalPrice; set => totalPrice = value; }
         public List<ShoppingCart_Product> ListBill { get => listBill; set => listBill = value; }
         public int CustomerId { get => customerId; set => customerId = value; }
+        public int DiscountId { get => discountId; set => discountId = value; }
+        public bool CheckDiscount { get => checkDiscount; set => checkDiscount = value; }
     }
 }

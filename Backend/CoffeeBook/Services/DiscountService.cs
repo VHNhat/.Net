@@ -29,7 +29,7 @@ namespace CoffeeBook.Services
 
         public List<Discount> FindAll()
         {
-            return ctx.Discounts.ToList();
+            return ctx.Discounts.Where(w => w.Quantity > 0).ToList();
         }
 
         public Discount FindById(int id)

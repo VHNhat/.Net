@@ -39,13 +39,7 @@ export default function NewsRender({open, setOpen,scroll,Item}) {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-  
-          {[...new Array(50)]
-              .map(
-                () => Item.Content
-
-              )
-              .join('\n')}
+          {Item.Content}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

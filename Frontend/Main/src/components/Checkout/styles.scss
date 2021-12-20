@@ -34,7 +34,9 @@
         width: 90%;
         margin: 0 auto;
         & .input_info {
-          border: 1px solid rgb(202, 200, 200);
+
+          border:  2px solid var(--color-main);
+          border-radius: 5px;
           margin: 5px 0;
           & input {
             display: block;
@@ -44,6 +46,7 @@
             border: none;
             background: none;
             outline: none;
+          
           }
         }
       }
@@ -138,7 +141,7 @@
       height: 60px;
       line-height: 60px;
       & i {
-        line-height: 60px;
+        line-height: 70px;
       }
       &:hover {
         color:  var(--color-main);
@@ -223,17 +226,20 @@
 }
 .change_type,
 .add_item {
+ 
+  
   & a {
     text-decoration: none;
-    color: black;
+   
   }
   & p {
+    color: rgb(61, 110, 69);
     margin: 0;
     padding: 6px;
-    border: 1px solid black;
+    border:  2px solid var(--color-main);
     border-radius: 50px;
     &:hover {
-      background-color: rgb(90, 90, 90);
+      background-color:var(--color-main);
       color: white;
     }
   }

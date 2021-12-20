@@ -12,6 +12,7 @@ function News(props) {
   return (
     <div className="News">
       <div className="body_Page">
+     
         <ListItemNews />
       </div>
       <Footer />

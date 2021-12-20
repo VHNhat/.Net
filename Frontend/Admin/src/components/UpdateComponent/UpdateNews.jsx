@@ -62,9 +62,9 @@ function UpdateNews(props) {
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    if (urlImage) {
-      console.log(urlImage)
-      const res = await updateNews({...valueData,Thumbnail:urlImage});
+    if (valueData?.Id) {
+      const photo=urlImage||valueData?.Thumbnail;
+      const res = await updateNews({...valueData,Thumbnail:photo});
       if (res?.success) {
         enqueueSnackbar('Tải lên thành công', { variant: 'success' });
       } else {
@@ -73,10 +73,10 @@ function UpdateNews(props) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [urlImage]);
-  const HandleUpload = async () => {
+  const HandleUpload =  () => {
     if (image) {
       const UploadTask = storage.ref(`imageProducts/${image.name}`).put(image);
-      await UploadTask.on(
+       UploadTask.on(
         'state_changed',
         (snapshot) => {},
         (error) => {
@@ -95,6 +95,9 @@ function UpdateNews(props) {
             });
         }
       );
+    }
+    else{
+      setUrlimage(null);
     }
   };
   return (

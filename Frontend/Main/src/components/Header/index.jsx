@@ -7,7 +7,7 @@ import React, {
   useContext,
   useEffect,
   useLayoutEffect,
-  useState,
+  useState
 } from 'react';
 import { useDetectClickOutside } from 'react-detect-click-outside';
 import { useDispatch, useSelector } from 'react-redux';
@@ -141,6 +141,7 @@ function Header(props) {
       }
     }
     setFlagAvata(0)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkToken,flagAvata]);
 
   return (

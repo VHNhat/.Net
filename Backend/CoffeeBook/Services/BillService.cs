@@ -66,7 +66,8 @@ namespace CoffeeBook.Services
         {
             string query = @"select Month(CreatedDate) as 'Month', sum(TotalPrice) as 'Sales'
                              from Bill b
-                             group by CreatedDate
+                             where Validated = 1
+                             group by Month(CreatedDate)
                              order by Month(CreatedDate) asc";
 
             DataTable table = new DataTable();
@@ -109,17 +110,24 @@ namespace CoffeeBook.Services
         {
             try
             {
+                if (dto.CheckDiscount)
+                {
+                    Discount discount = ctx.Discounts.Single(s => s.Id == dto.DiscountId);
+                    discount.Quantity--;
+                }
                 Bill bill = new Bill();
                 bill.Address = dto.Address;
                 bill.Name = dto.Name;
                 bill.Note = dto.Note;
                 bill.PayBy = dto.PayBy;
                 bill.Phone = dto.Phone;
-                bill.Time = dto.Time;
                 bill.TotalPrice = dto.TotalPrice;
                 bill.CreatedDate = DateTime.Now;
                 bill.CustomerId = dto.CustomerId;
-                bill.Status = "Delivering";
+                bill.Status = "Nhận đơn";
+                if (dto.Time == "")
+                    bill.Time = "15-30 phút";
+                else bill.Time = dto.Time;
                 ctx.Bills.Add(bill);
 
                 var billResult = ctx.SaveChanges();
@@ -163,7 +171,8 @@ namespace CoffeeBook.Services
             try
             {
                 Bill bill = ctx.Bills.Single(s => s.Id == id);
-                bill.Status = "Paid";
+                bill.Validated = 1;
+                bill.Status = "Đã thanh toán";
                 return ctx.SaveChanges();
             }
             catch

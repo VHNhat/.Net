@@ -2,9 +2,9 @@
     
     /* --color-main:#f38f0c;
     --color-image-main:linear-gradient(to right, #faad47, #ff9e37); */
-    --color-main:#01a156;
-    --color-main-act:#028045;
-    --color-image-main:linear-gradient(to right, #1fb870,#e7c08d ,#acda64);
+    --color-main:#ff9626;
+    --color-main-act:#ffa84c;
+    --color-image-main:linear-gradient(to right, #fb8d17,#fb8d17 ,#fb8d17);
    
     --height-header: 4.8rem;
     --radial-gradient-yellow: radial-gradient(100% 1636.16% at 100% 0%,#fff2d8 0%,#ffe7ba 100%);

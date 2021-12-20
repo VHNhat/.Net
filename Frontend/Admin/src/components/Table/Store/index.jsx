@@ -66,7 +66,7 @@ export default function TableStore(props) {
         onClick={() => HandelAddSale()}
         className='btn btn-outline-success'
         style={{ position: 'absolute', right: '5%', top: '2%' }}>
-        Thêm nhà cung cấp mới
+        Thêm nhà cửa hàng mới
       </button>
 
       <Stack className='mt-4' spacing={2}>

@@ -145,7 +145,7 @@ function Admin() {
 
           <div className='img_user'>
             <img
-              src='https://scontent.fdad3-4.fna.fbcdn.net/v/t1.6435-9/208927547_306774221147382_3866266535058989464_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qsfFEmSzDSkAX_58-Ut&tn=FLKH1yZIfYV-yRh0&_nc_ht=scontent.fdad3-4.fna&oh=fcd815652fc447fa7d15056b8f515420&oe=61AA5C0B'
+              src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRWoasWo6-T5az5H6wDjcykDWbR36J8TUNOrYc95f12Gf9UN1XPoA2kL-VUkgPq-bjp4&usqp=CAU'
               alt=''
             />
             <span>Bùi Quốc Huy</span>
