@@ -295,7 +295,7 @@ namespace CoffeeBook.Extensions
                     Email = "nhatvh@gmail.com",
                     Phone = "1234567890",
                     Address = "Quận 1",
-                    City = "Thành phồ Hồ Chí Minh",
+                    City = "Thành phố Hồ Chí Minh",
                     Country = "Việt Nam",
                     Salary = 100_000_000,
                     Status = "Hoạt động"
@@ -309,7 +309,7 @@ namespace CoffeeBook.Extensions
                     Email = "huybq@gmail.com",
                     Phone = "1234567891",
                     Address = "Quận 1",
-                    City = "Thành phồ Hồ Chí Minh",
+                    City = "Thành phố Hồ Chí Minh",
                     Country = "Việt Nam",
                     Salary = 100_000_000,
                     Status = "Hoạt động"
@@ -323,7 +323,7 @@ namespace CoffeeBook.Extensions
                     Email = "huynvn@gmail.com",
                     Phone = "1234567892",
                     Address = "Quận 1",
-                    City = "Thành phồ Hồ Chí Minh",
+                    City = "Thành phố Hồ Chí Minh",
                     Country = "Việt Nam",
                     Salary = 100_000_000,
                     Status = "Hoạt động"
@@ -337,7 +337,7 @@ namespace CoffeeBook.Extensions
                     Email = "hoangnb@gmail.com",
                     Phone = "1234567893",
                     Address = "Quận 1",
-                    City = "Thành phồ Hồ Chí Minh",
+                    City = "Thành phố Hồ Chí Minh",
                     Country = "Việt Nam",
                     Salary = 100_000_000,
                     Status = "Khóa"

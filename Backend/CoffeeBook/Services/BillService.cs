@@ -93,7 +93,7 @@ namespace CoffeeBook.Services
             var query = @"SELECT Id, CreatedDate, TotalPrice, PayBy
                           FROM Bill 
                           WHERE DATE(CreatedDate) = @Date
-                          ORDER BY TIME(CreatedDate)";
+                          ORDER BY TIME(CreatedDate);";
             var table = new DataTable();
             string sqlDataSource = _config.GetConnectionString("CoffeeBook");
             using (MySqlConnection connection = new MySqlConnection(sqlDataSource))
@@ -118,7 +118,7 @@ namespace CoffeeBook.Services
                           FROM Bill
                           WHERE MONTH(CreatedDate) = @Month AND YEAR(CreatedDate) = @Year
                           GROUP BY DAY(CreatedDate)
-                          ORDER BY DAY(CreatedDate)";
+                          ORDER BY DAY(CreatedDate);";
             var table = new DataTable();
             string sqlDataSource = _config.GetConnectionString("CoffeeBook");
             using (MySqlConnection connection = new MySqlConnection(sqlDataSource))
@@ -144,7 +144,7 @@ namespace CoffeeBook.Services
                              FROM Bill
                              WHERE YEAR(CreatedDate) = @Year
                              GROUP BY MONTH(CreatedDate)
-                             ORDER BY MONTH(CreatedDate)";
+                             ORDER BY MONTH(CreatedDate);";
             var table = new DataTable();
             string sqlDataSource = _config.GetConnectionString("CoffeeBook");
             using (MySqlConnection connection = new MySqlConnection(sqlDataSource))
