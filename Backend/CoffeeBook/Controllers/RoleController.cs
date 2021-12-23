@@ -29,8 +29,8 @@ namespace CoffeeBook.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            var roleList = _service.GetAllRoles();
-            return new JsonResult(roleList);
+            var roles = _service.GetAllRoles();
+            return new JsonResult(roles);
         }
 
         [Route("role/{id}")]
@@ -44,12 +44,12 @@ namespace CoffeeBook.Controllers
 
         [Route("role/add")]
         [HttpPost]
-        public JsonResult AddRole(Role role)
+        public ActionResult AddRole(Role role)
         {
             int result = _service.Post(role);
-            if (result == 0)
-                return new JsonResult("Added failed");
-            return new JsonResult("Added successfully");
+            if (result > 0)
+                return Ok();
+            return BadRequest();
         }
 
         [Route("role/edit/{id}")]
@@ -65,14 +65,13 @@ namespace CoffeeBook.Controllers
             return BadRequest();
         }
 
-        [Route("role/delete/id")]
+        [Route("role/delete/{id}")]
         [HttpDelete]
         public IActionResult DeleteRole(int id)
         {
-            if (id == null) return BadRequest();
             int res = _service.Delete(id);
             if (res > 0) return Ok();
-            else return BadRequest();
+            return BadRequest();
         }
     }
 }

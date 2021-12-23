@@ -20,12 +20,6 @@ namespace CoffeeBook.Services
         {
         }
 
-        public DiscountService(IConfiguration config)
-        {
-            _config = config;
-            sqlDataSource = _config.GetConnectionString("CoffeeBook");
-        }
-
         public DiscountService(IConfiguration config, Context context)
         {
             _config = config;
@@ -35,14 +29,7 @@ namespace CoffeeBook.Services
 
         public List<Discount> FindAll()
         {
-            try
-            {
-                return ctx.Discounts.ToList();
-            }
-            catch
-            {
-                return null;
-            }
+            return ctx.Discounts.ToList();
         }
 
         public Discount FindById(int id)
@@ -57,11 +44,25 @@ namespace CoffeeBook.Services
             }
         }
 
-        public int Add(Discount discount)
+        public int save(Discount discount)
         {
             try
             {
                 ctx.Discounts.Add(discount);
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int DeleteById(int id)
+        {
+            try
+            {
+                var deletedDiscount = ctx.Discounts.Single(s => s.Id == id);
+                ctx.Discounts.Remove(deletedDiscount);
                 return ctx.SaveChanges();
             }
             catch
@@ -80,20 +81,6 @@ namespace CoffeeBook.Services
                 updatedDiscount.Quantity = discount.Quantity;
                 updatedDiscount.Value = discount.Value;
                 updatedDiscount.ExpiredDate = discount.ExpiredDate;
-                return ctx.SaveChanges();
-            }
-            catch
-            {
-                return -1;
-            }
-        }
-
-        public int Delete(int id)
-        {
-            try
-            {
-                var deletedDiscount = ctx.Discounts.Single(s => s.Id == id);
-                ctx.Discounts.Remove(deletedDiscount);
                 return ctx.SaveChanges();
             }
             catch

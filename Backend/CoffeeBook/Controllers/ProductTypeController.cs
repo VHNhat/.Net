@@ -31,10 +31,6 @@ namespace CoffeeBook.Controllers
         public JsonResult Get()
         {
             List<ProductType> table = service.FindAll();
-            if (table == null)
-                return new JsonResult("There is no data");
-
-
             return new JsonResult(table);
         }
 
@@ -44,22 +40,22 @@ namespace CoffeeBook.Controllers
         {
             ProductType type = service.GetProductTypeById(id);
             if (type == null) return BadRequest();
-            else return new JsonResult(type);
+            return new JsonResult(type);
         }
 
         [Route("ProductType/create")]
         [HttpPost]
-        public JsonResult Post(ProductType productType)
+        public ActionResult Post(ProductType productType)
         {
             if (ModelState.IsValid)
             {
                 if (service.Post(productType) > 0)
                 {
-                    return new JsonResult("Added one product type successfully.");
+                    return Ok();
                 }
 
             }
-            return new JsonResult("Cannot add new product type.");
+            return BadRequest();
         }
 
         [Route("ProductType/update/{id}")]
@@ -76,12 +72,12 @@ namespace CoffeeBook.Controllers
 
         [Route("ProductType/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             if (service.Delete(id) > 0)
-                return new JsonResult("Deleted product type successfully.");
+                return Ok();
 
-            return new JsonResult("Cannot delete type product.");
+            return BadRequest();
         }
     }
 }

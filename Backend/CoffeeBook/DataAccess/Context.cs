@@ -12,22 +12,6 @@ namespace CoffeeBook.DataAccess
 {
     public class Context : DbContext
     {
-
-        #region  Test new connection method
-        /*private readonly IConfiguration _config;
-        private string connectionString;
-        public Context(IConfiguration config)
-        {
-            _config = config;
-            connectionString = _config.GetConnectionString("CoffeeBook");
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySQL(connectionString);
-        }*/
-        #endregion
         public Context()
         {
         }

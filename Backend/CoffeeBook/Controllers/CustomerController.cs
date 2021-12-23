@@ -3,17 +3,25 @@ using CoffeeBook.DataAccess;
 using CoffeeBook.Dto;
 using CoffeeBook.Models;
 using CoffeeBook.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
+    /*[Route("api/[controller]")]*/
     [ApiController]
     public class CustomerController : ControllerBase
     {
@@ -30,35 +38,30 @@ namespace CoffeeBook.Controllers
             service = new CustomerService(_config, ctx);
         }
 
+
         [Route("customer")]
         [HttpGet]
-        public ActionResult Get()
+        public JsonResult Get()
         {
-            var customers = service.FindAll();
-            if (customers == null || customers.Count == 0)
-                return BadRequest();
-            
+            List<Customer> customers = service.findAll();
             return new JsonResult(customers);
         }
 
         [Route("customer/{id}")]
         [HttpGet]
-        public ActionResult Get(int id)
+        public ActionResult GetById(int id)
         {
-            var customer = service.FindById(id);
-            if (customer == null) 
-                return BadRequest();
-
-            return new JsonResult(customer);
+            Customer list = service.findById(id);
+            if (list == null) return BadRequest();
+            return new JsonResult(list);
         }
 
         [Route("customer/add")]
         [HttpPost]
         public ActionResult Post(Customer customer)
         {
-            var result = service.Add(customer);
-            if (result > 0)
-                return Ok();
+            int res = service.save(customer);
+            if (res > 0) return Ok();
 
             return BadRequest();
         }
@@ -72,7 +75,7 @@ namespace CoffeeBook.Controllers
             if(user == null)
                 return BadRequest();
 
-            var token = GenerateJwtToken(user);
+            var token = generateJwtToken(user);
 
             return new JsonResult(new { Token = token });
         }
@@ -81,36 +84,31 @@ namespace CoffeeBook.Controllers
         [HttpPost]
         public ActionResult Register(SignupDto dto)
         {
-            var result = service.Register(dto);
-            if (result == "1")
-                return Ok();
-
-            return new JsonResult(result);
+            string res = service.Register(dto);
+            if (res == "1") return Ok();
+            else return new JsonResult(res);
         }
 
         [Route("customer/edit/{id}")]
         [HttpPut]
         public ActionResult Put(int id,Customer customer)
         {
-            int res = service.Update(id,customer);
-            if (res > 0) 
-                return Ok();
-            
-            return BadRequest();
+            int res = service.update(id,customer);
+            if (res > 0) return Ok();
+            else return BadRequest();
         }
 
         [Route("customer/delete/{id}")]
         [HttpDelete]
         public ActionResult Delete(int id)
         {
-            var result = service.Delete(id);
-            if (result > 0)
-                return Ok();
-
+            int res = service.deleteById(id);
+            if (res > 0) return Ok();
             return BadRequest();
         }
 
-        private string GenerateJwtToken(Customer customer)
+
+        private string generateJwtToken(Customer customer)
         {
             var claims = new Claim[]
             {

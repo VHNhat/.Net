@@ -32,50 +32,49 @@ namespace CoffeeBook.Controllers
 
         [Route("news")]
         [HttpGet]
-        public JsonResult Get()
+        public ActionResult Get()
         {
-            /*NewsService service = new NewsService(_config);*/
-            DataTable table = service.findAll();
-            if (table.Equals("") || table == null || table.Rows.Count == 0)
-                return new JsonResult("There is no data.");
-
-            return new JsonResult(table);
+            List<News> news = service.findAll();
+            return new JsonResult(news);
         }
 
         [Route("news/{id}")]
         [HttpGet]
-        public ActionResult GetById(int id)
+        public ActionResult Get(int id)
         {
-            News news = service.GetById(id);
-            if (news == null) return BadRequest();
-            else return new JsonResult(news);
+            News news = service.FindById(id);
+            if (news == null)
+                return BadRequest();
+
+            return new JsonResult(news);
         }
 
         [Route("news/add")]
         [HttpPost]
-        public JsonResult Post(News news)
+        public ActionResult Post(News news)
         {
-            DataTable table = service.save(news);
-            
-            return new JsonResult("Added successfully!");
+            int res = service.save(news);
+            if (res > 0) return Ok();
+
+            return BadRequest();
         }
 
         [Route("news/edit/{id}")]
         [HttpPut]
-        public ActionResult Put(int id,News news)
+        public ActionResult Put(int id, News news)
         {
-            int res = service.update(id,news);
+            int res = service.update(id, news);
             if (res > 0) return Ok();
             return BadRequest();
         }
 
         [Route("news/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
-            DataTable table = service.deleteById(id);
-
-            return new JsonResult($"News with id = {id} is deleted successfully!");
+            int res = service.deleteById(id);
+            if (res > 0) return Ok();
+            return BadRequest();
         }
     }
 }

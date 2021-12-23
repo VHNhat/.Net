@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj": {}
+    "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj": {}
   },
   "projects": {
-    "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj": {
+    "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+        "projectUniqueName": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
         "projectName": "CoffeeBook",
-        "projectPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+        "projectPath": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
         "packagesPath": "C:\\Users\\Malik\\.nuget\\packages\\",
-        "outputPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\obj\\",
+        "outputPath": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Malik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,30 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.95.4, )"
+            },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.8.4, )"
+            },
+            "ExcelNumberFormat": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "GemBox.Spreadsheet": {
+              "target": "Package",
+              "version": "[47.0.1345, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.2, )"

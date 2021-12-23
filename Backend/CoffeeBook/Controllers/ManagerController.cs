@@ -29,53 +29,53 @@ namespace CoffeeBook.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            var stores = service.GetAllManagers();
-            return new JsonResult(stores);
+            var managers = service.GetAllManagers();
+            return new JsonResult(managers);
         }
 
         [Route("manager/{id}")]
         [HttpGet]
-        public JsonResult GetById(int id)
+        public ActionResult GetById(int id)
         {
-            var store = service.GetManagerById(id);
-            return new JsonResult(store);
+            var manager = service.GetManagerById(id);
+            if (manager == null) return BadRequest();
+            return new JsonResult(manager);
         }
 
         [Route("manager/create")]
         [HttpPost]
-        public JsonResult Post(Manager manager)
+        public ActionResult Post(Manager manager)
         {
             if (ModelState.IsValid)
             {
                 if (service.Post(manager) > 0)
                 {
-                    return new JsonResult("Added one manager successfully.");
+                    return Ok();
                 }
-
             }
-            return new JsonResult("Cannot add new manager.");
+            return BadRequest();
         }
 
         [Route("manager/update/{id}")]
         [HttpPut]
-        public JsonResult Put(int id, Manager manager)
+        public ActionResult Put(int id, Manager manager)
         {
             if (ModelState.IsValid)
             {
                 if (service.Put(id, manager) > 0)
-                    return new JsonResult("Updated manager successfully.");
+                    return Ok();
             }
-            return new JsonResult("Cannot manager store.");
+            return BadRequest();
         }
 
         [Route("manager/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             if (service.Delete(id) > 0)
-                return new JsonResult("Deleted manager successfully.");
+                return Ok();
 
-            return new JsonResult("Cannot delete manager.");
+            return BadRequest();
         }
     }
 }

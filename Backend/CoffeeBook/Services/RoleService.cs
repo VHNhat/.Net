@@ -23,8 +23,7 @@ namespace CoffeeBook.Services
 
         public List<Role> GetAllRoles()
         {
-            var roles = _context.Roles.ToList();
-            return roles;
+            return _context.Roles.ToList();
         }
 
         public Role GetRoleById(int id)

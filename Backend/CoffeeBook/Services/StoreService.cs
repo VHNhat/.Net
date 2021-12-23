@@ -29,44 +29,71 @@ namespace CoffeeBook.Services
 
         public List<Store> GetAllStores()
         {
-            var stores = _context.Stores.ToList();
-            return stores;
+            return _context.Stores.ToList();
         }
 
         public Store GetStoreById(int id)
         {
-            var store = _context.Stores.Where(w => w.Id == id).FirstOrDefault();
-            return store;
+            try
+            {
+                return _context.Stores.Single(s=>s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public int Post(Store model)
         {
-            _context.Stores.Add(model);
-            var resutl = _context.SaveChanges();
-            return resutl;
+            try
+            {
+                _context.Stores.Add(model);
+                var resutl = _context.SaveChanges();
+                return resutl;
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Put(int id, Store model)
         {
-            var store = _context.Stores.Single(s => s.Id == id);
-            store.StoreName = model.StoreName;
-            store.Description = model.Description;
-            store.Address = model.Address;
-            store.Country = model.Country;
-            store.Phone = model.Phone;
-            store.ManagerId = model.ManagerId;
+            try
+            {
+                var store = _context.Stores.Single(s => s.Id == id);
+                store.StoreName = model.StoreName;
+                store.Description = model.Description;
+                store.Address = model.Address;
+                store.Country = model.Country;
+                store.Phone = model.Phone;
+                store.ManagerId = model.ManagerId;
 
-            var resulut = _context.SaveChanges();
-            return resulut;
+                var res = _context.SaveChanges();
+                return res;
+            }
+            catch
+            {
+                return -1;
+            }
+
         }
 
         public int Delete(int id)
         {
-            var store = _context.Stores.Single(s=>s.Id == id);
-            _context.Stores.Remove(store);
+            try
+            {
+                var store = _context.Stores.Single(s => s.Id == id);
+                _context.Stores.Remove(store);
 
-            var resulut = _context.SaveChanges();
-            return resulut;
+                var resulut = _context.SaveChanges();
+                return resulut;
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

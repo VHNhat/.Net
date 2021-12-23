@@ -47,8 +47,15 @@ namespace CoffeeBook.Services
 
         public int Post(ProductType model)
         {
-            _context.ProductTypes.Add(model);
-            return _context.SaveChanges();
+            try
+            {
+                _context.ProductTypes.Add(model);
+                return _context.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Put(int id, ProductType model)
@@ -60,18 +67,25 @@ namespace CoffeeBook.Services
                 productType.Description = model.Description;
                 productType.Photo = model.Photo;
                 return _context.SaveChanges();
-            } catch
+            }
+            catch
             {
                 return -1;
             }
-            
         }
 
         public int Delete(int id)
         {
-            var productType = _context.ProductTypes.Single(s => s.Id == id);
-            _context.ProductTypes.Remove(productType);
-            return _context.SaveChanges();
+            try
+            {
+                var productType = _context.ProductTypes.Single(s => s.Id == id);
+                _context.ProductTypes.Remove(productType);
+                return _context.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

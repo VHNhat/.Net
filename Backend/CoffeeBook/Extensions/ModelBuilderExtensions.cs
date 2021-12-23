@@ -629,36 +629,42 @@ namespace CoffeeBook.Extensions
                     Id = 1,
                     Name = "Cà phê gói - Uống liền",
                     Description = "Cà phê đóng gói",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_cpg_web.png",
                 },
                 new ProductType()
                 {
                     Id = 2,
                     Name = "Cà phê pha",
                     Description = "Cà phê pha",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_coffee_web.png",
                 },
                 new ProductType()
                 {
                     Id = 3,
                     Name = "Trà Trái Cây - Trà sữa",
                     Description = "Trà Trái Cây - Trà sữa",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_tea_milk_tea_web.png",
                 },
                 new ProductType()
                 {
                     Id = 4,
                     Name = "Đá xay - Choco - Matcha",
                     Description = "Đá xay",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_frappu_web.png",
                 },
                 new ProductType()
                 {
                     Id = 5,
                     Name = "Bánh - snack",
                     Description = "Bánh",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_snack_web.png",
                 },
                 new ProductType()
                 {
                     Id = 6,
                     Name = "Bộ sưu tập - quà tặng",
                     Description = "Đồ lưu niệm",
+                    Photo = "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_merchandise_web.png",
                 }
                 );
             #endregion

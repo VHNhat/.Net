@@ -26,7 +26,7 @@ namespace CoffeeBook.Controllers
 
         [Route("stores")]
         [HttpGet]
-        public JsonResult Get()
+        public ActionResult Get()
         {
             var stores = service.GetAllStores();
             return new JsonResult(stores);
@@ -34,47 +34,47 @@ namespace CoffeeBook.Controllers
 
         [Route("store/{id}")]
         [HttpGet]
-        public JsonResult GetById(int id)
+        public ActionResult GetById(int id)
         {
             var store = service.GetStoreById(id);
+            if (store == null) return BadRequest();
             return new JsonResult(store);
         }
 
         [Route("store/create")]
         [HttpPost]
-        public JsonResult Post(Store store)
+        public ActionResult Post(Store store)
         {
             if (ModelState.IsValid)
             {
                 if (service.Post(store) > 0)
                 {
-                    return new JsonResult("Added one store successfully.");
+                    return Ok();
                 }
-
             }
-            return new JsonResult("Cannot add new store.");
+            return BadRequest();
         }
 
         [Route("store/update/{id}")]
         [HttpPut]
-        public JsonResult Put(int id, Store store)
+        public ActionResult Put(int id, Store store)
         {
             if (ModelState.IsValid)
             {
                 if (service.Put(id, store) > 0)
-                    return new JsonResult("Updated store successfully.");
+                    return Ok();
             }
-            return new JsonResult("Cannot update store.");
+            return BadRequest();
         }
 
         [Route("store/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             if (service.Delete(id) > 0)
-                return new JsonResult("Deleted store successfully.");
+                return Ok();
 
-            return new JsonResult("Cannot delete store.");
+            return BadRequest();
         }
     }
 }

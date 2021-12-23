@@ -27,78 +27,28 @@ namespace CoffeeBook.Services
             ctx = context;
         }
 
-        public DataTable findAll()
+        public List<News> findAll()
         {
-            DataTable table = new DataTable();
-            string query = "select * from News";
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
+            return ctx.News.ToList();
         }
 
-        public DataTable save(News news)
-        {
-            DataTable table = new DataTable();
-            string query = @$"insert into News(title, content, thumbnail)
-                             values('{news.Title}',
-                             '{news.Content}',
-                             '{news.Thumbnail}')";
-                             
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
-        }
-
-        public DataTable deleteById(int id)
-        {
-            DataTable table = new DataTable();
-            string query = @$"delete from News
-                              where id = {id}";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
-        }
-
-        public int update(int id,News news)
+        public News FindById(int id)
         {
             try
             {
-                News n = ctx.News.Single(s => s.Id == id);
-                n = news;
+                return ctx.News.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public int save(News news)
+        {
+            try
+            {
+                ctx.News.Add(news);
                 return ctx.SaveChanges();
             }
             catch
@@ -106,10 +56,35 @@ namespace CoffeeBook.Services
                 return -1;
             }
         }
-        public News GetById(int id)
+
+        public int deleteById(int id)
         {
-            News n = ctx.News.Single(s => s.Id == id);
-            return n;
+            try
+            {
+                var deletedNews = ctx.News.Single(s => s.Id == id);
+                ctx.News.Remove(deletedNews);
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int update(int id, News news)
+        {
+            try
+            {
+                News n = ctx.News.Single(s => s.Id == id);
+                n.Title = news.Title;
+                n.Thumbnail = news.Thumbnail;
+                n.Content = news.Content;
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

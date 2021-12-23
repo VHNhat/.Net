@@ -31,58 +31,53 @@ namespace CoffeeBook.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            List<Product> table = service.FindAll();
-            if (table == null)
-                return new JsonResult("There is no data");
+            List<Product> products = service.FindAll();
+            return new JsonResult(products);
+        }
 
-
-            return new JsonResult(table);
+        [Route("product/{id}")]
+        [HttpGet]
+        public ActionResult GetProductById(int id)
+        {
+            Product product = service.GetProductById(id);
+            if (product == null) return BadRequest();
+            return new JsonResult(product);
         }
 
         [Route("product/create")]
         [HttpPost]
-        public JsonResult Post(Product product)
+        public ActionResult Post(Product product)
         {
             if (ModelState.IsValid)
             {
                 if (service.Post(product) > 0)
                 {
-                    return new JsonResult("Added one product successfully.");
+                    return Ok();
                 }
-
             }
-            return new JsonResult("Cannot add new product.");
+            return BadRequest();
         }
 
         [Route("product/update/{id}")]
         [HttpPut]
-        public JsonResult Put(int id, Product product)
+        public ActionResult Put(int id, Product product)
         {
             if (ModelState.IsValid)
             {
                 if (service.Put(id, product) > 0)
-                    return new JsonResult("Updated product successfully.");
+                    return Ok();
             }
-            return new JsonResult("Cannot update product.");
+            return BadRequest();
         }
 
-        [Route("product/{id}")]
-        [HttpGet]
-        public JsonResult GetProductById(int id)
-        {
-
-            Product product = service.GetProductById(id);
-            return new JsonResult(product);
-
-        }
         [Route("product/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             if (service.Delete(id) > 0)
-                return new JsonResult("Deleted product successfully.");
+                return Ok();
 
-            return new JsonResult("Cannot delete product.");
+            return BadRequest();
         }
     }
 }

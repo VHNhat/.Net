@@ -40,34 +40,62 @@ namespace CoffeeBook.Services
 
         public Product GetProductById(int id)
         {
-            return _context.Products.Single(s => s.Id == id);
+            try
+            {
+                return _context.Products.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public int Post(Product model)
         {
-            _context.Products.Add(model);
-            return _context.SaveChanges();
+            try
+            {
+                _context.Products.Add(model);
+                return _context.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Put(int id, Product model)
         {
-            var product = _context.Products.Single(s => s.Id == id);
+            try
+            {
+                var product = _context.Products.Single(s => s.Id == id);
 
-            product.CreatedDate = model.CreatedDate;
-            product.Description = model.Description; product.Name = model.Name;
-            product.Photo = model.Photo;
-            product.Price = model.Price;
-            product.Size = model.Size;
-            product.ProductTypeId = model.ProductTypeId;
-            product.SupplierId = model.SupplierId;
+                product.CreatedDate = model.CreatedDate;
+                product.Description = model.Description; product.Name = model.Name;
+                product.Photo = model.Photo;
+                product.Price = model.Price;
+                product.Size = model.Size;
+                product.ProductTypeId = model.ProductTypeId;
+                product.SupplierId = model.SupplierId;
 
-            return _context.SaveChanges() ;
+                return _context.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
         public int Delete(int id)
         {
-            var product = _context.Products.Single(s => s.Id == id);
-            _context.Products.Remove(product);
-            return _context.SaveChanges();
+            try
+            {
+                var product = _context.Products.Single(s => s.Id == id);
+                _context.Products.Remove(product);
+                return _context.SaveChanges();
+            }
+            catch
+            {
+                return - 1;
+            }
         }
     }
 }

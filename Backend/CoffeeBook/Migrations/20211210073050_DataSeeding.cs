@@ -100,12 +100,12 @@ namespace CoffeeBook.Migrations
                 columns: new[] { "Id", "Description", "Name", "Photo" },
                 values: new object[,]
                 {
-                    { 1, "Cà phê đóng gói", "Cà phê gói - Uống liền", null },
-                    { 2, "Cà phê pha", "Cà phê pha", null },
-                    { 3, "Trà Trái Cây - Trà sữa", "Trà Trái Cây - Trà sữa", null },
-                    { 4, "Đá xay", "Đá xay - Choco - Matcha", null },
-                    { 5, "Bánh", "Bánh - snack", null },
-                    { 6, "Đồ lưu niệm", "Bộ sưu tập - quà tặng", null }
+                    { 1, "Cà phê đóng gói", "Cà phê gói - Uống liền", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_cpg_web.png" },
+                    { 2, "Cà phê pha", "Cà phê pha", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_coffee_web.png" },
+                    { 3, "Trà Trái Cây - Trà sữa", "Trà Trái Cây - Trà sữa", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_tea_milk_tea_web.png" },
+                    { 4, "Đá xay", "Đá xay - Choco - Matcha", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_frappu_web.png" },
+                    { 5, "Bánh", "Bánh - snack", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_snack_web.png" },
+                    { 6, "Đồ lưu niệm", "Bộ sưu tập - quà tặng", "https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_merchandise_web.png" }
                 });
 
             migrationBuilder.InsertData(

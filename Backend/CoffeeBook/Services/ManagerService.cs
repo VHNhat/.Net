@@ -33,40 +33,68 @@ namespace CoffeeBook.Services
 
         public Manager GetManagerById(int id)
         {
-            return _context.Managers.Single(s => s.Id == id);
+            try
+            {
+                return _context.Managers.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public int Post(Manager model)
         {
-            _context.Managers.Add(model);
-            var result = _context.SaveChanges();
-            return result;
+            try
+            {
+                _context.Managers.Add(model);
+                var result = _context.SaveChanges();
+                return result;
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Put(int id, Manager model)
         {
-            var manager = _context.Managers.Single(s => s.Id == id);
-            manager.Name = model.Name;
-            manager.Age = model.Age;
-            manager.Gender = model.Gender;
-            manager.Address = model.Address;
-            manager.City = model.City;
-            manager.Country = model.Country;
-            manager.Email = model.Email;
-            manager.Phone = model.Phone;
-            manager.Salary = model.Salary;
-            manager.Status = model.Status;
+            try
+            {
+                var manager = _context.Managers.Single(s => s.Id == id);
+                manager.Name = model.Name;
+                manager.Age = model.Age;
+                manager.Gender = model.Gender;
+                manager.Address = model.Address;
+                manager.City = model.City;
+                manager.Country = model.Country;
+                manager.Email = model.Email;
+                manager.Phone = model.Phone;
+                manager.Salary = model.Salary;
+                manager.Status = model.Status;
 
-            var result = _context.SaveChanges();
-            return result;
+                var result = _context.SaveChanges();
+                return result;
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Delete(int id)
         {
-            var manager = _context.Managers.Single(s => s.Id == id);
-            _context.Managers.Remove(manager);
-            var result = _context.SaveChanges();
-            return result;
+            try
+            {
+                var manager = _context.Managers.Single(s => s.Id == id);
+                _context.Managers.Remove(manager);
+                var result = _context.SaveChanges();
+                return result;
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

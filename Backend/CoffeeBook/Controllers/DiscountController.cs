@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
+    /*[Route("api/[controller]")]*/
     [ApiController]
     public class DiscountController : ControllerBase
     {
@@ -23,7 +24,7 @@ namespace CoffeeBook.Controllers
         {
             _config = config;
             context = ctx;
-            service = new DiscountService(_config);
+            service = new DiscountService(_config, ctx);
         }
 
 
@@ -32,9 +33,6 @@ namespace CoffeeBook.Controllers
         public ActionResult Get()
         {
             var discounts = service.FindAll();
-            if (discounts == null)
-                return BadRequest();
-
             return new JsonResult(discounts);
         }
 
@@ -53,14 +51,14 @@ namespace CoffeeBook.Controllers
         [HttpPost]
         public ActionResult Post(Discount discount)
         {
-            var result = service.Add(discount);
-            if(result > 0)
+            var result = service.save(discount);
+            if (result > 0)
                 return Ok();
 
             return BadRequest();
         }
 
-        [Route("discount/edit/{id}")]
+        [Route("discount/edit")]
         [HttpPut]
         public ActionResult Put(int id, Discount discount)
         {
@@ -76,7 +74,7 @@ namespace CoffeeBook.Controllers
         [HttpDelete]
         public ActionResult Delete(int id)
         {
-            var result = service.Delete(id);
+            var result = service.DeleteById(id);
 
             if (result > 0)
                 return Ok();

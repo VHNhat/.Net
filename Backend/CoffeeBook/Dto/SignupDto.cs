@@ -20,11 +20,11 @@ namespace CoffeeBook.Dto
         [Required]
         private string confirmPassword;
         [Required]
+        private string name;
+        [Required]
         [EmailAddress]
         private string email;
-        [Required]
-        [StringLength(100)]
-        private string name;
+        /*private int gender;*/
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
@@ -32,5 +32,6 @@ namespace CoffeeBook.Dto
         public string ConfirmPassword { get => confirmPassword; set => confirmPassword = value; }
         public string Email { get => email; set => email = value; }
         public string Name { get => name; set => name = value; }
+        /*public int Gender { get => gender; set => gender = value; }*/
     }
 }

@@ -27,55 +27,12 @@ namespace CoffeeBook.Services
             ctx = context;
         }
 
-        public DataTable findAll()
+        public List<Supplier> findAll()
         {
-            DataTable table = new DataTable();
-            string query = "select * from Supplier";
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
+            return ctx.Suppliers.ToList();
         }
 
-        public DataTable save(Supplier supplier)
-        {
-            DataTable table = new DataTable();
-            string query = @$"insert into Supplier(name, description, address, city, country, phone, url)
-                             values('{supplier.Name}',
-                             '{supplier.Description}',
-                             '{supplier.Address}',
-                             '{supplier.City}',
-                             '{supplier.Country}',
-                             '{supplier.Phone}',
-                             '{supplier.Url}')";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return table;
-        }
-
-        public Supplier GetById(int id)
+        public Supplier findById(int id)
         {
             try
             {
@@ -87,26 +44,31 @@ namespace CoffeeBook.Services
             }
         }
 
-        public DataTable deleteById(int id)
+        public int save(Supplier supplier)
         {
-            DataTable table = new DataTable();
-            string query = @$"delete from Supplier
-                              where id = {id}";
-
-            MySqlDataReader myReader;
-            using (MySqlConnection myCon = new MySqlConnection(sqlDataSource))
+            try
             {
-                myCon.Open();
-                using (MySqlCommand myCommand = new MySqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
+                ctx.Suppliers.Add(supplier);
+                return ctx.SaveChanges();
             }
-            return table;
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int deleteById(int id)
+        {
+            try
+            {
+                var deletedSupplier = ctx.Suppliers.Single(s => s.Id == id);
+                ctx.Suppliers.Remove(deletedSupplier);
+                return ctx.SaveChanges();
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int Update(int id, Supplier supplier)

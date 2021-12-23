@@ -36,7 +36,14 @@ namespace CoffeeBook.Services
 
         public Employee GetEmployeeById(int id)
         {
-            return _context.Employees.Single(s => s.Id == id);
+            try
+            {
+                return _context.Employees.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public int Post(Employee model)
@@ -57,25 +64,39 @@ namespace CoffeeBook.Services
 
         public int Put(int id, Employee model)
         {
-            var emp = _context.Employees.Single(s => s.Id == id);
-            emp.Name = model.Name;
-            emp.Age = model.Age;
-            emp.Gender = model.Gender;
-            emp.Address = model.Address;
-            emp.Email = model.Email;
-            emp.Phone = model.Phone;
-            emp.Salary = model.Salary;
-            emp.StoreId = model.StoreId;
+            try
+            {
+                var emp = _context.Employees.Single(s => s.Id == id);
+                emp.Name = model.Name;
+                emp.Age = model.Age;
+                emp.Gender = model.Gender;
+                emp.Address = model.Address;
+                emp.Email = model.Email;
+                emp.Phone = model.Phone;
+                emp.Salary = model.Salary;
+                emp.StoreId = model.StoreId;
 
-            var result = _context.SaveChanges();
-            return result;
+                var result = _context.SaveChanges();
+                return result;
+            }
+            catch
+            {
+                return -1;
+            }
         }
         public int Delete(int id)
         {
-            var emp = _context.Employees.Single(s => s.Id == id);
-            _context.Employees.Remove(emp);
-            var result = _context.SaveChanges();
-            return result;
+            try
+            {
+                var emp = _context.Employees.Single(s => s.Id == id);
+                _context.Employees.Remove(emp);
+                var result = _context.SaveChanges();
+                return result;
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }

@@ -32,30 +32,26 @@ namespace CoffeeBook.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            /*NewsService service = new NewsService(_config);*/
-            DataTable table = service.findAll();
-            if (table.Equals("") || table == null || table.Rows.Count == 0)
-                return new JsonResult("There is no data.");
-
-            return new JsonResult(table);
+            List<Supplier> suppliers = service.findAll();
+            return new JsonResult(suppliers);
         }
 
         [Route("supplier/{id}")]
         [HttpGet]
         public ActionResult GetById(int id)
         {
-            Supplier sup = service.GetById(id);
+            Supplier sup = service.findById(id);
             if (sup == null) return BadRequest();
             else return new JsonResult(sup);
         }
 
         [Route("supplier/add")]
         [HttpPost]
-        public JsonResult Post(Supplier supplier)
+        public ActionResult Post(Supplier supplier)
         {
-            DataTable table = service.save(supplier);
-
-            return new JsonResult("Added successfully!");
+            int res = service.save(supplier);
+            if (res > 0) return Ok();
+            return BadRequest();
         }
 
         [Route("supplier/edit/{id}")]
@@ -69,11 +65,11 @@ namespace CoffeeBook.Controllers
 
         [Route("supplier/delete/{id}")]
         [HttpDelete]
-        public JsonResult Delete(int id)
+        public ActionResult Delete(int id)
         {
-            DataTable table = service.deleteById(id);
-
-            return new JsonResult($"Supplier with id = {id} is deleted successfully!");
+            int res = service.deleteById(id);
+            if (res > 0) return Ok();
+            return BadRequest();
         }
     }
 }

@@ -7,8 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace CoffeeBook.Services
 {
@@ -35,7 +35,7 @@ namespace CoffeeBook.Services
             ctx = context;
         }
 
-        public List<Customer> FindAll()
+        public List<Customer> findAll()
         {
             try
             {
@@ -47,19 +47,7 @@ namespace CoffeeBook.Services
             }
         }
 
-        public Customer FindById(int id)
-        {
-            try
-            {
-                return ctx.Customers.Single(s => s.Id == id);
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        public int Add(Customer customer)
+        public int save(Customer customer)
         {
             try
             {
@@ -69,6 +57,18 @@ namespace CoffeeBook.Services
             catch
             {
                 return -1;
+            }
+        }
+
+        public Customer findById(int id)
+        {
+            try
+            {
+                return ctx.Customers.Single(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
             }
         }
 
@@ -94,7 +94,6 @@ namespace CoffeeBook.Services
                         flag[1] = true;
                         errorList.Add("Email");
                     }
-
                 }
                 if (cust.Phone == dto.Phone)
                 {
@@ -105,11 +104,9 @@ namespace CoffeeBook.Services
                     }
                 }
             }
-            if(errorList.Count != 0)
-                return JsonSerializer.Serialize(errorList);
+            if (errorList.Count != 0) return JsonSerializer.Serialize(errorList);
             try
             {
-                
                 Customer customer = new Customer();
                 customer.Username = dto.Username;
                 customer.Password = dto.Password;
@@ -118,45 +115,33 @@ namespace CoffeeBook.Services
                 customer.Name = dto.Name;
 
                 ctx.Customers.Add(customer);
-                return ctx.SaveChanges().ToString();
+                var res = ctx.SaveChanges();
+                if (res > 0) return "1";
+                return "";
             }
-            catch
+            catch 
             {
                 return "0";
             }
         }
 
         public Customer Login(SigninDto dto)
-        {
-            try
+        { try
             {
-                return ctx.Customers.Single(s => s.Username == dto.Username &&
-                                                 s.Password == dto.Password);
+            var query = from c in ctx.Customers
+                        where c.Username == dto.Username
+                        where c.Password == dto.Password
+                        select c;
+
+            return query.FirstOrDefault();
             }
             catch
             {
                 return null;
             }
         }
-        public int Update(int id, Customer customer)
-        {
-            try
-            {
-                Customer cus = ctx.Customers.Single(s => s.Id == id);
-                cus.Name = customer.Name;
-                cus.Email = customer.Email;
-                cus.Phone = customer.Phone;
-                cus.Address = customer.Address;
-                cus.Gender = customer.Gender;
-                return ctx.SaveChanges();
-            }
-            catch
-            {
-                return -1;
-            }
-        }
 
-        public int Delete(int id)
+        public int deleteById(int id)
         {
             try
             {
@@ -168,6 +153,28 @@ namespace CoffeeBook.Services
             {
                 return -1;
             }
+        }
+
+        public int update(int id, Customer customer)
+        {
+            try
+            {
+                Customer cus = ctx.Customers.Single(s => s.Id == id);
+                cus.Name = customer.Name;
+                cus.Email = customer.Email;
+                cus.Phone = customer.Phone;
+                cus.Address = customer.Address;
+                cus.Gender = customer.Gender;
+                cus.Avata = customer.Avata;
+                return ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return -1;
+            }
+
+
         }
     }
 }

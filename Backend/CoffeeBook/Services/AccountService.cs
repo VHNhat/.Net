@@ -33,25 +33,19 @@ namespace CoffeeBook.Services
 
         public Account Login(AdminLoginDto dto)
         {
-            try
-            {
-                return ctx.Accounts.Single(s => s.Username == dto.Username &&
-                                                s.Password == dto.Password);
-            }
-            catch { return null; }
+            var query = from c in ctx.Accounts
+                        where c.Username == dto.Username
+                        where c.Password == dto.Password
+                        select c;
+
+            return query.FirstOrDefault();
         }
 
         public List<Account> FindAll()
         {
-            try
-            {
-                return ctx.Accounts.ToList<Account>();
-            }
-            catch
-            {
-                return null;
-            }
+            return ctx.Accounts.ToList<Account>();
         }
+
         public Account FindById(int id)
         {
             try
@@ -63,18 +57,17 @@ namespace CoffeeBook.Services
                 return null;
             }
         }
+
         public int Add(Account account)
         {
             try
             {
                 ctx.Accounts.Add(account);
                 return ctx.SaveChanges();
-            }
-            catch
+            } catch
             {
                 return -1;
             }
-
         }
 
         public int Update(int id, Account account)
@@ -88,9 +81,8 @@ namespace CoffeeBook.Services
                 acc.RoleId = account.RoleId;
 
                 return ctx.SaveChanges();
-
-            }
-            catch
+                
+            } catch
             {
                 return -1;
             }
@@ -103,8 +95,7 @@ namespace CoffeeBook.Services
                 var acc = ctx.Accounts.Single(s => s.Id == id);
                 ctx.Accounts.Remove(acc);
                 return ctx.SaveChanges();
-            }
-            catch
+            } catch
             {
                 return -1;
             }
