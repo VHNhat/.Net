@@ -33,6 +33,7 @@ namespace CoffeeBook.Services
 
         public Account Login(AdminLoginDto dto)
         {
+            dto.Username = dto.Username.Trim();
             var query = from c in ctx.Accounts
                         where c.Username == dto.Username
                         select c;
