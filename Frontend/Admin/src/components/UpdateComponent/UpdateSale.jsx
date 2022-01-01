@@ -3,7 +3,7 @@ import Fade from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
 import { useSnackbar } from "notistack";
 import React, { useContext, useEffect, useState } from "react";
-import { getSaleId, updateEmployee } from "../../app/ApiResult";
+import { getListStore, getSaleId, updateEmployee } from "../../app/ApiResult";
 import { context } from "../../app/Context";
 import Sales from "./../Sales/index";
 import "./stylesUpdateComponent/UpdateSale.scss";
@@ -21,36 +21,43 @@ function UpdateSale(props) {
     Gender: "",
     Address: "",
     StoreId: "",
+    Salary: "",
   });
+  const [listStoreId, setListStoreId] = useState([]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    const res = await getListStore("/stores");
+    setListStoreId(res);
+  }, []);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     const result = await getSaleId(id, "/employee");
     if (result) {
       setValueData({
         ...valueData,
-        Id: result.Id,
-        Name: result.Name,
-        Email: result.Email,
-        Phone: result.Phone,
-        Age: result.Age,
-        Gender: result.Gender,
-        Address: result.Address,
-        StoreId: result.StoreId,
+        Id: result?.Id,
+        Name: result?.Name,
+        Email: result?.Email,
+        Phone: result?.Phone,
+        Age: result?.Age,
+        Gender: result?.Gender,
+        Address: result?.Address,
+        StoreId: result?.StoreId || listStoreId[0]?.Id,
+        Salary: result?.Salary,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  }, [id, listStoreId]);
   function Prev() {
     setBodyAdmin(<Sales />);
     setFillerAdmin("SALES");
   }
   const HandleUpload = async () => {
-    console.log(valueData);
     const res = await updateEmployee(valueData);
     if (res.success && res.message === "Yes") {
-      enqueueSnackbar("Đa xac nhan", { variant: "success" });
+      enqueueSnackbar("Đã xác nhận", { variant: "success" });
     } else {
-      enqueueSnackbar("Loi ", { variant: "warning" });
+      enqueueSnackbar("Có lỗi xảy ra xin hãy thử lại!", { variant: "warning" });
     }
   };
   const handleChange = (event) => {
@@ -82,7 +89,7 @@ function UpdateSale(props) {
                 name="Name"
                 color="warning"
                 value={valueData?.Name}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
               />
               <label htmlFor="floatingInput">Họ và Tên</label>
             </div>
@@ -93,7 +100,7 @@ function UpdateSale(props) {
                 name="Email"
                 color="warning"
                 value={valueData?.Email}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
               />
               <label htmlFor="floatingInput">Email</label>
             </div>
@@ -104,7 +111,7 @@ function UpdateSale(props) {
                 name="Phone"
                 color="warning"
                 value={valueData?.Phone}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
               />
               <label htmlFor="floatingInput">Số điện thoại</label>
             </div>
@@ -115,7 +122,7 @@ function UpdateSale(props) {
                 name="Age"
                 color="warning"
                 value={valueData?.Age}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
               />
               <label htmlFor="floatingInput">Tuổi</label>
             </div>
@@ -125,7 +132,7 @@ function UpdateSale(props) {
                 name="Gender"
                 color="warning"
                 value={valueData?.Gender}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
               >
                 {valueData?.Gender ? (
                   <>
@@ -146,23 +153,40 @@ function UpdateSale(props) {
               <input
                 type="text"
                 className="form-control "
-                name="Address"
+                name="Salary"
                 color="warning"
-                value={valueData?.Address}
-                onChange={handleChange}
+                value={valueData?.Salary}
+                onChange={(e) => handleChange(e)}
               />
-              <label htmlFor="floatingInput">Địa chỉ</label>
+              <label htmlFor="floatingInput">Lương</label>
             </div>
             <div className="form-floating mb-3 inputData">
               <input
                 type="text"
                 className="form-control "
+                name="Address"
+                color="warning"
+                value={valueData?.Address}
+                onChange={(e) => handleChange(e)}
+              />
+              <label htmlFor="floatingInput">Địa chỉ</label>
+            </div>
+            <div className="form-floating mb-3 inputData">
+              <select
+                type="text"
+                className="form-control "
                 name="StoreId"
                 color="warning"
                 value={valueData?.StoreId}
-                onChange={handleChange}
-              />
-              <label htmlFor="floatingInput">StoreId</label>
+                onChange={(e) => handleChange(e)}
+              >
+                {listStoreId?.map((item, index) => (
+                  <option key={index} value={item?.Id}>
+                    {item.StoreName}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="floatingInput">Cửa hàng trực thuộc</label>
             </div>
             <div className="inputData">
               <button

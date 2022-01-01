@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -51,36 +52,23 @@ namespace CoffeeBook.Controllers
         [HttpPost]
         public ActionResult Post(Manager manager)
         {
-            if (ModelState.IsValid)
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
             {
-                if (service.Post(manager) > 0)
+                var Role = getCurrentRole(jwt);
+                if (Role == "1")
                 {
-                    return Ok();
+                    if (ModelState.IsValid)
+                    {
+                        if (service.Post(manager) > 0)
+                        {
+                            return Ok();
+                        }
+                    }
+                    return BadRequest();
                 }
             }
-            return BadRequest();
-        }
-
-        [Route("manager/update/{id}")]
-        [HttpPut]
-        public ActionResult Put(int id, Manager manager)
-        {
-            if (ModelState.IsValid)
-            {
-                if (service.Put(id, manager) > 0)
-                    return Ok();
-            }
-            return BadRequest();
-        }
-
-        [Route("manager/delete/{id}")]
-        [HttpDelete]
-        public ActionResult Delete(int id)
-        {
-            if (service.Delete(id) > 0)
-                return Ok();
-
-            return BadRequest();
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
         }
 
         [Route("managers/export")]
@@ -204,7 +192,7 @@ namespace CoffeeBook.Controllers
                 sheet.Cells["K6:K6"].Style.Fill.PatternType = ExcelFillStyle.Solid;
                 sheet.Cells["K6:K6"].Style.Fill.BackgroundColor.SetColor(0, 91, 155, 213);
                 sheet.Column(12).Width = 20;
-                sheet.Cells["L6:L6"].Value = "Quản lýc cửa hàng";
+                sheet.Cells["L6:L6"].Value = "Quản lý cửa hàng";
                 sheet.Cells["L6:L6"].Style.Font.Bold = true;
                 sheet.Cells["L6:L6"].Style.Fill.PatternType = ExcelFillStyle.Solid;
                 sheet.Cells["L6:L6"].Style.Fill.BackgroundColor.SetColor(0, 91, 155, 213);
@@ -310,6 +298,55 @@ namespace CoffeeBook.Controllers
 
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", tenfile);
 
+        }
+
+        [Route("manager/update/{id}")]
+        [HttpPut]
+        public ActionResult Put(int id, Manager manager)
+        {
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
+            {
+                var Role = getCurrentRole(jwt);
+                if (Role == "1")
+                {
+                    if (ModelState.IsValid)
+                    {
+                        if (service.Put(id, manager) > 0)
+                            return Ok();
+                    }
+                    return BadRequest();
+                }
+            }
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
+        }
+
+        [Route("manager/delete/{id}")]
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
+            {
+                var Role = getCurrentRole(jwt);
+                if (Role == "1")
+                {
+                    if (service.Delete(id) > 0)
+                        return Ok();
+
+                    return BadRequest();
+                }
+            }
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
+        }
+
+        private string getCurrentRole(string jwt)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(jwt);
+            var tokenS = jsonToken as JwtSecurityToken;
+            var role = tokenS.Claims.First(claim => claim.Type == "RoleId").Value;
+            return role;
         }
     }
 }

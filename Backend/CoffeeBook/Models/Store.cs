@@ -16,6 +16,9 @@ namespace CoffeeBook.Models
         private string address;
         private string country;
         private string phone;
+        private string photo;
+        private string linkGG;
+        private string district;
 
         private int? managerId;
         private Manager manager;
@@ -28,8 +31,12 @@ namespace CoffeeBook.Models
         public string Address { get => address; set => address = value; }
         public string Country { get => country; set => country = value; }
         public string Phone { get => phone; set => phone = value; }
-        public int? ManagerId { get => managerId; set => managerId = value; }
+
         public Manager Manager { get => manager; set => manager = value; }
         public ICollection<Employee> Employees { get => employees; set => employees = value; }
+        public string Photo { get => photo; set => photo = value; }
+        public string LinkGG { get => linkGG; set => linkGG = value; }
+        public string District { get => district; set => district = value; }
+        public int? ManagerId { get => managerId; set => managerId = value; }
     }
 }

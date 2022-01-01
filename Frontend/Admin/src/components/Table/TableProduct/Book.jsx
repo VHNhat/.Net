@@ -1,15 +1,16 @@
-import Fade from '@mui/material/Grow';
-import Pagination from '@mui/material/Pagination';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { useSnackbar } from 'notistack';
-import PropTypes from 'prop-types';
-import React, { useContext, useState } from 'react';
-import { DeleteId } from '../../../app/ApiResult';
-import { context } from '../../../app/Context';
-import ProDetails from '../../ProDetails/index';
-import '../stylesTable.scss';
-import UpdateBook from './../../UpdateComponent/UpdateBook';
+import { Tooltip, Zoom } from "@mui/material";
+import Fade from "@mui/material/Grow";
+import Pagination from "@mui/material/Pagination";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { useSnackbar } from "notistack";
+import PropTypes from "prop-types";
+import React, { useContext, useState } from "react";
+import { DeleteId } from "../../../app/ApiResult";
+import { context } from "../../../app/Context";
+import ProDetails from "../../ProDetails/index";
+import "../stylesTable.scss";
+import UpdateBook from "./../../UpdateComponent/UpdateBook";
 TableBooks.propTypes = {
   List: PropTypes.array,
 };
@@ -18,18 +19,18 @@ TableBooks.defaultProps = {
 };
 export default function TableBooks(props) {
   const Context = useContext(context);
-  const { List, paginate, setPaginate,setFlag} = props;
+  const { List, paginate, setPaginate, setFlag } = props;
   const { enqueueSnackbar } = useSnackbar();
-  const { setBodyAdmin} = Context;
+  const { setBodyAdmin } = Context;
   const [open, setOpen] = useState(false);
   const [details, setDetails] = useState({});
   const ListTitleHead = [
-    { Name: 'Mã số' },
-    { Name: 'Tiêu đề' },
-    { Name: 'Giá' },
-    { Name: 'Xóa' },
-    { Name: 'Cập nhật' },
-    { Name: 'Chi tiết' },
+    { Name: "Mã số" },
+    { Name: "Tiêu đề" },
+    { Name: "Giá" },
+    { Name: "Xóa" },
+    { Name: "Cập nhật" },
+    { Name: "Chi tiết" },
   ];
 
   function handleDetaits(params) {
@@ -38,46 +39,47 @@ export default function TableBooks(props) {
   }
 
   const HandleDelete = async (id) => {
-    if (window.confirm('Bạn đã chắc chắn muốn xóa?')) {
-      const response = await DeleteId(id,'/product/delete')
-        if (response.status === 200) {
-          setFlag(true)
-          enqueueSnackbar('Xóa thành công', { variant: 'success' });
-        } else {
-          enqueueSnackbar('Xóa thất bại', { variant: 'warning' });
-        }
+    if (window.confirm("Bạn đã chắc chắn muốn xóa?")) {
+      const response = await DeleteId(id, "/product/delete");
+      if (response.status === 200) {
+        setFlag(true);
+        enqueueSnackbar("Xóa thành công", { variant: "success" });
+      } else {
+        enqueueSnackbar("Xóa thất bại", { variant: "warning" });
+      }
     }
   };
   function changePage(page) {
-    setFlag(true)
+    setFlag(true);
     setPaginate({
       ...paginate,
       page: page,
     });
   }
   function HandelUpdate(id) {
-        setBodyAdmin(<UpdateBook id={id} />);
+    setBodyAdmin(<UpdateBook id={id} />);
   }
   return (
     <>
-      {' '}
-      <Stack className='m-auto' spacing={2}>
+      {" "}
+      <Stack className="m-auto" spacing={2}>
         <Pagination
-          color='primary'
+          color="primary"
           count={paginate?.count}
           onChange={(e, value) => changePage(value)}
         />
       </Stack>
-      <Fade in={true} timeout={400} className='body_page'>
+      <Fade in={true} timeout={400} className="body_page">
         <Paper>
           <div>
-            <table className='itemTable'>
-              <thead className='headerTable'>
+            <table className="itemTable">
+              <thead className="headerTable">
                 <tr>
                   <th>STT</th>
-                  {ListTitleHead?.map((item, index) => (
-                    <th key={index}>{item?.Name}</th>
-                  ))}
+                  {ListTitleHead?.map(
+                    (item, index) =>
+                      item?.Name && <th key={index}>{item?.Name}</th>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -86,36 +88,47 @@ export default function TableBooks(props) {
                     <td>{index + 1}</td>
                     <td>{item?.Id}</td>
                     <td>
-                      <p className='text_over'>
-                        {item?.Name}
-                      </p>
+                      <Tooltip
+                        TransitionComponent={Zoom}
+                        title={item?.Name}
+                        placement="right-start"
+                        arrow
+                      >
+                        <p className="text_over">{item?.Name}</p>
+                      </Tooltip>
                     </td>
 
-                    <td> {(item?.Price*1).toLocaleString(undefined, {
-                    minimumFractionDigits: 0,
-                  })} đ</td>
+                    <td>
+                      {" "}
+                      {(item?.Price * 1).toLocaleString(undefined, {
+                        minimumFractionDigits: 0,
+                      })}{" "}
+                      đ
+                    </td>
                     <td>
                       <button
-                        type='button'
-                        className='btn btn-outline-danger'
+                        type="button"
+                        className="btn btn-outline-danger"
                         data-set={item?.Id}
-                        onClick={() => HandleDelete(item?.Id)}>
+                        onClick={() => HandleDelete(item?.Id)}
+                      >
                         Xóa
                       </button>
                     </td>
                     <td>
                       <button
-                        type='button'
-                        className='btn btn-outline-success'
+                        type="button"
+                        className="btn btn-outline-success"
                         onClick={() => HandelUpdate(item?.Id)}
-                        data-set={item?.Id}>
+                        data-set={item?.Id}
+                      >
                         Cập nhật
                       </button>
                     </td>
                     <td>
                       <button
-                        type='button'
-                        className='btn btn-outline-warning'
+                        type="button"
+                        className="btn btn-outline-warning"
                         data-set={item?.Id}
                         onClick={() =>
                           handleDetaits({
@@ -125,7 +138,8 @@ export default function TableBooks(props) {
                             Description: item?.Description,
                             Price: item?.Price,
                           })
-                        }>
+                        }
+                      >
                         Xem chi tiết
                       </button>
                     </td>

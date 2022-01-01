@@ -21,6 +21,7 @@ namespace CoffeeBook.Models
         private string address;
         private string city;
         private string country;
+        private string role = "Customer";
         private int? gender;
 
         private ICollection<ShoppingCart> shoppingCarts;
@@ -39,5 +40,6 @@ namespace CoffeeBook.Models
         public int? Gender { get => gender; set => gender = value; }
         public ICollection<ShoppingCart> ShoppingCarts { get => shoppingCarts; set => shoppingCarts = value; }
         public ICollection<Bill> Bills { get => bills; set => bills = value; }
+        public string Role { get => role; set => role = value; }
     }
 }

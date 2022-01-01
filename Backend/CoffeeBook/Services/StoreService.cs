@@ -44,6 +44,15 @@ namespace CoffeeBook.Services
             }
         }
 
+        public IQueryable GetByDistrict()
+        {
+            var query = from s in _context.Stores
+                        group s by new { District = s.District} into k
+                        select new { Count = k.Count(), District = k.Key.District };
+
+            return query;
+        }
+
         public int Post(Store model)
         {
             try
@@ -68,6 +77,9 @@ namespace CoffeeBook.Services
                 store.Address = model.Address;
                 store.Country = model.Country;
                 store.Phone = model.Phone;
+                store.Photo = model.Photo;
+                store.LinkGG = model.LinkGG;
+                store.District = model.District;
                 store.ManagerId = model.ManagerId;
 
                 var res = _context.SaveChanges();

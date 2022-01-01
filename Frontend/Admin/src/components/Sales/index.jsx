@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getSales } from '../../app/ApiResult';
-import TableSales from '../Table/TablePeople/Sales';
+import { useEffect, useState } from "react";
+import { getSales } from "../../app/ApiResult";
+import TableSales from "../Table/TablePeople/Sales";
 function Sales() {
   const [flag, setFlag] = useState();
   const [data, setData] = useState();
@@ -12,14 +12,14 @@ function Sales() {
   });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    const res = await getSales(paginate, '/employees');
+    const res = await getSales(paginate, "/employees");
     setData(res?.data);
     setPaginate({
       ...paginate,
       count: res?.totalPages,
     });
     setFlag(false);
-    setLoading(true)
+    setLoading(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flag]);
   return (
@@ -33,8 +33,8 @@ function Sales() {
           setFlag={setFlag}
         />
       ) : (
-        <div class='spinner-border text-success' role='status'>
-          <span class='visually-hidden'>Loading...</span>
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       )}
     </>

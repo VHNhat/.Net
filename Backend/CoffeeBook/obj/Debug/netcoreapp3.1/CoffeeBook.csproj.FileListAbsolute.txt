@@ -529,6 +529,598 @@ C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBo
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
 C:\Users\BUIQUOCHUY\Documents\GitHub\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.exe
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.deps.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ZstdNet.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.xml
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeBook.styles.css
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\framework_IS220.M11.HTCL_2-Complete-Store\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.exe
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.deps.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ZstdNet.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.xml
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeBook.styles.css
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\framework_IS220.M11.HTCL_2-Complete-Store\AppDepNhatTrenDoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.exe
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.deps.json
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.json
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Humanizer.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.EntityFrameworkCore.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.xml
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeBook.styles.css
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.exe
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.deps.json
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.json
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ZstdNet.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\MySql.EntityFrameworkCore.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.xml
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeBook.styles.css
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CopyComplete
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ClosedXML.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\EPPlus.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\GemBox.Spreadsheet.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\GemBox.Spreadsheet.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+E:\Code Life\UIT\Project\AppDepNhatTrenDoi-main\AppDepNhatTrenDoi-main\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ClosedXML.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\EPPlus.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\GemBox.Spreadsheet.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\GemBox.Spreadsheet.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\BUIQUOCHUY\Desktop\FRAME\tamthoi\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\appsettings.json
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.StaticWebAssets.xml
@@ -538,6 +1130,7 @@ E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.runtimeconfig.dev.json
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\CoffeeBook.pdb
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\ClosedXML.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\EPPlus.dll
@@ -548,6 +1141,8 @@ E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
@@ -670,16 +1265,6 @@ E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.AssemblyReference.cache
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.GeneratedMSBuildEditorConfig.editorconfig
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfoInputs.cache
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.AssemblyInfo.cs
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.csproj.CoreCompileInputs.cache
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.MvcApplicationPartsAssemblyInfo.cache
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\staticwebassets\CoffeeBook.StaticWebAssets.Manifest.cache
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.RazorTargetAssemblyInfo.cache
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.dll
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.pdb
 E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\obj\Debug\netcoreapp3.1\CoffeeBook.genruntimeconfig.cache
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
-E:\Học tập\học kỳ 5\HTTT trên các Framework\Đồ án\framework_IS220.M11.HTCL_2\Backend\CoffeeBook\bin\Debug\netcoreapp3.1\System.Web.Http.dll

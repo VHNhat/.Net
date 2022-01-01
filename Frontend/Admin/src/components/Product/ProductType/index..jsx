@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getProductTypes } from '../../../app/ApiResult';
-import TableProductType from '../../Table/TableProduct/ProductType.';
+import { useEffect, useState } from "react";
+import { getProductTypes } from "../../../app/ApiResult";
+import TableProductType from "../../Table/TableProduct/ProductType.";
 function ProductType() {
   const [flag, setFlag] = useState();
   const [data, setData] = useState();
@@ -12,7 +12,7 @@ function ProductType() {
   });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    const res = await getProductTypes(paginate, '/ProductTypes');
+    const res = await getProductTypes(paginate, "/ProductTypes");
     setData(res?.data);
     setPaginate({
       ...paginate,
@@ -26,8 +26,8 @@ function ProductType() {
     // eslint-disable-next-line react/jsx-pascal-case
     <>
       {loading ? (
-        <div class='spinner-border text-success' ProductType='status'>
-          <span class='visually-hidden'>Loading...</span>
+        <div className="spinner-border text-success" ProductType="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
         <TableProductType
@@ -35,7 +35,7 @@ function ProductType() {
           paginate={paginate}
           setPaginate={setPaginate}
           setFlag={setFlag}
-          Type='PRODUCTTYPE'
+          Type="PRODUCTTYPE"
         />
       )}
     </>

@@ -1,130 +1,130 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Fade from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import { useSnackbar } from 'notistack';
-import React, { useState } from 'react';
-import { addSupplier } from '../../../app/ApiResult';
-import './styles.scss';
+import Fade from "@mui/material/Grow";
+import Paper from "@mui/material/Paper";
+import { useSnackbar } from "notistack";
+import React, { useState } from "react";
+import { addSupplier } from "../../../app/ApiResult";
+import "./styles.scss";
 function AddSupplier(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [valueData, setValueData] = useState({
-    Name: '',
-    Description: '',
-    Address: '',
-    City: '',
-    Country: '',
-    Phone: '',
-    Url: '',
+    Name: "",
+    Description: "",
+    Address: "",
+    City: "",
+    Country: "",
+    Phone: "",
+    Url: "",
   });
   const handleChangeData = (event) => {
     setValueData({
       ...valueData,
-      [event.target.name]:event.target.value
+      [event.target.name]: event.target.value,
     });
   };
   const HandleUpload = async () => {
-    const res = await addSupplier(valueData)
-    if(res?.success)
-      enqueueSnackbar('Tải lên thành công', { variant: 'success' });
-    else
-      enqueueSnackbar('Tải lên thất bại', { variant: 'error' });
+    const res = await addSupplier(valueData);
+    if (res?.success)
+      enqueueSnackbar("Tải lên thành công", { variant: "success" });
+    else enqueueSnackbar("Tải lên thất bại", { variant: "error" });
   };
   return (
-    <div className='AddSupplier'>
-      <Fade in={true} timeout={200} style={{ height: '100%' }}>
+    <div className="AddSupplier">
+      <Fade in={true} timeout={200} style={{ height: "100%" }}>
         <Paper>
-          <h2 className='text-center pt-4'>Thêm nhà cung cấp mới</h2>
+          <h2 className="text-center pt-4">Thêm nhà cung cấp mới</h2>
 
-          <div className='dataAdd'>
-            <div className='form-floating mb-3 inputData'>
+          <div className="dataAdd">
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='Name'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="Name"
+                color="warning"
                 value={valueData?.Name}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
-              <label htmlFor='floatingInput'>Tên nhà cung cấp</label>
+              <label htmlFor="floatingInput">Tên nhà cung cấp</label>
             </div>
 
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control'
-                name='Description'
-                color='warning'
+                type="text"
+                className="form-control"
+                name="Description"
+                color="warning"
                 value={valueData?.Description}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
 
-              <label htmlFor='floatingInput'>Mô tả nhà </label>
+              <label htmlFor="floatingInput">Mô tả nhà </label>
             </div>
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='Address'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="Address"
+                color="warning"
                 value={valueData?.Address}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
 
-              <label htmlFor='floatingInput'>Địa chỉ</label>
+              <label htmlFor="floatingInput">Địa chỉ</label>
             </div>
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='City'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="City"
+                color="warning"
                 value={valueData?.City}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
 
-              <label htmlFor='floatingInput'>Thành phố </label>
+              <label htmlFor="floatingInput">Thành phố </label>
             </div>
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='Country'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="Country"
+                color="warning"
                 value={valueData?.Country}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
 
-              <label htmlFor='floatingInput'>Quốc gia</label>
+              <label htmlFor="floatingInput">Quốc gia</label>
             </div>
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='Phone'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="Phone"
+                color="warning"
                 value={valueData?.Phone}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
 
-              <label htmlFor='floatingInput'>Số điện thoại</label>
+              <label htmlFor="floatingInput">Số điện thoại</label>
             </div>
-            <div className='form-floating mb-3 inputData'>
+            <div className="form-floating mb-3 inputData">
               <input
-                type='text'
-                className='form-control '
-                name='Url'
-                color='warning'
+                type="text"
+                className="form-control "
+                name="Url"
+                color="warning"
                 value={valueData?.Url}
-                onChange={handleChangeData}
+                onChange={(e) => handleChangeData(e)}
               />
-               <label htmlFor='floatingInput'>Website</label>
+              <label htmlFor="floatingInput">Website</label>
             </div>
-            <div className='inputData'>
+            <div className="inputData">
               <button
-                type='submit'
-                className='btn btn-success inputData'
-                style={{ width: '100%', margin: '0 auto' }}
-                onClick={HandleUpload}>
+                type="submit"
+                className="btn btn-success inputData"
+                style={{ width: "100%", margin: "0 auto" }}
+                onClick={HandleUpload}
+              >
                 Thêm nhà cung cấp mới
               </button>
             </div>

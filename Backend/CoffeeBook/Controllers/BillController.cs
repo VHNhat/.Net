@@ -2,16 +2,20 @@
 using CoffeeBook.Dto;
 using CoffeeBook.Models;
 using CoffeeBook.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using MySql.Data.MySqlClient;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace CoffeeBook.Controllers
 {
@@ -32,26 +36,89 @@ namespace CoffeeBook.Controllers
 
         [Route("bill")]
         [HttpGet]
-        public JsonResult Get()
+        public ActionResult Get()
         {
-            List<Bill> bills = _service.GetAll();
-            return new JsonResult(bills);
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
+            {
+                var role = getCurrentRole(jwt);
+                if (role == "1" || role == "2" || role == "3" || role == "4")
+                {
+                    List<Bill> bills = _service.findAll();
+                    return new JsonResult(bills);
+                }
+            }
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
         }
+
         [Route("bill/{id}")]
         [HttpGet]
         public JsonResult GetById(int id)
         {
-            Bill bill = _service.GetBillId(id);
-            return new JsonResult(bill);
+            List<Bill> bills = _service.GetBillId(id);
+            return new JsonResult(bills);
         }
-        [Route("bill/sales")]
+        [Route("bill/sales/year/{year}")]
         [HttpGet]
-        public JsonResult GetSale(int id)
+        public JsonResult GetSaleByYearMonth(int year)
         {
-            var sales = _service.GetSale();
+            var sales = _service.GetSaleByYear(year);
             return new JsonResult(sales);
         }
-        #region Revenue by day
+
+        [Route("bill/totalsale/{year}")]
+        [HttpGet]
+        public ActionResult GetTotalSaleByYear(int year)
+        {
+            var sale = _service.GetTotalSaleByYear(year);
+            return new JsonResult(sale);
+        }
+        [Route("bill/count/{year}")]
+        public ActionResult GetCountBill(int year)
+        {
+            var count = _service.GetCountBill(year);
+            return new JsonResult(count );
+        }
+        // url: .../bill/sales/date/month-day-year
+        // example: .../bill/sales/date/12-24-2021
+        [Route("bill/sales/date/{date}")]
+        [HttpGet]
+        public ActionResult GetSaleByDay(DateTime date)
+        {
+
+            var sale = _service.GetRevenueByDay(date);
+            return new JsonResult(sale);
+        }
+      ////
+        [Route("bill/sales/months/{param}")]
+        [HttpGet]
+        public ActionResult GetSaleByMonth(string param)
+        {
+            string[] parameters = param.Split("-");
+            int month = int.Parse(parameters[0]);
+            int year = int.Parse(parameters[1]);
+            var sale = _service.GetRevenueByMonth(month, year);
+            return new JsonResult(sale);
+        }
+        /// <summary>
+        ///
+        /// <returns></returns>
+        [Route("bill/sales/years/{year}")]
+        [HttpGet]
+        public ActionResult GetSaleByYear(int year)
+        {
+            var sale = _service.GetRevenueByYear(year);
+            return new JsonResult(sale);
+        }
+
+        [Route("bill/total/{year}")]
+        [HttpGet]
+        public ActionResult GetTotalListBill(int year)
+        {
+            var count = _service.GetTotalListBill(year);
+            return new JsonResult( count);
+        }
+
         // url: .../bill/revenue/date/month-day-year
         // example: .../bill/revenue/date/12-24-2021
         [Route("bill/revenue/date/{date}")]
@@ -69,56 +136,58 @@ namespace CoffeeBook.Controllers
                 string sheetName = $"Doanh thu ngay {date.Day}/{date.Month}/{date.Year}";
                 var sheet = package.Workbook.Worksheets.Add(sheetName);
                 sheet.Cells["A1:W99"].Style.Font.Name = "Times New Roman";
-                sheet.Cells["A1:W99"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A1:F1"].Merge = true;
                 sheet.Cells["A1:F1"].Value = "COFFEE & BOOK";
                 sheet.Cells["A1:F1"].Style.Font.Bold = true;
                 sheet.Cells["A1:F1"].Style.Font.Size = 14;
                 sheet.Cells["A1:F1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                sheet.Cells["A1:F1"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A2:D2"].Merge = true;
                 sheet.Cells["A2:D2"].Value = "Trụ sở chính: Thành phố HCM";
                 sheet.Cells["A2:D2"].Style.Font.Size = 13
                     ;
                 sheet.Cells["A2:D2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                sheet.Cells["A2:D2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells["A3:C3"].Merge = true;
                 sheet.Cells["A3:C3"].Value = "SĐT: 0901234567";
                 sheet.Cells["A3:C3"].Style.Font.Size = 13;
                 sheet.Cells["A3:C3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
 
-                sheet.Cells["F2:J2"].Merge = true;
-                sheet.Cells["F2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
-                sheet.Cells["F2:J2"].Style.Font.UnderLine = true;
-                sheet.Cells["F2:J2"].Style.Font.Size = 13;
-                sheet.Cells["F2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Merge = true;
+                sheet.Cells["G2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
+                sheet.Cells["G2:J2"].Style.Font.UnderLine = true;
+                sheet.Cells["G2:J2"].Style.Font.Size = 13;
+                sheet.Cells["G2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells["F3:J3"].Merge = true;
-                sheet.Cells["F3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
+                sheet.Cells["G3:J3"].Merge = true;
+                sheet.Cells["G3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
                                                 $"{currentDate.Hour}:{currentDate.Minute}:{currentDate.Second}";
-                sheet.Cells["F3:J3"].Style.Font.Italic = true;
-                sheet.Cells["F3:J3"].Style.Font.Size = 13;
-                sheet.Cells["F3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                sheet.Cells["F3:J3"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.Font.Italic = true;
+                sheet.Cells["G3:J3"].Style.Font.Size = 13;
+                sheet.Cells["G3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells["A5:F5"].Merge = true;
-                sheet.Cells["A5:F5"].Value = $"THỐNG KÊ DOANH THU NGÀY {date.Day}/{date.Month}/{date.Year}";
-                sheet.Cells["A5:F5"].Style.Font.Bold = true;
-                sheet.Cells["A5:F5"].Style.Font.Size = 18;
-                sheet.Cells["A5:F5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                sheet.Cells["A5:F5"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                sheet.Cells["A5:E5"].Merge = true;
+                sheet.Cells["A5:E5"].Value = $"THỐNG KÊ DOANH THU NGÀY {date.Day}/{date.Month}/{date.Year}";
+                sheet.Cells["A5:E5"].Style.Font.Bold = true;
+                sheet.Cells["A5:E5"].Style.Font.Size = 18;
+                sheet.Cells["A5:E5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A5:E5"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Row(5).Height = 35;
 
                 sheet.Row(6).Style.WrapText = true;
                 sheet.Row(6).Height = 30;
 
-                sheet.Cells["A6:F6"].Style.Border.Left.Style = ExcelBorderStyle.Thin;
-                sheet.Cells["A6:F6"].Style.Border.Right.Style = ExcelBorderStyle.Thin;
-                sheet.Cells["A6:F6"].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
-                sheet.Cells["A6:F6"].Style.Border.Top.Style = ExcelBorderStyle.Thin;
-                sheet.Cells["A6:F6"].Style.Font.Size = 11;
-                sheet.Cells["A6:F6"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                sheet.Cells["A6:F6"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                sheet.Cells["A6:E6"].Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                sheet.Cells["A6:E6"].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                sheet.Cells["A6:E6"].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                sheet.Cells["A6:E6"].Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                sheet.Cells["A6:E6"].Style.Font.Size = 11;
+                sheet.Cells["A6:E6"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A6:E6"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Column(1).Width = 7;
                 sheet.Cells["A6:A6"].Value = "STT";
@@ -154,7 +223,7 @@ namespace CoffeeBook.Controllers
                 var revenue = _service.GetRevenueByDay(date);
                 int numOfRow = revenue.Rows.Count;
                 if (numOfRow < 1)
-                    return Content("Chưa có doanh thu");
+                    return BadRequest();
 
                 long total = 0;
                 int dem = 1;
@@ -178,26 +247,38 @@ namespace CoffeeBook.Controllers
                         string ghiChu = $"F{dong}:F{dong}";
 
                         sheet.Cells[stt].Value = dem;
+                        sheet.Cells[stt].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[stt].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
                         sheet.Cells[maHd].Value = row[0].ToString();
+                        sheet.Cells[maHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[maHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
                         sheet.Cells[gioHd].Value = DateTime.Parse(row[1].ToString()).ToLongTimeString();
                         sheet.Cells[gioHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[gioHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         total += long.Parse(row[2].ToString());
                         sheet.Cells[tienHd].Value = long.Parse(row[2].ToString()).ToString("C2", CultureInfo.CreateSpecificCulture("vi-VN"));
                         sheet.Cells[tienHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[tienHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         sheet.Cells[thanhToan].Value = row[3].ToString();
                         sheet.Cells[thanhToan].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[thanhToan].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         sheet.Cells[ghiChu].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[ghiChu].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                         dem++;
                         dong++;
                     }
                 }
                 sheet.Cells[$"C{dong}:C{dong}"].Value = "Doanh thu:";
                 sheet.Cells[$"C{dong}:C{dong}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                sheet.Cells[$"C{dong}:C{dong}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells[$"D{dong}:D{dong}"].Value = total.ToString("C2", CultureInfo.CreateSpecificCulture("vi-VN"));
                 sheet.Cells[$"D{dong}:D{dong}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                sheet.Cells[$"D{dong}:D{dong}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Merge = true;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Value = $"Hồ Chí Minh, " +
                                                                 $"ngày {currentDate.Day} tháng {currentDate.Month} năm {currentDate.Year}";
@@ -205,27 +286,28 @@ namespace CoffeeBook.Controllers
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Merge = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Merge = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Merge = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Value = "Võ Hoàng Nhật";
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Merge = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Value = "Võ Hoàng Nhật";
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 package.Save();
             }
             stream.Position = 0;
 
-            var tenfile = $"Doanh-thu-ngay-{date.Day}/{date.Month}/{date.Year}_{DateTime.Now.ToShortDateString()}.xlsx";
+            var tenfile = $"Doanh-thu-ngay-{date.Day}/{date.Month}/{date.Year}_{DateTime.Now.ToString("dd/MM/yyyy")}.xlsx";
 
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", tenfile);
         }
-        #endregion
-        #region Revenue by month
-        // url: .../bill/revenue/month/12-2021
+
+        // url: ... 
         [Route("bill/revenue/month/{param}")]
         [HttpGet]
         public ActionResult GetRevenueByMonth(string param)
@@ -245,42 +327,45 @@ namespace CoffeeBook.Controllers
                 string sheetName = $"Doanh thu thang {month}/{year}";
                 var sheet = package.Workbook.Worksheets.Add(sheetName);
                 sheet.Cells["A1:W99"].Style.Font.Name = "Times New Roman";
-                sheet.Cells["A1:W99"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A1:E1"].Merge = true;
                 sheet.Cells["A1:E1"].Value = "COFFEE & BOOK";
                 sheet.Cells["A1:E1"].Style.Font.Bold = true;
                 sheet.Cells["A1:E1"].Style.Font.Size = 14;
                 sheet.Cells["A1:E1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                sheet.Cells["A1:E1"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A2:D2"].Merge = true;
                 sheet.Cells["A2:D2"].Value = "Trụ sở chính: Thành phố HCM";
                 sheet.Cells["A2:D2"].Style.Font.Size = 13;
                 sheet.Cells["A2:D2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
-
+                sheet.Cells["A2:D2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells["A3:C3"].Merge = true;
                 sheet.Cells["A3:C3"].Value = "SĐT: 0901234567";
                 sheet.Cells["A3:C3"].Style.Font.Size = 13;
                 sheet.Cells["A3:C3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
 
-                sheet.Cells["F2:J2"].Merge = true;
-                sheet.Cells["F2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
-                sheet.Cells["F2:J2"].Style.Font.UnderLine = true;
-                sheet.Cells["F2:J2"].Style.Font.Size = 13;
-                sheet.Cells["F2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Merge = true;
+                sheet.Cells["G2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
+                sheet.Cells["G2:J2"].Style.Font.UnderLine = true;
+                sheet.Cells["G2:J2"].Style.Font.Size = 13;
+                sheet.Cells["G2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells["F3:J3"].Merge = true;
-                sheet.Cells["F3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
+                sheet.Cells["G3:J3"].Merge = true;
+                sheet.Cells["G3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
                                                 $"{currentDate.Hour}:{currentDate.Minute}:{currentDate.Second}";
-                sheet.Cells["F3:J3"].Style.Font.Italic = true;
-                sheet.Cells["F3:J3"].Style.Font.Size = 13;
-                sheet.Cells["F3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.Font.Italic = true;
+                sheet.Cells["G3:J3"].Style.Font.Size = 13;
+                sheet.Cells["G3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A5:E5"].Merge = true;
                 sheet.Cells["A5:E5"].Value = $"THỐNG KÊ DOANH THU THÁNG {month}/{year}";
                 sheet.Cells["A5:E5"].Style.Font.Bold = true;
                 sheet.Cells["A5:E5"].Style.Font.Size = 18;
                 sheet.Cells["A5:E5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A5:E5"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Row(5).Height = 35;
 
                 sheet.Row(6).Style.WrapText = true;
@@ -292,6 +377,7 @@ namespace CoffeeBook.Controllers
                 sheet.Cells["A6:E6"].Style.Border.Top.Style = ExcelBorderStyle.Thin;
                 sheet.Cells["A6:E6"].Style.Font.Size = 11;
                 sheet.Cells["A6:E6"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A6:E6"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Column(1).Width = 7;
                 sheet.Cells["A6:A6"].Value = "STT";
@@ -322,7 +408,7 @@ namespace CoffeeBook.Controllers
                 var revenue = _service.GetRevenueByMonth(month, year);
                 int numOfRow = revenue.Rows.Count;
                 if (numOfRow < 1)
-                    return Content("Chưa có doanh thu");
+                    return BadRequest();
 
                 long totalOfMonth = 0;
                 int dem = 1;
@@ -335,7 +421,7 @@ namespace CoffeeBook.Controllers
                     sheet.Cells[table].Style.Border.Right.Style = ExcelBorderStyle.Thin;
                     sheet.Cells[table].Style.Border.Top.Style = ExcelBorderStyle.Thin;
                     sheet.Cells[table].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
-
+                    //revenue = _service.GetRevenueByMonth(month, year);
                     foreach (DataRow row in revenue.Rows)
                     {
                         string stt = $"A{dong}:A{dong}";
@@ -345,15 +431,21 @@ namespace CoffeeBook.Controllers
                         string ghichu = $"E{dong}:E{dong}";
 
                         sheet.Cells[stt].Value = dem;
+                        sheet.Cells[stt].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[stt].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         sheet.Cells[ngayHd].Value = row[0].ToString() + $"/{month}/{year}";
                         sheet.Cells[ngayHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[ngayHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         sheet.Cells[sluongHd].Value = int.Parse(row[1].ToString());
+                        sheet.Cells[sluongHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[sluongHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         totalOfMonth += long.Parse(row[2].ToString());
                         sheet.Cells[doanhThu].Value = long.Parse(row[2].ToString()).ToString("C2", CultureInfo.CreateSpecificCulture("vi-VN"));
                         sheet.Cells[doanhThu].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[doanhThu].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                         if (long.Parse(row[2].ToString()) > 2000000)
                         {
                             sheet.Cells[ghichu].Value = "Cao";
@@ -371,6 +463,7 @@ namespace CoffeeBook.Controllers
                         }
 
                         sheet.Cells[ghichu].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[ghichu].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                         dem++;
                         dong++;
                     }
@@ -388,25 +481,27 @@ namespace CoffeeBook.Controllers
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Merge = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Merge = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Merge = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Value = "Võ Hoàng Nhật";
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Merge = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Value = "Võ Hoàng Nhật";
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
                 package.Save();
             }
             stream.Position = 0;
 
-            var tenfile = $"Doanh-thu-thang-{month}-{year}_{DateTime.Now.ToShortDateString()}.xlsx";
+            var tenfile = $"Doanh-thu-thang-{month}-{year}_{DateTime.Now}.xlsx";
 
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", tenfile);
         }
-        #endregion
-        #region Revenue by year
+
         // url: .../bill/revenue/year/2021
         [Route("bill/revenue/year/{year}")]
         [HttpGet]
@@ -423,41 +518,45 @@ namespace CoffeeBook.Controllers
                 string sheetName = $"Doanh thu năm {year}";
                 var sheet = package.Workbook.Worksheets.Add(sheetName);
                 sheet.Cells["A1:W99"].Style.Font.Name = "Times New Roman";
-                sheet.Cells["A1:W99"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A1:E1"].Merge = true;
                 sheet.Cells["A1:E1"].Value = "COFFEE & BOOK";
                 sheet.Cells["A1:E1"].Style.Font.Bold = true;
                 sheet.Cells["A1:E1"].Style.Font.Size = 14;
                 sheet.Cells["A1:E1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                sheet.Cells["A1:E1"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A2:D2"].Merge = true;
                 sheet.Cells["A2:D2"].Value = "Trụ sở chính: Thành phố HCM";
                 sheet.Cells["A2:D2"].Style.Font.Size = 13;
                 sheet.Cells["A2:D2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                sheet.Cells["A2:D2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells["A3:C3"].Merge = true;
                 sheet.Cells["A3:C3"].Value = "SĐT: 0901234567";
                 sheet.Cells["A3:C3"].Style.Font.Size = 13;
                 sheet.Cells["A3:C3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
 
-                sheet.Cells["F2:J2"].Merge = true;
-                sheet.Cells["F2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
-                sheet.Cells["F2:J2"].Style.Font.UnderLine = true;
-                sheet.Cells["F2:J2"].Style.Font.Size = 13;
-                sheet.Cells["F2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Merge = true;
+                sheet.Cells["G2:J2"].Value = "BỘ PHẬN KẾ TOÁN";
+                sheet.Cells["G2:J2"].Style.Font.UnderLine = true;
+                sheet.Cells["G2:J2"].Style.Font.Size = 13;
+                sheet.Cells["G2:J2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G2:J2"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells["F3:J3"].Merge = true;
-                sheet.Cells["F3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
+                sheet.Cells["G3:J3"].Merge = true;
+                sheet.Cells["G3:J3"].Value = $"Ngày xuất: {currentDate.Day}/{currentDate.Month}/{currentDate.Year} " +
                                                 $"{currentDate.Hour}:{currentDate.Minute}:{currentDate.Second}";
-                sheet.Cells["F3:J3"].Style.Font.Italic = true;
-                sheet.Cells["F3:J3"].Style.Font.Size = 13;
-                sheet.Cells["F3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.Font.Italic = true;
+                sheet.Cells["G3:J3"].Style.Font.Size = 13;
+                sheet.Cells["G3:J3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["G3:J3"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Cells["A5:E5"].Merge = true;
                 sheet.Cells["A5:E5"].Value = $"THỐNG KÊ DOANH THU NĂM {year}";
                 sheet.Cells["A5:E5"].Style.Font.Bold = true;
                 sheet.Cells["A5:E5"].Style.Font.Size = 18;
                 sheet.Cells["A5:E5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A5:E5"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Row(5).Height = 35;
 
                 sheet.Row(6).Style.WrapText = true;
@@ -469,6 +568,7 @@ namespace CoffeeBook.Controllers
                 sheet.Cells["A6:E6"].Style.Border.Top.Style = ExcelBorderStyle.Thin;
                 sheet.Cells["A6:E6"].Style.Font.Size = 11;
                 sheet.Cells["A6:E6"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells["A6:E6"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 sheet.Column(1).Width = 7;
                 sheet.Cells["A6:A6"].Value = "STT";
@@ -499,7 +599,7 @@ namespace CoffeeBook.Controllers
                 var revenue = _service.GetRevenueByYear(year);
                 int numOfRow = revenue.Rows.Count;
                 if (numOfRow < 1)
-                    return Content($"Chưa có doanh thu năm {year}");
+                    return BadRequest();
 
                 long totalOfMonth = 0;
                 int dem = 1;
@@ -512,6 +612,7 @@ namespace CoffeeBook.Controllers
                     sheet.Cells[table].Style.Border.Right.Style = ExcelBorderStyle.Thin;
                     sheet.Cells[table].Style.Border.Top.Style = ExcelBorderStyle.Thin;
                     sheet.Cells[table].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                    //revenue = _service.GetRevenueByMonth(month, year);
                     foreach (DataRow row in revenue.Rows)
                     {
                         string stt = $"A{dong}:A{dong}";
@@ -521,12 +622,21 @@ namespace CoffeeBook.Controllers
                         string ghichu = $"E{dong}:E{dong}";
 
                         sheet.Cells[stt].Value = dem;
-                        sheet.Cells[thangHd].Value = row[0];
+                        sheet.Cells[stt].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[stt].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                        sheet.Cells[thangHd].Value = row[0].ToString();
+                        sheet.Cells[thangHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[thangHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
                         sheet.Cells[sluongHd].Value = int.Parse(row[1].ToString());
+                        sheet.Cells[sluongHd].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[sluongHd].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                         totalOfMonth += long.Parse(row[2].ToString());
                         sheet.Cells[doanhThu].Value = long.Parse(row[2].ToString()).ToString("C2", CultureInfo.CreateSpecificCulture("vi-VN"));
                         sheet.Cells[doanhThu].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        sheet.Cells[doanhThu].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                         if (long.Parse(row[2].ToString()) > 50_000_000)
                         {
                             sheet.Cells[ghichu].Value = "Cao";
@@ -544,14 +654,17 @@ namespace CoffeeBook.Controllers
                         }
 
                         sheet.Cells[ghichu].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        sheet.Cells[ghichu].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                         dem++;
                         dong++;
                     }
                 }
                 sheet.Cells[$"C{dong}:C{dong}"].Value = "Doanh thu:";
                 sheet.Cells[$"C{dong}:C{dong}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                sheet.Cells[$"C{dong}:C{dong}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells[$"D{dong}:D{dong}"].Value = totalOfMonth.ToString("C2", CultureInfo.CreateSpecificCulture("vi-VN"));
                 sheet.Cells[$"D{dong}:D{dong}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                sheet.Cells[$"D{dong}:D{dong}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Merge = true;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Value = $"Hồ Chí Minh, " +
                                                                 $"ngày {currentDate.Day} tháng {currentDate.Month} năm {currentDate.Year}";
@@ -559,31 +672,33 @@ namespace CoffeeBook.Controllers
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 sheet.Cells[$"F{dong + 2}:J{dong + 2}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Merge = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 3}:J{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Merge = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Value = "KẾ TOÁN TRƯỞNG";
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 3}:I{dong + 3}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Merge = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Value = "Võ Hoàng Nhật";
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.Font.Bold = true;
-                sheet.Cells[$"F{dong + 9}:J{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Merge = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Value = "Võ Hoàng Nhật";
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.Font.Bold = true;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                sheet.Cells[$"G{dong + 9}:I{dong + 9}"].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
                 package.Save();
             }
             stream.Position = 0;
 
-            var tenfile = $"Doanh-thu-nam-{year}_{DateTime.Now.ToShortDateString()}.xlsx";
+            var tenfile = $"Doanh-thu-nam-{year}_{DateTime.Now}.xlsx";
 
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", tenfile);
         }
-        #endregion
+
 
         [Route("bill/add")]
         [HttpPost]
         public ActionResult Post(Bill bill)
         {
-            int table = _service.Add(bill);
+            int table = _service.save(bill);
             if (table > 0) return Ok();
             else return BadRequest();
         }
@@ -592,7 +707,7 @@ namespace CoffeeBook.Controllers
         [HttpPut]
         public ActionResult Put(int id, Bill bill)
         {
-            int res = _service.Update(id, bill);
+            int res = _service.update(id, bill);
             if (res > 0) return Ok();
             else return BadRequest();
         }
@@ -613,16 +728,34 @@ namespace CoffeeBook.Controllers
             int result = _service.Purchase(dto);
             if (result > 0)
                 return Ok();
-            else return BadRequest();
+            else return Ok();
         }
 
         [Route("bill/delivery/{id}")]
         [HttpPut]
         public ActionResult Delivery(int id)
         {
-            int res = _service.Delivery(id);
-            if (res > 0) return Ok();
-            else return BadRequest();
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
+            {
+                var role = getCurrentRole(jwt);
+                if (role == "4"|| role == "1")
+                {
+                    int res = _service.Delivery(id);
+                    if (res > 0) return Ok();
+                    else return BadRequest();
+                }
+            }
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
+        }
+
+        private string getCurrentRole(string jwt)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(jwt);
+            var tokenS = jsonToken as JwtSecurityToken;
+            var role = tokenS.Claims.First(claim => claim.Type == "RoleId").Value;
+            return role;
         }
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffeeBook.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20211210072538_SetupMigration")]
+    [Migration("20211228134021_SetupMigration")]
     partial class SetupMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -72,10 +72,9 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 904, DateTimeKind.Local).AddTicks(4277));
+                        .HasDefaultValue(new DateTime(2021, 12, 28, 20, 40, 20, 738, DateTimeKind.Local).AddTicks(4971));
 
                     b.Property<int?>("CustomerId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -104,8 +103,9 @@ namespace CoffeeBook.Migrations
                         .HasDefaultValue("Đang chờ thanh toán");
 
                     b.Property<string>("Time")
+                        .HasMaxLength(100)
                         .IsUnicode(true)
-                        .HasColumnType("text")
+                        .HasColumnType("varchar(100)")
                         .HasDefaultValue("15-20 phút");
 
                     b.Property<long>("TotalPrice")
@@ -172,6 +172,9 @@ namespace CoffeeBook.Migrations
                         .HasMaxLength(11)
                         .HasColumnType("varchar(11)");
 
+                    b.Property<string>("Role")
+                        .HasColumnType("text");
+
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -204,6 +207,10 @@ namespace CoffeeBook.Migrations
                     b.Property<DateTime>("ExpiredDate")
                         .HasColumnType("datetime")
                         .HasDefaultValue(new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+                    b.Property<int>("MinPrice")
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -507,7 +514,7 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 921, DateTimeKind.Local).AddTicks(8863));
+                        .HasDefaultValue(new DateTime(2021, 12, 28, 20, 40, 20, 752, DateTimeKind.Local).AddTicks(7040));
 
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
@@ -537,10 +544,12 @@ namespace CoffeeBook.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime")
-                        .HasDefaultValue(new DateTime(2021, 12, 10, 14, 25, 37, 928, DateTimeKind.Local).AddTicks(6790));
+                        .HasDefaultValue(new DateTime(2021, 12, 28, 20, 40, 20, 759, DateTimeKind.Local).AddTicks(9222));
 
                     b.Property<string>("TilteSize")
-                        .HasColumnType("text")
+                        .HasMaxLength(100)
+                        .IsUnicode(true)
+                        .HasColumnType("varchar(100)")
                         .HasDefaultValue("Nhỏ");
 
                     b.HasKey("ShoppingCartId", "ProductId");
@@ -572,6 +581,14 @@ namespace CoffeeBook.Migrations
                         .IsUnicode(true)
                         .HasColumnType("text");
 
+                    b.Property<string>("District")
+                        .IsUnicode(true)
+                        .HasColumnType("text");
+
+                    b.Property<string>("LinkGG")
+                        .IsUnicode(true)
+                        .HasColumnType("text");
+
                     b.Property<int?>("ManagerId")
                         .HasColumnType("int");
 
@@ -579,6 +596,10 @@ namespace CoffeeBook.Migrations
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Photo")
+                        .IsUnicode(true)
+                        .HasColumnType("text");
 
                     b.Property<string>("StoreName")
                         .IsRequired()
@@ -665,8 +686,7 @@ namespace CoffeeBook.Migrations
                     b.HasOne("CoffeeBook.Models.Customer", "Customer")
                         .WithMany("Bills")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Customer");
                 });

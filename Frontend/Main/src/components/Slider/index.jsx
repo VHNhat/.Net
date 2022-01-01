@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./styles.scss";
 const ListImage = [
   {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/GANKET_web_734379.jpg",
+    link_img:
+      "https://minio.thecoffeehouse.com/image/admin/GANKET_web_734379.jpg",
   },
   {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/baner-home-web_510005.jpg",
+    link_img:
+      "https://minio.thecoffeehouse.com/image/admin/baner-home-web_510005.jpg",
   },
   {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/CPG-COMBO-WEB-01.jpg_530519.png",
+    link_img:
+      "https://minio.thecoffeehouse.com/image/admin/CPG-COMBO-WEB-01.jpg_530519.png",
   },
 ];
 
@@ -47,7 +50,7 @@ function Slider() {
     <>
       <div className="Sliders">
         <ul className="Slider_imgs">
-          {ListImage.map((img,index) =>
+          {ListImage.map((img, index) =>
             img.link_img ? (
               <li className="Slider_img" key={index}>
                 {" "}
@@ -61,7 +64,8 @@ function Slider() {
       </div>
       <div className="dots">
         {ListImage.map((item, index) => (
-          <li key={index}
+          <li
+            key={index}
             onClick={() => {
               SetCount(index);
               Settime(0);

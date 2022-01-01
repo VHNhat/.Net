@@ -4,21 +4,21 @@ import {
   DialogContent,
   DialogTitle,
   IconButton,
-} from '@mui/material';
-import { styled } from '@mui/system';
-import Button from '@restart/ui/esm/Button';
-import { useSnackbar } from 'notistack';
-import { useState } from 'react';
-import { propTypes } from 'react-bootstrap/esm/Image';
-import { useDispatch } from 'react-redux';
-import { increaseBill } from '../../app/CounterBill';
-import './styles.scss';
-import { PropTypes } from 'prop-types';
+} from "@mui/material";
+import { styled } from "@mui/system";
+import Button from "@restart/ui/esm/Button";
+import { useSnackbar } from "notistack";
+import { useState } from "react";
+import { propTypes } from "react-bootstrap/esm/Image";
+import { useDispatch } from "react-redux";
+import { increaseBill } from "../../app/CounterBill";
+import "./styles.scss";
+import { PropTypes } from "prop-types";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuDialogContent-root': {
+  "& .MuDialogContent-root": {
     padding: theme.spacing(2),
   },
-  '& .MuDialogActions-root': {
+  "& .MuDialogActions-root": {
     padding: theme.spacing(1),
   },
 }));
@@ -31,15 +31,16 @@ const BootstrapDialogTitle = (props) => {
       {children}
       {onClose ? (
         <IconButton
-          aria-label='close'
+          aria-label="close"
           onClick={onClose}
           sx={{
-            position: 'absolute',
+            position: "absolute",
             right: 8,
             top: 8,
             color: (theme) => theme.palette.grey[500],
-          }}>
-          <i className='fas fa-times'></i>
+          }}
+        >
+          <i className="fas fa-times"></i>
         </IconButton>
       ) : null}
     </DialogTitle>
@@ -69,40 +70,37 @@ export default function CustomizedDialogs(Props) {
     setOpen(false);
   };
   function AddItems_Success() {
-   
     setOpen(false);
-    enqueueSnackbar('Thêm vào giỏ hàng thành công', { variant: 'success' });
-    console.log(Item.Id)
+    enqueueSnackbar("Thêm vào giỏ hàng thành công", { variant: "success" });
     const temp = {
-      Id:Item.Id,
-      ProductId:Item.Id,
+      Id: Item.Id,
+      ProductId: Item.Id,
       title: `${count}x ${Item.Name}`,
       TitleSize: size ? `Vừa` : `Nhỏ`,
       typeSize: size ? 1 : 0,
-      priceSize:size,
-      count:count,
+      priceSize: size,
+      count: count,
       price: count * Item.Price + size * count,
     };
 
-    var get = JSON.parse(localStorage.getItem('LISTBILL') || '[]');
-    var flag=true;
-    get = get.map(item=>{
-        if(item.Id===temp.Id && item.typeSize===temp.typeSize)
-        {  item.title=`${item.count+temp.count}x ${Item.Name}`
-          item.TitleSize = temp.priceSize ? `Vừa` : `Nhỏ`
-          item.count=item.count+temp.count
-          item.price= item.price+temp.price
-          flag=false;
-        }
-        return item;
-    })
-    if(flag)
-    {
+    var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
+    var flag = true;
+    get = get.map((item) => {
+      if (item.Id === temp.Id && item.typeSize === temp.typeSize) {
+        item.title = `${item.count + temp.count}x ${Item.Name}`;
+        item.TitleSize = temp.priceSize ? `Vừa` : `Nhỏ`;
+        item.count = item.count + temp.count;
+        item.price = item.price + temp.price;
+        flag = false;
+      }
+      return item;
+    });
+    if (flag) {
       get.push(temp);
       dispatch(increaseBill());
     }
-    
-    localStorage.setItem('LISTBILL', JSON.stringify(get));
+
+    localStorage.setItem("LISTBILL", JSON.stringify(get));
   }
   function decrease() {
     setcount(count - 1);
@@ -112,73 +110,75 @@ export default function CustomizedDialogs(Props) {
     setcount(count + 1);
   }
   return (
-    <div className='ItemDetails'>
+    <div className="ItemDetails">
       <BootstrapDialog
         onClose={handleClose}
-        aria-labelledby='customized-dialog-title'
-        open={open}>
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
         <BootstrapDialogTitle
-          id='customized-dialog-title'
-          className='d-flex justify-content-center'
-          onClose={handleClose}>
+          id="customized-dialog-title"
+          className="d-flex justify-content-center"
+          onClose={handleClose}
+        >
           Thêm món mới
         </BootstrapDialogTitle>
-        <DialogContent dividers className='Width_details'>
-          <div className='bodyDetails'>
-            <div className='imgDetail'>
-              <img src={Item.Photo} alt='' />
+        <DialogContent dividers className="Width_details">
+          <div className="bodyDetails">
+            <div className="imgDetail">
+              <img src={Item.Photo} alt="" />
             </div>
-            <div className='Details'>
+            <div className="Details">
               <div>
-                <b className='Details_Title'>{Item.Name}</b>
-                <p className='Details_des'>{Item.Description}</p>
+                <b className="Details_Title">{Item.Name}</b>
+                <p className="Details_des">{Item.Description}</p>
               </div>
 
-              <div className='price_number d-flex justify-content-left'>
-                <p className='price'>
+              <div className="price_number d-flex justify-content-left">
+                <p className="price">
                   {Item.Price.toLocaleString(undefined, {
                     minimumFractionDigits: 0,
                   })}
                   đ
                 </p>
-                <div className='btn_number d-flex justify-content-around'>
-                  <i className='fas fa-minus-circle' onClick={decrease}></i>
+                <div className="btn_number d-flex justify-content-around">
+                  <i className="fas fa-minus-circle" onClick={decrease}></i>
                   <p>{count}</p>
-                  <i className='fas fa-plus-circle' onClick={increase}></i>
+                  <i className="fas fa-plus-circle" onClick={increase}></i>
                 </div>
               </div>
             </div>
           </div>
-          <div className='choose_size '>
-            <div className='tilte_size'>
+          <div className="choose_size ">
+            <div className="tilte_size mt-2">
               <p>CHỌN SIZE (BẮT BUỘC)</p>
             </div>
-            <div className='choose d-flex '>
+            <div className="choose d-flex ">
               <div>
                 <input
-                  type='radio'
-                  name='size'
-                  id='min'
+                  type="radio"
+                  name="size"
+                  id="min"
                   defaultChecked
                   onClick={() => Setsize(0)}
                 />
-                <label htmlFor='min'>Nhỏ(+0)</label>
+                <label htmlFor="min">Nhỏ(+0)</label>
               </div>
               <div>
                 <input
-                  type='radio'
-                  name='size'
-                  id='mid'
+                  type="radio"
+                  name="size"
+                  id="mid"
                   onClick={() => Setsize(5000)}
                 />
-                <label htmlFor='mid'>Vừa(+5,000)</label>
+                <label htmlFor="mid">Vừa(+5,000)</label>
               </div>
             </div>
           </div>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={AddItems_Success} className='btn_choose'>
-            {' '}
+          <Button autoFocus onClick={AddItems_Success} className="btn_choose">
+            {" "}
             {(count * Item.Price + size * count).toLocaleString(undefined, {
               minimumFractionDigits: 0,
             })}

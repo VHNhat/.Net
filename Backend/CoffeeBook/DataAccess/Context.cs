@@ -12,6 +12,22 @@ namespace CoffeeBook.DataAccess
 {
     public class Context : DbContext
     {
+
+        #region  Test new connection method
+        /*private readonly IConfiguration _config;
+        private string connectionString;
+        public Context(IConfiguration config)
+        {
+            _config = config;
+            connectionString = _config.GetConnectionString("CoffeeBook");
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseMySQL(connectionString);
+        }*/
+        #endregion
         public Context()
         {
         }
@@ -77,8 +93,8 @@ namespace CoffeeBook.DataAccess
                 entity.Property(e => e.Id)
                     .ValueGeneratedOnAdd();
 
-                entity.Property(e => e.CustomerId)
-                    .IsRequired();
+                //entity.Property(e => e.CustomerId)
+                //    .IsRequired();
 
                 entity.Property(e => e.Validated)
                     .HasDefaultValue(0);
@@ -105,6 +121,7 @@ namespace CoffeeBook.DataAccess
                     .IsUnicode();
 
                 entity.Property(e => e.Time)
+                    .HasMaxLength(100)
                     .HasDefaultValue("15-20 phút")
                     .IsUnicode();
 
@@ -137,6 +154,9 @@ namespace CoffeeBook.DataAccess
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.Value)
+                    .HasDefaultValue(0);
+
+                entity.Property(e => e.MinPrice)
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.ExpiredDate)
@@ -400,7 +420,9 @@ namespace CoffeeBook.DataAccess
                     .HasDefaultValue(0);
 
                 entity.Property(e => e.TilteSize)
-                    .HasDefaultValue("Nhỏ");
+                    .HasMaxLength(100)
+                    .HasDefaultValue("Nhỏ")
+                    .IsUnicode();
 
                 entity.Property(e => e.CreatedDate)
                     .HasDefaultValue(DateTime.Now);
@@ -450,6 +472,15 @@ namespace CoffeeBook.DataAccess
                 entity.Property(e => e.Phone)
                     .HasMaxLength(11)
                     .IsRequired();
+                entity.Property(e => e.Photo)
+                   .HasColumnType("text")
+                    .IsUnicode();
+                entity.Property(e => e.District)
+
+                     .IsUnicode();
+
+                entity.Property(e => e.LinkGG)
+                    .IsUnicode();
 
                 entity.HasIndex(e => e.ManagerId)
                     .IsUnique();
@@ -499,7 +530,7 @@ namespace CoffeeBook.DataAccess
                     .IsRequired();
             });
             #endregion
-            #region User
+            #region Customer
             modelBuilder.Entity<Customer>(entity =>
             {
                 entity.ToTable("Customer")

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getRole } from '../../app/ApiResult';
-import TableRole from '../Table/Role/Role';
+import { useEffect, useState } from "react";
+import { getRole } from "../../app/ApiResult";
+import TableRole from "../Table/Role/Role";
 function Role() {
   const [flag, setFlag] = useState();
   const [data, setData] = useState();
@@ -12,32 +12,31 @@ function Role() {
   });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    const res = await getRole(paginate, '/role');
+    const res = await getRole(paginate, "/role");
     setData(res?.data);
     setPaginate({
       ...paginate,
       count: res?.totalPages,
     });
     setFlag(false);
-    setLoading(false)
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flag]);
   return (
     // eslint-disable-next-line react/jsx-pascal-case
     <>
       {loading ? (
-           <div class='spinner-border text-success' role='status'>
-           <span class='visually-hidden'>Loading...</span>
-         </div>
-       
-       
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
       ) : (
         <TableRole
-        List={data}
-        paginate={paginate}
-        setPaginate={setPaginate}
-        setFlag={setFlag}
-        Type='ROLE' />
+          List={data}
+          paginate={paginate}
+          setPaginate={setPaginate}
+          setFlag={setFlag}
+          Type="ROLE"
+        />
       )}
     </>
   );

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -48,36 +49,72 @@ namespace CoffeeBook.Controllers
         [HttpPost]
         public ActionResult Post(Product product)
         {
-            if (ModelState.IsValid)
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
             {
-                if (service.Post(product) > 0)
+                var Role = getCurrentRole(jwt);
+                if (Role == "1" || Role == "2")
                 {
-                    return Ok();
+                    if (ModelState.IsValid)
+                    {
+                        if (service.Post(product) > 0)
+                        {
+                            return Ok();
+                        }
+                    }
+                    return BadRequest();
                 }
             }
-            return BadRequest();
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
         }
 
         [Route("product/update/{id}")]
         [HttpPut]
         public ActionResult Put(int id, Product product)
         {
-            if (ModelState.IsValid)
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
             {
-                if (service.Put(id, product) > 0)
-                    return Ok();
+                var Role = getCurrentRole(jwt);
+                if (Role == "1" || Role == "2")
+                {
+                    if (ModelState.IsValid)
+                    {
+                        if (service.Put(id, product) > 0)
+                            return Ok();
+                    }
+                    return BadRequest();
+                }
             }
-            return BadRequest();
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
         }
 
         [Route("product/delete/{id}")]
         [HttpDelete]
         public ActionResult Delete(int id)
         {
-            if (service.Delete(id) > 0)
-                return Ok();
+            string jwt = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(jwt))
+            {
+                var Role = getCurrentRole(jwt);
+                if (Role == "1" || Role == "2")
+                {
+                    if (service.Delete(id) > 0)
+                        return Ok();
 
-            return BadRequest();
+                    return BadRequest();
+                }
+            }
+            return Unauthorized(new { message = "Bạn không có quyền truy cập" });
+        }
+
+        private string getCurrentRole(string jwt)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(jwt);
+            var tokenS = jsonToken as JwtSecurityToken;
+            var role = tokenS.Claims.First(claim => claim.Type == "RoleId").Value;
+            return role;
         }
     }
 }

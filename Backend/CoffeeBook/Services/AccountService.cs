@@ -35,7 +35,6 @@ namespace CoffeeBook.Services
         {
             var query = from c in ctx.Accounts
                         where c.Username == dto.Username
-                        where c.Password == dto.Password
                         select c;
 
             return query.FirstOrDefault();
@@ -77,7 +76,7 @@ namespace CoffeeBook.Services
                 Account acc = ctx.Accounts.Single(s => s.Id == id);
 
                 acc.Username = account.Username;
-                acc.Password = account.Password;
+                acc.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
                 acc.RoleId = account.RoleId;
 
                 return ctx.SaveChanges();

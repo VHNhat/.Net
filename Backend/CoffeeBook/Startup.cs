@@ -17,6 +17,8 @@ using CoffeeBook.Authen;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+//using CoffeeBook.Middleware;
+using CoffeeBook.JWT;
 
 namespace CoffeeBook
 {
@@ -32,6 +34,9 @@ namespace CoffeeBook
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add cors
+            services.AddCors();
+
             // Config format JSON result
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
@@ -42,7 +47,8 @@ namespace CoffeeBook
             // Map Context to MySQL
             services.AddDbContext<Context>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("CoffeeBook")));
-
+            //
+            services.AddScoped<JwtService>();
             // configure strongly typed settings object
             services.Configure<AppSetting>(Configuration.GetSection("AppSettings"));
 
@@ -79,11 +85,19 @@ namespace CoffeeBook
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(options => options
+                .WithOrigins(new[] {"http://localhost:3000"})
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
 
             app.UseAuthentication();
 
-            app.UseAuthorization();
+          
 
+            app.UseAuthorization();
+            //app.UseMiddleware<AuthenticationMiddleware>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

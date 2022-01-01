@@ -1,15 +1,16 @@
-import Fade from '@mui/material/Grow';
-import Pagination from '@mui/material/Pagination';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { useSnackbar } from 'notistack';
-import PropTypes from 'prop-types';
-import React, { useContext, useState } from 'react';
-import { DeleteId } from '../../../app/ApiResult';
-import { context } from '../../../app/Context';
-import ProDetails from '../../ProDetails/index';
-import UpdateCoffee from '../../UpdateComponent/UpdateCoffee';
-import '../stylesTable.scss';
+import { Tooltip, Zoom } from "@mui/material";
+import Fade from "@mui/material/Grow";
+import Pagination from "@mui/material/Pagination";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { useSnackbar } from "notistack";
+import PropTypes from "prop-types";
+import React, { useContext, useState } from "react";
+import { DeleteId } from "../../../app/ApiResult";
+import { context } from "../../../app/Context";
+import ProDetails from "../../ProDetails/index";
+import UpdateCoffee from "../../UpdateComponent/UpdateCoffee";
+import "../stylesTable.scss";
 TableCoffees.propTypes = {
   List: PropTypes.array,
   ListTitleHead: PropTypes.array,
@@ -22,16 +23,16 @@ export default function TableCoffees(props) {
   const Context = useContext(context);
   const { List, paginate, setPaginate, setFlag } = props;
   const { enqueueSnackbar } = useSnackbar();
-  const { setBodyAdmin } = Context;
+  const { setBodyAdmin, userRole } = Context;
   const [open, setOpen] = useState(false);
   const [details, setDetails] = useState({});
   const ListTitleHead = [
-    { Name: 'Mã số' },
-    { Name: 'Tiêu đề' },
-    { Name: 'Giá' },
-    { Name: 'Xóa' },
-    { Name: 'Cập nhật' },
-    { Name: 'Chi tiết' },
+    { Name: "Mã số" },
+    { Name: "Tiêu đề" },
+    { Name: "Giá" },
+    userRole?.product?.button?.delete && { Name: "Xóa" },
+    userRole?.product?.button?.update && { Name: "Cập nhật" },
+    { Name: "Chi tiết" },
   ];
 
   function handleDetaits(params) {
@@ -40,13 +41,13 @@ export default function TableCoffees(props) {
   }
 
   const HandleDelete = async (id) => {
-    if (window.confirm('Bạn đã chắc chắn muốn xóa?')) {
-      const response = await DeleteId(id, '/product/delete');
+    if (window.confirm("Bạn đã chắc chắn muốn xóa?")) {
+      const response = await DeleteId(id, "/product/delete");
       if (response.status === 200) {
         setFlag(true);
-        enqueueSnackbar('Xóa thành công', { variant: 'success' });
+        enqueueSnackbar("Xóa thành công", { variant: "success" });
       } else {
-        enqueueSnackbar('Xóa thất bại', { variant: 'warning' });
+        enqueueSnackbar("Xóa thất bại", { variant: "warning" });
       }
     }
   };
@@ -58,28 +59,29 @@ export default function TableCoffees(props) {
     });
   }
   function HandelUpdate(id) {
-    setBodyAdmin(<UpdateCoffee id={id} />);
+    userRole?.product?.button?.update && setBodyAdmin(<UpdateCoffee id={id} />);
   }
   return (
     <>
-      {' '}
-      <Stack className='m-auto' spacing={2}>
+      {" "}
+      <Stack className="m-auto" spacing={2}>
         <Pagination
-          color='primary'
+          color="primary"
           count={paginate?.count}
           onChange={(e, value) => changePage(value)}
         />
       </Stack>
-      <Fade in={true} timeout={400} className='body_page'>
+      <Fade in={true} timeout={400} className="body_page">
         <Paper>
           <div>
-            <table className='itemTable'>
-              <thead className='headerTable'>
+            <table className="itemTable">
+              <thead className="headerTable">
                 <tr>
                   <th>STT</th>
-                  {ListTitleHead?.map((item, index) => (
-                    <th key={index}>{item?.Name}</th>
-                  ))}
+                  {ListTitleHead?.map(
+                    (item, index) =>
+                      item?.Name && <th key={index}>{item?.Name}</th>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -88,38 +90,51 @@ export default function TableCoffees(props) {
                     <td>{index + 1}</td>
                     <td>{item?.Id}</td>
                     <td>
-                      <p className='text_over'>{item?.Name}</p>
+                      <Tooltip
+                        TransitionComponent={Zoom}
+                        title={item?.Name}
+                        placement="right-start"
+                        arrow
+                      >
+                        <p className="text_over">{item?.Name}</p>
+                      </Tooltip>
                     </td>
 
                     <td>
-                      {' '}
+                      {" "}
                       {(item?.Price * 1).toLocaleString(undefined, {
                         minimumFractionDigits: 0,
-                      })}{' '}
+                      })}{" "}
                       đ
                     </td>
+                    {userRole?.product?.button?.delete && (
+                      <td>
+                        <button
+                          type="button"
+                          className="btn btn-outline-danger"
+                          data-set={item?.Id}
+                          onClick={() => HandleDelete(item?.Id)}
+                        >
+                          Xóa
+                        </button>
+                      </td>
+                    )}
+                    {userRole?.product?.button?.update && (
+                      <td>
+                        <button
+                          type="button"
+                          className="btn btn-outline-success"
+                          onClick={() => HandelUpdate(item?.Id)}
+                          data-set={item?.Id}
+                        >
+                          Cập nhật
+                        </button>
+                      </td>
+                    )}
                     <td>
                       <button
-                        type='button'
-                        className='btn btn-outline-danger'
-                        data-set={item?.Id}
-                        onClick={() => HandleDelete(item?.Id)}>
-                        Xóa
-                      </button>
-                    </td>
-                    <td>
-                      <button
-                        type='button'
-                        className='btn btn-outline-success'
-                        onClick={() => HandelUpdate(item?.Id)}
-                        data-set={item?.Id}>
-                        Cập nhật
-                      </button>
-                    </td>
-                    <td>
-                      <button
-                        type='button'
-                        className='btn btn-outline-warning'
+                        type="button"
+                        className="btn btn-outline-warning"
                         data-set={item?.Id}
                         onClick={() =>
                           handleDetaits({
@@ -129,7 +144,8 @@ export default function TableCoffees(props) {
                             Description: item?.Description,
                             Price: item?.Price,
                           })
-                        }>
+                        }
+                      >
                         Xem chi tiết
                       </button>
                     </td>

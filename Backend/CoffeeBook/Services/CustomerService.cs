@@ -109,7 +109,7 @@ namespace CoffeeBook.Services
             {
                 Customer customer = new Customer();
                 customer.Username = dto.Username;
-                customer.Password = dto.Password;
+                customer.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);
                 customer.Phone = dto.Phone;
                 customer.Email = dto.Email;
                 customer.Name = dto.Name;
@@ -130,7 +130,6 @@ namespace CoffeeBook.Services
             {
             var query = from c in ctx.Customers
                         where c.Username == dto.Username
-                        where c.Password == dto.Password
                         select c;
 
             return query.FirstOrDefault();
@@ -166,6 +165,7 @@ namespace CoffeeBook.Services
                 cus.Address = customer.Address;
                 cus.Gender = customer.Gender;
                 cus.Avata = customer.Avata;
+                ctx.Entry(customer).Property(p => p.Role).IsModified = false;
                 return ctx.SaveChanges();
             }
             catch (Exception ex)
@@ -175,6 +175,24 @@ namespace CoffeeBook.Services
             }
 
 
+        }
+
+        public int ChangePassword(string email, ForgotPassDto dto)
+        {
+            try
+            {
+                Customer cus = ctx.Customers.Single(s => s.Email == email);
+                if (cus == null)
+                    return 0;
+                cus.Password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+                
+                ctx.SaveChanges();
+                return 1;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return -1;
+            }
         }
     }
 }

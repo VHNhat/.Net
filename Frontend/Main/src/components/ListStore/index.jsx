@@ -1,50 +1,104 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+/* eslint-disable eqeqeq */
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { getStore, getStoreByDistrict } from "../../app/ApiResult";
+import Store from "./../Store/Store";
 import "./styles.scss";
-import data from"../../data"
-import { memo } from "react";
-const List_Store = data.Stores;
 
 function ListStore(props) {
-  // const [Filter, SetFilter] = useState("");
-  //   const [List_Fillter, SetList_Fillter] = useState("");
+  const queryParams = new URLSearchParams(window.location.search);
+  const history = useHistory();
+  const [listDistrict, setListDistrict] = useState([]);
+  const [stores, setStores] = useState([]);
+  const [listFillter, setListFillter] = useState([]);
   function ChangeActive(index, filter) {
-    const Loaiactive = document.querySelector(".Store.active");
-    const listLoai = document.querySelectorAll(".Store");
+    const Loaiactive = document.querySelector(".StoreTag.active");
+    const listLoai = document.querySelectorAll(".StoreTag");
     if (Loaiactive) {
       Loaiactive.classList.remove("active");
     }
     listLoai[index].classList.add("active");
-    // SetFilter(filter);
+    history.push(`/Store?type=${filter}`);
   }
-  //   useEffect(() => {
-  //     // const Temp = [];
-  //     // SetList_Fillter(Temp);
-  //   }, [Filter]);
+  const fetch = async () => {
+    const res = await getStore();
+    const district = await getStoreByDistrict();
+    let Districts = [];
+    district.forEach((item) => {
+      const temp = {
+        cityName: `Quận ${item?.District}`,
+        Count: item?.Count,
+        id: item?.District !== "Bình Thạnh" ? Number(item?.District) : "BTh",
+      };
+      Districts.push(temp);
+    });
+    const temp = {
+      cityName: "Tất cả cửa hàng",
+      Count: res?.length,
+      id: "0",
+    };
+    Districts.unshift(temp);
+    setListDistrict(Districts);
+    if (res) {
+      setStores(res);
+    }
+  };
+
+  useEffect(() => {
+    fetch();
+  }, [queryParams.get("type")]);
+  useEffect(() => {
+    const filter = queryParams.get("type");
+    if (filter !== "0") {
+      let temp = [];
+      if (filter === "BTh") {
+        temp = stores?.filter((item) => item?.District === "Bình Thạnh");
+      } else {
+        temp = stores?.filter(
+          (item) => Number(item?.District) === Number(filter)
+        );
+      }
+
+      setListFillter(temp);
+    } else {
+      setListFillter(stores);
+    }
+  }, [Number(queryParams.get("type")), stores]);
   return (
     <div className="List_Store">
       <div className="List_country">
         <div className="Title">
-          <img src="https://www.thecoffeehouse.com/_nuxt/img/store-icon.eb4e4fc.svg" alt="" />
-          <h3>Hệ thống 180 cửa hàng TCH</h3>
+          <i className="fas fa-store-alt"></i>
+          <h3>Khám phá {stores?.length} cửa hàng COFFEE&BOOK</h3>
         </div>
       </div>
-      <div className="List_country">
-        <ul>
-          <Row id="center_item">
-            {List_Store.map((item, index) => (
-              <Col key={index} className="Center_Item" xs={12} sm={6} lg={3}>
-                {" "}
-                <li className="Store" onClick={() => ChangeActive(index)}>
-                  {item.City_Name}({item.count})
-                </li>{" "}
-              </Col>
-            ))}
-          </Row>
+      <div className="bodyCountry">
+        <ul className="Countrys">
+          {listDistrict?.map((item, index) => (
+            <li
+              key={index}
+              className={`StoreTag ${
+                queryParams.get("type") == item?.id && "active"
+              }`}
+              onClick={() => ChangeActive(index, item?.id)}
+            >
+              <p>
+                {item.cityName} ({item?.Count})
+              </p>
+            </li>
+          ))}
         </ul>
+        <div className="Stores">
+          {listFillter ? (
+            listFillter?.map((item, index) => <Store key={index} item={item} />)
+          ) : (
+            <h5>Chưa có cửa hàng nào !</h5>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-export default memo(ListStore);
+export default ListStore;

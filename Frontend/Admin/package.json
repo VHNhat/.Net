@@ -7,6 +7,7 @@
     "@emotion/styled": "latest",
     "@material-ui/data-grid": "^4.0.0-alpha.37",
     "@mui/icons-material": "latest",
+    "@mui/lab": "latest",
     "@mui/material": "latest",
     "@mui/styles": "latest",
     "@mui/x-data-grid-generator": "5.0.1",
@@ -19,7 +20,10 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.1",
     "chart.js": "^3.6.0",
+    "date-fns": "latest",
+    "firebase": "4.8.0",
     "jquery": "^3.6.0",
+    "js-file-download": "^0.4.12",
     "jwt-decode": "^3.1.2",
     "node-sass": "4.14.1",
     "notistack": "^2.0.2",
@@ -29,6 +33,7 @@
     "react-chartjs-2": "^3.3.0",
     "react-detect-click-outside": "^1.1.1",
     "react-dom": "^17.0.2",
+    "react-export-excel": "^0.5.3",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
@@ -58,5 +63,21 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+  "proxy": "http://localhost:5000",
+  "vendor": [
+    "xlsx",
+    "file-saver"
+  ],
+  "node": {
+    "fs": "empty"
+  },
+  "externals": [
+    {
+      "./cptable": "var cptable"
+    },
+    {
+      "./jszip": "jszip"
+    }
+  ]
 }

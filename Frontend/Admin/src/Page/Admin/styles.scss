@@ -1,22 +1,21 @@
-
 .Admin {
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  font-family: 'Segoe UI', 'Arial';
+  font-family: "Segoe UI", "Arial";
   box-sizing: border-box;
-  & p{
+  & p {
     margin: 0;
   }
   & .header {
-    
     & .background-top,
     .nav-top {
       height: 70px;
     }
-  
-    & .nav-top {
 
-      background: rgba(182, 188, 202, 0.952);
+    & .nav-top {
+      background-image: url("https://assets-global.website-files.com/55e67eeba2e73cb76514f165/5987c3116dccc600016b682d_Webflow%20Elements.png");
+      background-repeat: no-repeat;
+      background-size: cover;
       position: relative;
       box-shadow: 2px 5px 6px #7575;
       & .img_user img {
@@ -25,11 +24,27 @@
         border-radius: 50%;
         border: 1px solid white;
       }
+      & .fa-sign-out {
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        color: rgba(255, 255, 255, 0.637);
+        transition: all ease 0.2s;
+        &:hover {
+          color: rgb(255, 255, 255);
+          transition: all ease 0.2s;
+        }
+      }
       & .logo {
         position: absolute;
         left: 4%;
         top: 0;
         margin-top: -5px;
+        & path {
+          fill: rgb(255, 255, 255);
+        }
       }
       & .logo svg {
         width: fit-content;
@@ -38,10 +53,10 @@
         left: 0;
       }
       & .img_user {
-        color: rgb(85, 85, 85);
-       font-size: 1rem;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
         position: absolute;
-        right: 10%;
+        right: 12%;
         top: 50%;
         transform: translateY(-50%);
         & span {
@@ -49,30 +64,27 @@
           font-size: 0.8rem;
         }
       }
-     
     }
   }
   & .Admin_main {
-    
     display: flex;
     position: relative;
-    color: white;
-    & #nav_admin{
+
+    & #nav_admin {
       display: none;
     }
-    & #nav_admin:checked ~ .main_menu{
+    & #nav_admin:checked ~ .main_menu {
       transform: translateX(0%);
       transition: transform ease 0.3s;
     }
-    & .bar_admin{
-      
+    & .bar_admin {
       position: absolute;
       z-index: 99;
       width: 40px;
       height: 40px;
       background-color: white;
       box-shadow: 0px 0px 5px #c7c7c7;
-      color: #000;
+      color: rgb(2, 2, 2);
       border-radius: 10px;
       font-size: 1.4rem;
       display: flex;
@@ -80,32 +92,31 @@
       justify-content: center;
       line-height: 40px;
       visibility: hidden;
-
     }
 
-    & .close_admin{
+    & .close_admin {
       visibility: hidden;
       position: absolute;
-      top:0px;
+      top: 0px;
       right: 5px;
-        & p{
-     
+      & p {
         font-size: 1.3rem;
-        }
+      }
     }
     & .main_menu {
-      
+      color: white;
       padding: 5% 2% 2% 1%;
       flex: 1;
       overflow-y: scroll;
-      background: rgba(109, 118, 141, 0.952);
+      background-image: url("https://assets-global.website-files.com/55e67eeba2e73cb76514f165/5987c3116dccc600016b682d_Webflow%20Elements.png");
+      background-repeat: no-repeat;
+      background-size: cover;
       height: calc(100vh - 70px);
-      box-shadow:2px 5px 6px #7575;
- 
-      & .fa-chevron-right{
+
+      & .fa-chevron-right {
         position: absolute;
         right: 3px;
-         line-height: 40px;
+        line-height: 40px;
         transition: transform ease 0.3s;
       }
       & .icon {
@@ -116,8 +127,8 @@
         // opacity: 0.7;
         margin: 0;
         line-height: 40px;
-        &[aria-expanded=true] .fa-chevron-right {
-          transform:rotate(90deg);
+        &[aria-expanded="true"] .fa-chevron-right {
+          transform: rotate(90deg);
           transition: transform ease 0.3s;
         }
       }
@@ -127,19 +138,18 @@
         list-style: none;
         padding-left: 10px;
         margin-left: 10px;
-   
+
         & .tag_menu {
-          
           color: #fffffff1;
+          background-color: #f1f1f128;
           &.active {
-            background-color: #e0f3ff;
-            color: #fd5d00f3;
+            background-color: #ffffffe8;
+            color: #4b91ff;
           }
         }
         & li {
-          border-radius: 5px;
+          border-radius: 4px;
           padding: 5px 5px 5px 30px;
-          margin-top: 2px;
         }
       }
     }
@@ -148,9 +158,10 @@
       position: relative;
       width: 80%;
       height: calc(100vh - 70px);
+      overflow: scroll;
     }
   }
 }
 .css-wjh20t-MuiPagination-ul {
-  bottom: 40px;
+  bottom: 15px;
 }

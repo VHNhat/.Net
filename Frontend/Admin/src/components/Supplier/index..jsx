@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getSupplier } from '../../app/ApiResult';
-import TableSupplier from '../Table/TablePeople/Supplier';
+import { useEffect, useState } from "react";
+import { getSupplier } from "../../app/ApiResult";
+import TableSupplier from "../Table/TablePeople/Supplier";
 function Supplier() {
   const [flag, setFlag] = useState();
   const [data, setData] = useState();
@@ -12,32 +12,31 @@ function Supplier() {
   });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    const res = await getSupplier(paginate, '/supplier');
+    const res = await getSupplier(paginate, "/supplier");
     setData(res?.data);
     setPaginate({
       ...paginate,
       count: res?.totalPages,
     });
     setFlag(false);
-    setLoading(false)
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flag]);
   return (
     // eslint-disable-next-line react/jsx-pascal-case
     <>
       {loading ? (
-           <div class='spinner-border text-success' role='status'>
-           <span class='visually-hidden'>Loading...</span>
-         </div>
-       
-       
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
       ) : (
         <TableSupplier
-        List={data}
-        paginate={paginate}
-        setPaginate={setPaginate}
-        setFlag={setFlag}
-        Type='SUPPLIER' />
+          List={data}
+          paginate={paginate}
+          setPaginate={setPaginate}
+          setFlag={setFlag}
+          Type="SUPPLIER"
+        />
       )}
     </>
   );

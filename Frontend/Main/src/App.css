@@ -1,4 +1,4 @@
-@import 'variables.css';
+@import "variables.css";
 
 * {
   padding: 0;
@@ -13,11 +13,11 @@
 }
 
 body {
-  font-size: 0.93rem;
+  font-size: 0.85rem;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   line-height: 1.5;
   color: #212529;
@@ -35,7 +35,27 @@ body .row {
   width: 3.5px;
   background-color: white;
 }
-
+.Header .btn-success {
+  background-color: #ffa84c !important;
+  border: #cf6b00 !important ;
+  outline: #cf6b00 !important ;
+}
+.btn-success {
+  background-color: #f89328 !important;
+  border: #cf6b00 !important ;
+  outline: #cf6b00 !important ;
+}
+.btn-success:hover {
+  background-color: #ff792b !important;
+  color: #ffffff !important;
+}
+.Header .btn-success:hover {
+  background-color: #f7f7f7 !important;
+  color: #ff8706 !important;
+}
+.btn-success:focus {
+  box-shadow: 0 0 0 0.25rem #ff8706;
+}
 /* Track */
 *::-webkit-scrollbar-track {
   border-radius: 1px;
@@ -43,11 +63,11 @@ body .row {
 
 /* Handle */
 *::-webkit-scrollbar-thumb {
-  background: rgb(255, 205, 129);
+  background: rgb(243, 157, 27);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 205, 129);
+  background: rgb(255, 187, 85);
 }

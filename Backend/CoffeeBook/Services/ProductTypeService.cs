@@ -68,8 +68,9 @@ namespace CoffeeBook.Services
                 productType.Photo = model.Photo;
                 return _context.SaveChanges();
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return -1;
             }
         }

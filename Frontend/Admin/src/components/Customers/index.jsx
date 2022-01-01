@@ -1,12 +1,10 @@
 /* eslint-disable react/jsx-pascal-case */
 
-import React, { useEffect, useState } from 'react';
-import { getCustomers } from '../../app/ApiResult';
-import TableCustomes from '../Table/TablePeople/Customes';
+import React, { useEffect, useState } from "react";
+import { getCustomers } from "../../app/ApiResult";
+import TableCustomes from "../Table/TablePeople/Customes";
 
 function Customers(props) {
-
-
   const [data, setData] = useState();
   const [flag, setFlag] = useState();
   const [loading, setLoading] = useState(false);
@@ -23,24 +21,24 @@ function Customers(props) {
       ...paginate,
       count: res?.totalPages,
     });
-    setFlag(false)
-    setLoading(true)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    setFlag(false);
+    setLoading(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flag]);
   return (
     <>
-    {loading ? (
-      <TableCustomes
-      List={data}
-      paginate={paginate}
-      setFlag={setFlag}
-      setPaginate={setPaginate}
-      />
-    ) : (
-      <div class='spinner-border text-success' role='status'>
-        <span class='visually-hidden'>Loading...</span>
-      </div>
-    )}
+      {loading ? (
+        <TableCustomes
+          List={data}
+          paginate={paginate}
+          setFlag={setFlag}
+          setPaginate={setPaginate}
+        />
+      ) : (
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      )}
     </>
   );
 }

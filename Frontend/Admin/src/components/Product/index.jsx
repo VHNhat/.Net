@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useContext, useEffect, useState } from 'react';
-import { getNews, getProducts } from '../../app/ApiResult';
-import { context } from '../../app/Context';
-import TableBooks from '../Table/TableProduct/Book';
-import TableCoffees from '../Table/TableProduct/Coffees';
-import TableNews from '../Table/TableProduct/News';
+import React, { useContext, useEffect, useState } from "react";
+import { getNews, getProducts } from "../../app/ApiResult";
+import { context } from "../../app/Context";
+import TableBooks from "../Table/TableProduct/Book";
+import TableCoffees from "../Table/TableProduct/Coffees";
+import TableNews from "../Table/TableProduct/News";
 
 function ProductList(props) {
   const [body, setBody] = useState();
@@ -22,8 +22,8 @@ function ProductList(props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     switch (TypeDataPro) {
-      case 'COFFEES': {
-        const Products = await getProducts(paginate, '/products');
+      case "COFFEES": {
+        const Products = await getProducts(paginate, "/products");
         setPaginate({
           ...paginate,
           count: Products.totalPages,
@@ -40,8 +40,8 @@ function ProductList(props) {
         setFlag(false);
         break;
       }
-      case 'BOOKS': {
-        const Books = await getProducts(paginate, '/products');
+      case "BOOKS": {
+        const Books = await getProducts(paginate, "/products");
         setPaginate({ paginate });
         setBody(
           <TableBooks
@@ -55,8 +55,8 @@ function ProductList(props) {
         setFlag(false);
         break;
       }
-      case 'NEWS': {
-        const News = await getNews(paginate, '/news');
+      case "NEWS": {
+        const News = await getNews(paginate, "/news");
         setPaginate({ paginate });
         setBody(
           <TableNews
@@ -71,7 +71,7 @@ function ProductList(props) {
         break;
       }
       default: {
-        const Products = await getProducts(paginate, '/products');
+        const Products = await getProducts(paginate, "/products");
         setPaginate({ paginate });
         setBody(
           <TableCoffees
@@ -89,23 +89,24 @@ function ProductList(props) {
   }, [TypeDataPro, flag, paginate.count]);
   return (
     <>
-      <ul className='nav nav-tabs' id='myTab' role='tablist'>
-        <li className='nav-item' role='presentation'>
+      <ul className="nav nav-tabs" id="myTab" role="tablist">
+        <li className="nav-item" role="presentation">
           <button
-            onClick={() => setTypeDataPro('COFFEES')}
-            className={`nav-link ${TypeDataPro === 'COFFEES' && 'active'}`}
-            id='home-tab'
-            data-bs-toggle='tab'
-            data-bs-target='#home'
-            type='button'
-            role='tab'
-            label={'Show'}
-            aria-controls='home'
-            aria-selected='true'>
-            Coffees
+            onClick={() => setTypeDataPro("COFFEES")}
+            className={`nav-link ${TypeDataPro === "COFFEES" && "active"}`}
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            label={"Show"}
+            aria-controls="home"
+            aria-selected="true"
+          >
+            Sản phẩm
           </button>
         </li>
-        <li className='nav-item' role='presentation'>
+        {/* <li className='nav-item' role='presentation'>
           <button
             onClick={() => setTypeDataPro('BOOKS')}
             className={`nav-link ${TypeDataPro === 'BOOKS' && 'active'}`}
@@ -118,27 +119,28 @@ function ProductList(props) {
             aria-selected='false'>
             Books
           </button>
-        </li>
-        <li className='nav-item' role='presentation'>
+        </li> */}
+        <li className="nav-item" role="presentation">
           <button
-            onClick={() => setTypeDataPro('NEWS')}
-            className={`nav-link ${TypeDataPro === 'NEWS' && 'active'}`}
-            id='contact-tab'
-            data-bs-toggle='tab'
-            data-bs-target='#contact'
-            type='button'
-            role='tab'
-            aria-controls='contact'
-            aria-selected='false'>
-            News
+            onClick={() => setTypeDataPro("NEWS")}
+            className={`nav-link ${TypeDataPro === "NEWS" && "active"}`}
+            id="contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#contact"
+            type="button"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+          >
+            Tin tức
           </button>
         </li>
       </ul>
       {loading ? (
         body
       ) : (
-        <div class='spinner-border text-success' role='status'>
-          <span class='visually-hidden'>Loading...</span>
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       )}
     </>
