@@ -9042,11 +9042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+      "projectUniqueName": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
       "projectName": "CoffeeBook",
-      "projectPath": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+      "projectPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
       "packagesPath": "C:\\Users\\Malik\\.nuget\\packages\\",
-      "outputPath": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\obj\\",
+      "outputPath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Malik\\AppData\\Roaming\\NuGet\\NuGet.Config",

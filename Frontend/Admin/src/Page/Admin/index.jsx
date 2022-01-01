@@ -10,7 +10,7 @@ import ProductUpload from "../../components/AddComponents/ProductUpload/index";
 import BillOrder from "../../components/BillOrder";
 import Customers from "../../components/Customers/index";
 import AlertDialog from "../../components/Dialog/Dialog";
-import Finace from "../../components/Finance/Finance";
+import Finance from "../../components/Finance/Finance";
 import Discount from "../../components/Product/Discount/index.";
 import Product from "../../components/Product/index";
 import ProductType from "../../components/Product/ProductType/index.";
@@ -54,7 +54,7 @@ function Admin() {
   const Logout = () => {
     setOpen(true);
   };
-  const Fecth = async (id) => {
+  const Fetch = async (id) => {
     const res = await getAccountId(id, "/account");
     if (res) {
       setUser(res);
@@ -98,7 +98,7 @@ function Admin() {
       var decoded = jwt_decode(token);
       if (decoded?.Id) {
         RenderRole(decoded?.Id);
-        Fecth(decoded?.Id);
+        Fetch(decoded?.Id);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -133,7 +133,7 @@ function Admin() {
           return userRole?.productType?.tag && <ProductType />;
         }
         case "FINANCE": {
-          return userRole?.revenue?.finance && <Finace />;
+          return userRole?.revenue?.finance && <Finance />;
         }
         case "ACCOUNT": {
           return userRole?.account?.tag && <Account />;
@@ -247,7 +247,7 @@ function Admin() {
             <p id="nav_X_admin">&#x2715;</p>
           </label>
           <div>
-            <div
+            {userRole?.mainTag?.DK && <div
               className="Title_Section"
               data-toggle="collapse"
               data-target="#dashboard"
@@ -256,7 +256,7 @@ function Admin() {
             >
               <i className="icon fad fa-rocket"></i>Bảng điều khiển
               <i className="fas fa-chevron-right"></i>
-            </div>
+            </div>}
             <ul className="collapse show" id="dashboard">
               {userRole?.bill?.tag && (
                 <li className="tag_menu" data-set="BILLORDER">
@@ -285,7 +285,7 @@ function Admin() {
               )}
             </ul>
           </div>
-          <div>
+          { userRole?.mainTag?.CT &&<div>
             <div
               className="Title_Section"
               data-toggle="collapse"
@@ -308,8 +308,8 @@ function Admin() {
                 </li>
               )}
             </ul>
-          </div>
-          <div>
+          </div>}
+          {userRole?.mainTag?.SP && <div>
             <div
               className="Title_Section"
               data-toggle="collapse"
@@ -332,8 +332,8 @@ function Admin() {
                 </li>
               )}
             </ul>
-          </div>
-          <div>
+          </div>}
+          {userRole?.mainTag?.NCC && <div>
             <div
               className="Title_Section"
               data-toggle="collapse"
@@ -356,8 +356,8 @@ function Admin() {
                 </li>
               )}
             </ul>
-          </div>
-          <div>
+          </div>}
+          {userRole?.mainTag?.CD &&<div>
             <div
               className="Title_Section"
               data-toggle="collapse"
@@ -385,7 +385,7 @@ function Admin() {
                 </li>
               )}
             </ul>
-          </div>
+          </div>}
         </div>
         <div className="body_render">{bodyAdmin}</div>
       </div>

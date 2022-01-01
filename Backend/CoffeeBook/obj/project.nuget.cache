@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6oxr2GhhovIRgF+7Zn/2+KDSPQUw/DHPbnCM97yp9NbX4zrP/97H50XKLULk4cMVdzkmPDQY9GhOCU+KkuN5jA==",
+  "dgSpecHash": "KSKpllnQMr4SaGePUCML4fyIsZPRgd6Xjwrt5vAKpnm/Fhyn6YK6znIcxye5ZpkpqwQsgjh/UhEJOvsJchiVtw==",
   "success": true,
-  "projectFilePath": "E:\\Học tập\\học kỳ 5\\HTTT trên các Framework\\Đồ án\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
+  "projectFilePath": "E:\\git_project\\framework_IS220.M11.HTCL_2\\Backend\\CoffeeBook\\CoffeeBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Malik\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
